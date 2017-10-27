@@ -1,0 +1,19260 @@
+cscope 15 $HOME/tests/DNC-tensorflow               0000093692
+	@dnc/__init__.py
+
+	@dnc/controller.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+4 
+şass
+ 
+	gBa£CÚŒŞËr
+:
+
+6 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+šput_size
+, 
+ouut_size
+, 
+memÜy_»ad_h—ds
+, 
+memÜy_wÜd_size
+, 
+b©ch_size
+=1):
+
+8 
+cÚ¡ruùs
+ 
+a
+ 
+cÚŒŞËr
+ 
+as
+ 
+desüibed
+ 
+š
+ 
+the
+ 
+DNC
+ 
+·³r
+:
+
+9 
+h‰p
+:
+
+11 
+P¬am‘”s
+:
+
+13 
+šput_size
+: 
+
+14 
+the
+ 
+size
+ 
+of
+h
+d©a
+ 
+šput
+ 
+veùÜ
+
+
+15 
+ouut_size
+: 
+
+16 
+the
+ 
+size
+ 
+of
+h
+d©a
+ 
+ouut
+ 
+veùÜ
+
+
+17 
+memÜy_»ad_h—ds
+: 
+
+18 
+the
+ 
+numb”
+ 
+of
+ 
+»ad
+ 
+h«ds
+ 
+š
+h
+assocŸ‹d
+ 
+ex‹º®
+ 
+memÜy
+
+
+19 
+memÜy_wÜd_size
+: 
+
+20 
+the
+ 
+size
+ 
+of
+h
+wÜd
+ 
+š
+h
+assocŸ‹d
+ 
+ex‹º®
+ 
+memÜy
+
+
+21 
+b©ch_size
+: 
+
+22 
+the
+ 
+size
+ 
+of
+h
+šput
+ 
+d©a
+ 
+b©ch
+ [
+İtiÚ®
+, 
+usu®ly
+ 
+£t
+ 
+by
+h
+DNC
+ 
+objeù
+]
+
+25 
+£lf
+.
+šput_size
+ = input_size
+
+26 
+£lf
+.
+ouut_size
+ = output_size
+
+27 
+£lf
+.
+»ad_h—ds
+ = 
+memÜy_»ad_h—ds
+
+
+28 
+£lf
+.
+wÜd_size
+ = 
+memÜy_wÜd_size
+
+
+29 
+£lf
+.
+b©ch_size
+ = batch_size
+
+31 #šdiÿ‹ 
+the
+ 
+š‹º®
+ 
+Ãu¿l
+ 
+ÃtwÜk
+ 
+is
+ 
+»cu¼’t
+
+
+32 #by 
+the
+ 
+exi¡’û
+ 
+of
+ 
+»cu¼’t_upd©e
+ 
+ªd
+ 
+g‘_¡©e
+ 
+m‘hods
+
+
+33 
+has_»cu¼’t_upd©e
+ = 
+	`ÿÎabË
+(
+	`g‘©Œ
+(
+£lf
+, 'upd©e_¡©e', 
+NÚe
+))
+
+34 
+has_g‘_¡©e
+ = 
+	`ÿÎabË
+(
+	`g‘©Œ
+(
+£lf
+, 'g‘_¡©e', 
+NÚe
+))
+
+35 
+£lf
+.
+has_»cu¼’t_Â
+ = 
+has_»cu¼’t_upd©e
+ 
+ªd
+ 
+has_g‘_¡©e
+
+
+37 #th
+aùu®
+ 
+size
+ 
+of
+ 
+the
+ 
+Ãu¿l
+ 
+ÃtwÜk
+ 
+šput
+ 
+aá”
+ 
+æ©’nšg
+ 
+ªd
+
+
+38 #cÚÿ‹Çtšg 
+the
+ 
+šput
+ 
+veùÜ
+ 
+w™h
+h
+´eviou¦y
+ 
+»ad
+ 
+vùÜs
+ 
+äom
+ 
+memÜy
+
+
+39 
+£lf
+.
+Â_šput_size
+ = s–f.
+wÜd_size
+ * s–f.
+»ad_h—ds
+ + s–f.
+šput_size
+
+
+41 
+£lf
+.
+š‹rçû_veùÜ_size
+ = s–f.
+wÜd_size
+ * s–f.
+»ad_h—ds
+ + 3 * self.word_size + 5 * self.read_heads + 3
+
+43 
+	#ÃtwÜk
+ 
+v¬s
+
+
+	)
+
+44 
+w™h
+ 
+tf
+.
+	`Çme_scİe
+("controller"):
+
+45 
+£lf
+.
+	$ÃtwÜk_v¬s
+()
+
+47 
+£lf
+.
+Â_ouut_size
+ = 
+NÚe
+
+
+48 
+w™h
+ 
+tf
+.
+	`v¬ŸbË_scİe
+("shape_inference"):
+
+49 
+£lf
+.
+Â_ouut_size
+ = s–f.
+	$g‘_Â_ouut_size
+()
+
+51 
+£lf
+.
+	$š™Ÿls
+()
+
+53 
+def
+ 
+	$š™Ÿls
+(
+£lf
+):
+
+55 
+£ts
+ 
+the
+ 
+š™Ÿl
+ 
+v®ues
+ 
+of
+h
+cÚŒŞËr
+ 
+ŒªsfÜm©iÚ
+ 
+weights
+ 
+m©riûs
+
+
+56 
+this
+ 
+m‘hod
+ 
+ÿn
+ 
+be
+ 
+ov”wr™‹n
+ 
+to
+ 
+u£
+ 
+a
+ 
+difã»Á
+ 
+š™Ÿliz©iÚ
+ 
+scheme
+
+
+58 #defššg 
+š‹º®
+ 
+weights
+ 
+of
+ 
+the
+ 
+cÚŒŞËr
+
+
+59 
+£lf
+.
+š‹rçû_weights
+ = 
+tf
+.
+	`V¬ŸbË
+(
+
+60 
+tf
+.
+	`¿ndom_nÜm®
+([
+£lf
+.
+Â_ouut_size
+, s–f.
+š‹rçû_veùÜ_size
+], 
+¡ddev
+=0.1),
+
+61 
+Çme
+='interface_weights'
+
+63 
+£lf
+.
+Â_ouut_weights
+ = 
+tf
+.
+	`V¬ŸbË
+(
+
+64 
+tf
+.
+	`¿ndom_nÜm®
+([
+£lf
+.
+Â_ouut_size
+, s–f.
+ouut_size
+], 
+¡ddev
+=0.1),
+
+65 
+Çme
+='nn_output_weights'
+
+67 
+£lf
+.
+mem_ouut_weights
+ = 
+tf
+.
+	`V¬ŸbË
+(
+
+68 
+tf
+.
+	`¿ndom_nÜm®
+([
+£lf
+.
+wÜd_size
+ * s–f.
+»ad_h—ds
+, s–f.
+ouut_size
+], 
+¡ddev
+=0.1),
+
+69 
+Çme
+='mem_output_weights'
+
+72 
+def
+ 
+	$ÃtwÜk_v¬s
+(
+£lf
+):
+
+74 
+defšes
+ 
+the
+ 
+v¬ŸbËs
+ 
+Ãeded
+ 
+by
+h
+š‹º®
+ 
+Ãu¿l
+ 
+ÃtwÜk
+
+
+75 [
+the
+ 
+v¬ŸbËs
+ 
+should
+ 
+be
+ 
+©Œibu‹s
+ 
+of
+h
+şass
+, 
+i
+.
+e
+. 
+£lf
+.*]
+
+77 
+¿i£
+ 
+	`NÙIm¶em’‹dE¼Ü
+("network_vars is‚ot implemented")
+
+80 
+def
+ 
+	$ÃtwÜk_İ
+(
+£lf
+, 
+X
+):
+
+82 
+defšes
+ 
+the
+ 
+cÚŒŞËr
+'s internal‚eural‚etwork operation
+
+84 
+P¬am‘”s
+:
+
+86 
+X
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+ * 
+»ad_h«ds
+ + 
+šput_size
+)
+
+87 
+the
+ 
+šput
+ 
+d©a
+ 
+cÚÿ‹Ç‹d
+ 
+w™h
+h
+´eviou¦y
+ 
+»ad
+ 
+veùÜs
+ 
+äom
+ 
+memÜy
+
+
+89 
+R‘uºs
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+Â_ouut_size
+)
+
+91 
+¿i£
+ 
+	`NÙIm¶em’‹dE¼Ü
+("network_op method is‚ot implemented")
+
+94 
+def
+ 
+	$g‘_Â_ouut_size
+(
+£lf
+):
+
+96 
+»Œives
+ 
+the
+ 
+ouut
+ 
+size
+ 
+of
+h
+defšed
+ 
+Ãu¿l
+ 
+ÃtwÜk
+
+
+98 
+R‘uºs
+: 
+
+99 
+the
+ 
+ouut
+'s size
+
+101 
+Rai£s
+: 
+V®ueE¼Ü
+
+
+104 
+šput_veùÜ
+ = 
+Å
+.
+	$z”os
+([
+£lf
+.
+b©ch_size
+, s–f.
+Â_šput_size
+], 
+dty³
+=
+Å
+.
+æßt32
+)
+
+105 
+ouut_veùÜ
+ = 
+NÚe
+
+
+107 
+£lf
+.
+has_»cu¼’t_Â
+:
+
+108 
+ouut_veùÜ
+,
+_
+ = 
+£lf
+.
+	`ÃtwÜk_İ
+(
+šput_veùÜ
+, s–f.
+	$g‘_¡©e
+())
+
+110 
+ouut_veùÜ
+ = 
+£lf
+.
+	$ÃtwÜk_İ
+(
+šput_veùÜ
+)
+
+112 
+sh­e
+ = 
+ouut_veùÜ
+.
+	`g‘_sh­e
+().
+	$as_li¡
+()
+
+114 
+	`Ën
+(
+sh­e
+) > 2:
+
+115 
+¿i£
+ 
+	`V®ueE¼Ü
+("Ex³ùedhÃu¿ÈÃtwÜkØouuˆ¨1D veùÜ, buˆgÙ %dD" % (
+	`Ën
+(
+sh­e
+) - 1))
+
+117  
+sh­e
+[1]
+
+120 
+def
+ 
+	$·r£_š‹rçû_veùÜ
+(
+£lf
+, 
+š‹rçû_veùÜ
+):
+
+122 
+·¤es
+ 
+the
+ 
+æ©
+ 
+š‹rçû_veùÜ
+ 
+što
+ 
+™s
+ 
+v¬ious
+ 
+compÚ’ts
+ 
+w™h
+ 
+theœ
+
+
+123 
+cÜ»ù
+ 
+sh­es
+
+
+125 
+P¬am‘”s
+:
+
+127 
+š‹rçû_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+š‹rçû_veùÜ_size
+)
+
+128 
+the
+ 
+æ©‹Ãd
+ 
+š‘rçû
+ 
+veùÜ
+ 
+to
+ 
+be
+ 
+·r£d
+
+
+130 
+R‘uºs
+: 
+diù
+
+
+131 
+a
+ 
+diùiÚ¬y
+ 
+w™h
+ 
+the
+ 
+compÚ’ts
+ 
+of
+h
+š‹rçû_veùÜ
+ 
+·r£d
+
+
+134 
+·r£d
+ = {
+	}
+}
+
+136 
+r_keys_’d
+ = 
+£lf
+.
+wÜd_size
+ * s–f.
+»ad_h—ds
+
+
+137 
+r_¡»ngths_’d
+ = 
+r_keys_’d
+ + 
+£lf
+.
+»ad_h—ds
+
+
+138 
+w_key_’d
+ = 
+r_¡»ngths_’d
+ + 
+£lf
+.
+wÜd_size
+
+
+139 
+”a£_’d
+ = 
+w_key_’d
+ + 1 + 
+£lf
+.
+wÜd_size
+
+
+140 
+wr™e_’d
+ = 
+”a£_’d
+ + 
+£lf
+.
+wÜd_size
+
+
+141 
+ä“_’d
+ = 
+wr™e_’d
+ + 
+£lf
+.
+»ad_h—ds
+
+
+143 
+r_keys_sh­e
+ = (-1, 
+	g£lf
+.
+	gwÜd_size
+, s–f.
+	g»ad_h—ds
+)
+
+144 
+	gr_¡»ngths_sh­e
+ = (-1, 
+	g£lf
+.
+	g»ad_h—ds
+)
+
+145 
+	gw_key_sh­e
+ = (-1, 
+	g£lf
+.
+	gwÜd_size
+, 1)
+
+146 
+	gwr™e_sh­e
+ = 
+”a£_sh­e
+ = (-1, 
+	g£lf
+.
+	gwÜd_size
+)
+
+147 
+	gä“_sh­e
+ = (-1, 
+	g£lf
+.
+	g»ad_h—ds
+)
+
+148 
+	gmodes_sh­e
+ = (-1, 3, 
+	g£lf
+.
+	g»ad_h—ds
+)
+
+150 #·rsšg 
+the
+ 
+veùÜ
+ 
+što
+ 
+™s
+ 
+šdividu®
+ 
+compÚ’ts
+
+
+151 
+	g·r£d
+['»ad_keys'] = 
+tf
+.
+	$»sh­e
+(
+š‹rçû_veùÜ
+[:, :
+r_keys_’d
+], 
+r_keys_sh­e
+)
+
+152 
+·r£d
+['»ad_¡»ngths'] = 
+tf
+.
+	$»sh­e
+(
+š‹rçû_veùÜ
+[:, 
+r_keys_’d
+:
+r_¡»ngths_’d
+], 
+r_¡»ngths_sh­e
+)
+
+153 
+·r£d
+['wr™e_key'] = 
+tf
+.
+	$»sh­e
+(
+š‹rçû_veùÜ
+[:, 
+r_¡»ngths_’d
+:
+w_key_’d
+], 
+w_key_sh­e
+)
+
+154 
+·r£d
+['wr™e_¡»ngth'] = 
+tf
+.
+	`»sh­e
+(
+š‹rçû_veùÜ
+[:, 
+w_key_’d
+], (-1, 1))
+
+155 
+·r£d
+['”a£_veùÜ'] = 
+tf
+.
+	`»sh­e
+(
+š‹rçû_veùÜ
+[:, 
+w_key_’d
+ + 1:
+”a£_’d
+], 
+”a£_sh­e
+)
+
+156 
+·r£d
+['wr™e_veùÜ'] = 
+tf
+.
+	$»sh­e
+(
+š‹rçû_veùÜ
+[:, 
+”a£_’d
+:
+wr™e_’d
+], 
+wr™e_sh­e
+)
+
+157 
+·r£d
+['ä“_g©es'] = 
+tf
+.
+	$»sh­e
+(
+š‹rçû_veùÜ
+[:, 
+wr™e_’d
+:
+ä“_’d
+], 
+ä“_sh­e
+)
+
+158 
+·r£d
+['®loÿtiÚ_g©e'] = 
+tf
+.
+	$ex·nd_dims
+(
+š‹rçû_veùÜ
+[:, 
+ä“_’d
+], 1)
+
+159 
+·r£d
+['wr™e_g©e'] = 
+tf
+.
+	`ex·nd_dims
+(
+š‹rçû_veùÜ
+[:, 
+ä“_’d
+ + 1], 1)
+
+160 
+·r£d
+['»ad_modes'] = 
+tf
+.
+	`»sh­e
+(
+š‹rçû_veùÜ
+[:, 
+ä“_’d
+ + 2:], 
+modes_sh­e
+)
+
+162 #ŒªsfÜmšg 
+the
+ 
+compÚ’ts
+ 
+to
+ 
+’su»
+ 
+they
+'re inhe„ight„anges
+
+163 
+·r£d
+['»ad_¡»ngths'] = 1 + 
+tf
+.
+Â
+.
+	`soá¶us
+(parsed['read_strengths'])
+
+164 
+·r£d
+['wr™e_¡»ngth'] = 1 + 
+tf
+.
+Â
+.
+	`soá¶us
+(parsed['write_strength'])
+
+165 
+·r£d
+['”a£_veùÜ'] = 
+tf
+.
+Â
+.
+	`sigmoid
+(parsed['erase_vector'])
+
+166 
+·r£d
+['ä“_g©es'] = 
+tf
+.
+Â
+.
+	`sigmoid
+(parsed['free_gates'])
+
+167 
+·r£d
+['®loÿtiÚ_g©e'] = 
+tf
+.
+Â
+.
+	`sigmoid
+(parsed['allocation_gate'])
+
+168 
+·r£d
+['wr™e_g©e'] = 
+tf
+.
+Â
+.
+	`sigmoid
+(parsed['write_gate'])
+
+169 
+·r£d
+['»ad_modes'] = 
+tf
+.
+Â
+.
+	`soámax
+(parsed['read_modes'], 1)
+
+171  
+·r£d
+
+
+173 
+def
+ 
+	$´oûss_šput
+(
+£lf
+, 
+X
+, 
+Ï¡_»ad_veùÜs
+, 
+¡©e
+=
+NÚe
+):
+
+175 
+´oûs£s
+ 
+šput
+ 
+d©a
+ 
+through
+ 
+the
+ 
+cÚŒŞËr
+ 
+ÃtwÜk
+ 
+ªd
+ 
+»tuºs
+he
+
+176 
+´e
+-
+ouut
+ 
+ªd
+ 
+š‹rçû_veùÜ
+
+
+178 
+P¬am‘”s
+:
+
+180 
+X
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+šput_size
+)
+
+181 
+the
+ 
+šput
+ 
+d©a
+ 
+b©ch
+
+
+182 
+Ï¡_»ad_veùÜs
+: (
+b©ch_size
+, 
+wÜd_size
+, 
+»ad_h—ds
+)
+
+183 
+the
+ 
+Ï¡
+ 
+b©ch
+ 
+of
+ 
+»ad
+ 
+veùÜs
+ 
+äom
+ 
+memÜy
+
+
+184 
+¡©e
+: 
+Tu¶e
+
+
+185 
+¡©e
+ 
+veùÜs
+ 
+the
+ 
+ÃtwÜk
+ 
+is
+ 
+»cu¼’t
+
+
+187 
+R‘uºs
+: 
+Tu¶e
+
+
+188 
+´e
+-
+ouut
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+ouut_size
+)
+
+189 
+·r£d_š‹rçû_veùÜ
+: 
+diù
+
+
+192 
+æ©_»ad_veùÜs
+ = 
+tf
+.
+	`»sh­e
+(
+Ï¡_»ad_veùÜs
+, (-1, 
+£lf
+.
+wÜd_size
+ * s–f.
+»ad_h—ds
+))
+
+193 
+com¶‘e_šput
+ = 
+tf
+.
+	$cÚÿt
+(1, [
+X
+, 
+æ©_»ad_veùÜs
+])
+
+194 
+Â_ouut
+, 
+Â_¡©e
+ = 
+NÚe
+, None
+
+196 
+£lf
+.
+has_»cu¼’t_Â
+:
+
+197 
+Â_ouut
+, 
+Â_¡©e
+ = 
+£lf
+.
+	$ÃtwÜk_İ
+(
+com¶‘e_šput
+, 
+¡©e
+)
+
+199 
+Â_ouut
+ = 
+£lf
+.
+	$ÃtwÜk_İ
+(
+com¶‘e_šput
+)
+
+201 
+´e_ouut
+ = 
+tf
+.
+	$m©mul
+(
+Â_ouut
+, 
+£lf
+.
+Â_ouut_weights
+)
+
+202 
+š‹rçû
+ = 
+tf
+.
+	$m©mul
+(
+Â_ouut
+, 
+£lf
+.
+š‹rçû_weights
+)
+
+203 
+·r£d_š‹rçû
+ = 
+£lf
+.
+	$·r£_š‹rçû_veùÜ
+(
+š‹rçû
+)
+
+205 
+£lf
+.
+has_»cu¼’t_Â
+:
+
+206  
+´e_ouut
+, 
+·r£d_š‹rçû
+, 
+Â_¡©e
+
+
+208  
+´e_ouut
+, 
+·r£d_š‹rçû
+
+
+211 
+def
+ 
+	$fš®_ouut
+(
+£lf
+, 
+´e_ouut
+, 
+Ãw_»ad_veùÜs
+):
+
+213 
+»tuºs
+ 
+the
+ 
+fš®
+ 
+ouut
+ 
+by
+ 
+kšg
+ 
+»ûút
+ 
+memÜy
+ 
+chªges
+ 
+što
+ 
+accouÁ
+
+
+215 
+P¬am‘”s
+:
+
+217 
+´e_ouut
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+ouut_size
+)
+
+218 
+the
+ 
+ouput
+ 
+veùÜ
+ 
+äom
+h
+šput
+ 
+´oûssšg
+ 
+¡•
+
+
+219 
+Ãw_»ad_veùÜs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_size
+, 
+»ad_h—ds
+)
+
+220 
+the
+ 
+Ãwly
+ 
+»ad
+ 
+veùÜs
+ 
+äom
+h
+upd©ed
+ 
+memÜy
+
+
+222 
+R‘uºs
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+ouut_size
+)
+
+225 
+æ©_»ad_veùÜs
+ = 
+tf
+.
+	`»sh­e
+(
+Ãw_»ad_veùÜs
+, (-1, 
+£lf
+.
+wÜd_size
+ * s–f.
+»ad_h—ds
+))
+
+227 
+fš®_ouut
+ = 
+´e_ouut
+ + 
+tf
+.
+	$m©mul
+(
+æ©_»ad_veùÜs
+, 
+£lf
+.
+mem_ouut_weights
+)
+
+229  
+fš®_ouut
+
+
+	@dnc/dnc.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+äom
+ 
+	g‹nsÜæow
+.
+	gpythÚ
+.
+	gİs
+.
+ºn_ûÎ
+ 
+impÜt
+ 
+LSTMS‹Tu¶e
+
+
+3 
+äom
+ 
+memÜy
+ 
+impÜt
+ 
+MemÜy
+
+
+4 
+impÜt
+ 
+ut™y
+
+
+5 
+impÜt
+ 
+os
+
+
+7 
+şass
+ 
+	gDNC
+:
+
+9 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+cÚŒŞËr_şass
+, 
+šput_size
+, 
+ouut_size
+, 
+max_£qu’û_Ëngth
+,
+
+10 
+memÜy_wÜds_num
+ = 256, 
+memÜy_wÜd_size
+ = 64, 
+memÜy_»ad_h—ds
+ = 4, 
+b©ch_size
+ = 1):
+
+12 
+cÚ¡ruùs
+ 
+a
+ 
+com¶‘e
+ 
+DNC
+ 
+¬ch™eùu»
+ 
+as
+ 
+desüibed
+ 
+š
+ 
+the
+ DNC 
+·³r
+
+
+13 
+h‰p
+:
+
+15 
+P¬am‘”s
+:
+
+17 
+cÚŒŞËr_şass
+: 
+Ba£CÚŒŞËr
+
+
+18 
+a
+ 
+cÚü‘e
+ 
+im¶em’tiÚ
+ 
+of
+ 
+the
+ 
+Ba£CÚŒŞËr
+ 
+şass
+
+
+19 
+šput_size
+: 
+
+20 
+the
+ 
+size
+ 
+of
+h
+šput
+ 
+veùÜ
+
+
+21 
+ouut_size
+: 
+
+22 
+the
+ 
+size
+ 
+of
+h
+ouut
+ 
+veùÜ
+
+
+23 
+max_£qu’û_Ëngth
+: 
+
+24 
+the
+ 
+maximum
+ 
+Ëngth
+ 
+of
+ 
+ª
+ 
+šput
+ 
+£qu’û
+
+
+25 
+memÜy_wÜds_num
+: 
+
+26 
+the
+ 
+numb”
+ 
+of
+ 
+wÜds
+ 
+th©
+ 
+ÿn
+ 
+be
+ 
+¡Üed
+ 
+š
+ 
+memÜy
+
+
+27 
+memÜy_wÜd_size
+: 
+
+28 
+the
+ 
+size
+ 
+of
+ 
+ª
+ 
+šdividu®
+ 
+wÜd
+ 
+š
+ 
+memÜy
+
+
+29 
+memÜy_»ad_h—ds
+: 
+
+30 
+the
+ 
+numb”
+ 
+of
+ 
+»ad
+ 
+h—ds
+ 
+š
+h
+memÜy
+
+
+31 
+b©ch_size
+: 
+
+32 
+the
+ 
+size
+ 
+of
+h
+d©a
+ 
+b©ch
+
+
+35 
+£lf
+.
+šput_size
+ = input_size
+
+36 
+£lf
+.
+ouut_size
+ = output_size
+
+37 
+£lf
+.
+max_£qu’û_Ëngth
+ = max_sequence_length
+
+38 
+£lf
+.
+wÜds_num
+ = 
+memÜy_wÜds_num
+
+
+39 
+£lf
+.
+wÜd_size
+ = 
+memÜy_wÜd_size
+
+
+40 
+£lf
+.
+»ad_h—ds
+ = 
+memÜy_»ad_h—ds
+
+
+41 
+£lf
+.
+b©ch_size
+ = batch_size
+
+43 
+£lf
+.
+memÜy
+ = 
+	$MemÜy
+(
+£lf
+.
+wÜds_num
+, s–f.
+wÜd_size
+, s–f.
+»ad_h—ds
+, s–f.
+b©ch_size
+)
+
+44 
+£lf
+.
+cÚŒŞËr
+ = 
+	$cÚŒŞËr_şass
+(
+£lf
+.
+šput_size
+, s–f.
+ouut_size
+, s–f.
+»ad_h—ds
+, s–f.
+wÜd_size
+, s–f.
+b©ch_size
+)
+
+46 #špuˆ
+d©a
+ 
+¶aûhŞd”s
+
+
+47 
+£lf
+.
+šput_d©a
+ = 
+tf
+.
+	`¶aûhŞd”
+Ñf.
+æßt32
+, [
+b©ch_size
+, 
+NÚe
+, 
+šput_size
+], 
+Çme
+='input')
+
+48 
+£lf
+.
+rg‘_ouut
+ = 
+tf
+.
+	`¶aûhŞd”
+Ñf.
+æßt32
+, [
+b©ch_size
+, 
+NÚe
+, 
+ouut_size
+], 
+Çme
+='targets')
+
+49 
+£lf
+.
+£qu’û_Ëngth
+ = 
+tf
+.
+	`¶aûhŞd”
+Ñf.
+št32
+, 
+Çme
+='sequence_length')
+
+51 
+£lf
+.
+	$bud_g¿ph
+()
+
+54 
+def
+ 
+	$_¡•_İ
+(
+£lf
+, 
+¡•
+, 
+memÜy_¡©e
+, 
+cÚŒŞËr_¡©e
+=
+NÚe
+):
+
+56 
+³rfÜms
+ 
+a
+ 
+¡•
+ 
+İ”©iÚ
+ 
+Ú
+ 
+the
+ 
+šput
+ s‹°
+d©a
+
+
+58 
+P¬am‘”s
+:
+
+60 
+¡•
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+šput_size
+)
+
+61 
+memÜy_¡©e
+: 
+Tu¶e
+
+
+62 
+a
+ 
+tu¶e
+ 
+of
+ 
+cu¼’t
+ 
+memÜy
+ 
+·¿m‘”s
+
+
+63 
+cÚŒŞËr_¡©e
+: 
+Tu¶e
+
+
+64 
+the
+ 
+¡©e
+ 
+of
+h
+cÚŒŞËr
+ 
+™
+'s„ecurrent
+
+66 
+R‘uºs
+: 
+Tu¶e
+
+
+67 
+ouut
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+ouut_size
+)
+
+68 
+memÜy_v›w
+: 
+diù
+
+
+71 
+Ï¡_»ad_veùÜs
+ = 
+memÜy_¡©e
+[6]
+
+72 
+´e_ouut
+, 
+š‹rçû
+, 
+Â_¡©e
+ = 
+NÚe
+, None, None
+
+74 
+£lf
+.
+cÚŒŞËr
+.
+has_»cu¼’t_Â
+:
+
+75 
+´e_ouut
+, 
+š‹rçû
+, 
+Â_¡©e
+ = 
+£lf
+.
+cÚŒŞËr
+.
+	$´oûss_šput
+(
+¡•
+, 
+Ï¡_»ad_veùÜs
+, 
+cÚŒŞËr_¡©e
+)
+
+77 
+´e_ouut
+, 
+š‹rçû
+ = 
+£lf
+.
+cÚŒŞËr
+.
+	$´oûss_šput
+(
+¡•
+, 
+Ï¡_»ad_veùÜs
+)
+
+79 
+u§ge_veùÜ
+, 
+wr™e_weightšg
+, 
+memÜy_m©rix
+, 
+lšk_m©rix
+, 
+´eûd’û_veùÜ
+ = 
+£lf
+.
+memÜy
+.
+	`wr™e
+(
+
+80 
+memÜy_¡©e
+[0], memory_state[1], memory_state[5],
+
+81 
+memÜy_¡©e
+[4], memory_state[2], memory_state[3],
+
+82 
+š‹rçû
+['write_key'],
+
+83 
+š‹rçû
+['write_strength'],
+
+84 
+š‹rçû
+['free_gates'],
+
+85 
+š‹rçû
+['allocation_gate'],
+
+86 
+š‹rçû
+['write_gate'],
+
+87 
+š‹rçû
+['write_vector'],
+
+88 
+š‹rçû
+['erase_vector']
+
+91 
+»ad_weightšgs
+, 
+»ad_veùÜs
+ = 
+£lf
+.
+memÜy
+.
+	`»ad
+(
+
+92 
+memÜy_m©rix
+,
+
+93 
+memÜy_¡©e
+[5],
+
+94 
+š‹rçû
+['read_keys'],
+
+95 
+š‹rçû
+['read_strengths'],
+
+96 
+lšk_m©rix
+,
+
+97 
+š‹rçû
+['read_modes'],
+
+102 #»pÜˆ
+Ãw
+ 
+memÜy
+ 
+¡©e
+ 
+to
+ 
+be
+ 
+upd©ed
+ 
+outside
+ 
+the
+ 
+cÚd™iÚ
+ 
+b¿nch
+
+
+103 
+memÜy_m©rix
+,
+
+104 
+u§ge_veùÜ
+,
+
+105 
+´eûd’û_veùÜ
+,
+
+106 
+lšk_m©rix
+,
+
+107 
+wr™e_weightšg
+,
+
+108 
+»ad_weightšgs
+,
+
+109 
+»ad_veùÜs
+,
+
+111 
+£lf
+.
+cÚŒŞËr
+.
+	`fš®_ouut
+(
+´e_ouut
+, 
+»ad_veùÜs
+),
+
+112 
+š‹rçû
+['free_gates'],
+
+113 
+š‹rçû
+['allocation_gate'],
+
+114 
+š‹rçû
+['write_gate'],
+
+116 #»pÜˆ
+Ãw
+ 
+¡©e
+ 
+of
+ 
+RNN
+ 
+exi¡s
+
+
+117 
+Â_¡©e
+[0] Â_¡©
+is
+ 
+nÙ
+ 
+NÚe
+ 
+tf
+.
+	`z”os
+(1),
+
+118 
+Â_¡©e
+[1] Â_¡©
+is
+ 
+nÙ
+ 
+NÚe
+ 
+tf
+.
+	`z”os
+(1)
+
+122 
+def
+ 
+	$_loİ_body
+(
+£lf
+, 
+time
+, 
+memÜy_¡©e
+, 
+ouuts
+, 
+ä“_g©es
+, 
+®loÿtiÚ_g©es
+, 
+wr™e_g©es
+,
+
+123 
+»ad_weightšgs
+, 
+wr™e_weightšgs
+, 
+u§ge_veùÜs
+, 
+cÚŒŞËr_¡©e
+):
+
+125 
+the
+ 
+body
+ 
+of
+h
+DNC
+ 
+£qu’û
+ 
+´oûssšg
+ 
+loİ
+
+
+127 
+P¬am‘”s
+:
+
+129 
+time
+: 
+T’sÜ
+
+
+130 
+ouuts
+: 
+T’sÜA¼ay
+
+
+131 
+memÜy_¡©e
+: 
+Tu¶e
+
+
+132 
+ä“_g©es
+: 
+T’sÜA¼ay
+
+
+133 
+®loÿtiÚ_g©es
+: 
+T’sÜA¼ay
+
+
+134 
+wr™e_g©es
+: 
+T’sÜA¼ay
+
+
+135 
+»ad_weightšgs
+: 
+T’sÜA¼ay
+,
+
+136 
+wr™e_weightšgs
+: 
+T’sÜA¼ay
+,
+
+137 
+u§ge_veùÜs
+: 
+T’sÜA¼ay
+,
+
+138 
+cÚŒŞËr_¡©e
+: 
+Tu¶e
+
+
+140 
+R‘uºs
+: 
+Tu¶e
+ 
+cÚššg
+ 
+®l
+ 
+upd©ed
+ 
+¬gum’ts
+
+
+143 
+¡•_šput
+ = 
+£lf
+.
+uÅacked_šput_d©a
+.
+	$»ad
+(
+time
+)
+
+145 
+ouut_li¡
+ = 
+£lf
+.
+	$_¡•_İ
+(
+¡•_šput
+, 
+memÜy_¡©e
+, 
+cÚŒŞËr_¡©e
+)
+
+147 #upd©
+memÜy
+ 
+·¿m‘”s
+
+
+149 
+Ãw_cÚŒŞËr_¡©e
+ = 
+tf
+.
+	$z”os
+(1)
+
+150 
+Ãw_memÜy_¡©e
+ = 
+	$tu¶e
+(
+ouut_li¡
+[0:7])
+
+152 
+Ãw_cÚŒŞËr_¡©e
+ = 
+	$LSTMS‹Tu¶e
+(
+ouut_li¡
+[11], output_list[12])
+
+154 
+ouuts
+ = ouuts.
+	$wr™e
+(
+time
+, 
+ouut_li¡
+[7])
+
+156 #cŞËùšg 
+memÜy
+ 
+v›w
+ 
+the
+ 
+cu¼’t
+ 
+¡•
+
+
+157 
+ä“_g©es
+ = f»e_g©es.
+	$wr™e
+(
+time
+, 
+ouut_li¡
+[8])
+
+158 
+®loÿtiÚ_g©es
+ =‡ÎoÿtiÚ_g©es.
+	$wr™e
+(
+time
+, 
+ouut_li¡
+[9])
+
+159 
+wr™e_g©es
+ = wr™e_g©es.
+	$wr™e
+(
+time
+, 
+ouut_li¡
+[10])
+
+160 
+»ad_weightšgs
+ =„—d_weightšgs.
+	$wr™e
+(
+time
+, 
+ouut_li¡
+[5])
+
+161 
+wr™e_weightšgs
+ = wr™e_weightšgs.
+	$wr™e
+(
+time
+, 
+ouut_li¡
+[4])
+
+162 
+u§ge_veùÜs
+ = u§ge_veùÜs.
+	$wr™e
+(
+time
+, 
+ouut_li¡
+[1])
+
+165 
+time
+ + 1, 
+Ãw_memÜy_¡©e
+, 
+ouuts
+,
+
+166 
+ä“_g©es
+,
+®loÿtiÚ_g©es
+, 
+wr™e_g©es
+,
+
+167 
+»ad_weightšgs
+, 
+wr™e_weightšgs
+,
+
+168 
+u§ge_veùÜs
+, 
+Ãw_cÚŒŞËr_¡©e
+
+
+172 
+def
+ 
+	$bud_g¿ph
+(
+£lf
+):
+
+174 
+buds
+ 
+the
+ 
+computiÚ®
+ 
+g¿ph
+ 
+th©
+ 
+³rfÜms
+ 
+a
+ 
+¡•
+-
+by
+-¡• 
+ev®u©iÚ
+
+
+175 
+of
+ 
+the
+ 
+šput
+ 
+d©a
+ 
+b©ches
+
+
+178 
+£lf
+.
+uÅacked_šput_d©a
+ = 
+ut™y
+.
+	$uÅack_što_‹nsÜ¬¿y
+(
+£lf
+.
+šput_d©a
+, 1, s–f.
+£qu’û_Ëngth
+)
+
+180 
+ouuts
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+£qu’û_Ëngth
+)
+
+181 
+ä“_g©es
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+£qu’û_Ëngth
+)
+
+182 
+®loÿtiÚ_g©es
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+£qu’û_Ëngth
+)
+
+183 
+wr™e_g©es
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+£qu’û_Ëngth
+)
+
+184 
+»ad_weightšgs
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+£qu’û_Ëngth
+)
+
+185 
+wr™e_weightšgs
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+£qu’û_Ëngth
+)
+
+186 
+u§ge_veùÜs
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+£qu’û_Ëngth
+)
+
+188 
+cÚŒŞËr_¡©e
+ = 
+£lf
+.
+cÚŒŞËr
+.
+	$g‘_¡©e
+(è
+£lf
+.
+cÚŒŞËr
+.
+has_»cu¼’t_Â
+ (
+tf
+.
+	`z”os
+(1),f.
+	$z”os
+(1))
+
+189 
+memÜy_¡©e
+ = 
+£lf
+.
+memÜy
+.
+	$š™_memÜy
+()
+
+190 
+nÙ
+ 
+	$isš¡ªû
+(
+cÚŒŞËr_¡©e
+, 
+LSTMS‹Tu¶e
+):
+
+191 
+cÚŒŞËr_¡©e
+ = 
+	$LSTMS‹Tu¶e
+(
+cÚŒŞËr_¡©e
+[0], controller_state[1])
+
+192 
+fš®_»suÉs
+ = 
+NÚe
+
+
+194 
+w™h
+ 
+tf
+.
+	`v¬ŸbË_scİe
+("£qu’û_loİ"è
+as
+ 
+scİe
+:
+
+195 
+time
+ = 
+tf
+.
+	$cÚ¡ªt
+(0, 
+dty³
+=
+tf
+.
+št32
+)
+
+197 
+fš®_»suÉs
+ = 
+tf
+.
+	`whe_loİ
+(
+
+198 
+cÚd
+=
+Ïmbda
+ 
+time
+, *
+_
+:im< 
+£lf
+.
+£qu’û_Ëngth
+,
+
+199 
+body
+=
+£lf
+.
+_loİ_body
+,
+
+200 
+loİ_v¬s
+=(
+
+201 
+time
+, 
+memÜy_¡©e
+, 
+ouuts
+,
+
+202 
+ä“_g©es
+, 
+®loÿtiÚ_g©es
+, 
+wr™e_g©es
+,
+
+203 
+»ad_weightšgs
+, 
+wr™e_weightšgs
+,
+
+204 
+u§ge_veùÜs
+, 
+cÚŒŞËr_¡©e
+
+
+206 
+·¿Î–_™”©iÚs
+=32,
+
+207 
+sw­_memÜy
+=
+True
+
+
+210 
+d•’d’c›s
+ = []
+
+211 
+£lf
+.
+cÚŒŞËr
+.
+has_»cu¼’t_Â
+:
+
+212 
+d•’d’c›s
+.
+	`­³nd
+(
+£lf
+.
+cÚŒŞËr
+.
+	$upd©e_¡©e
+(
+fš®_»suÉs
+[9]))
+
+214 
+w™h
+ 
+tf
+.
+	$cÚŒŞ_d•’d’c›s
+(
+d•’d’c›s
+):
+
+215 
+£lf
+.
+·cked_ouut
+ = 
+ut™y
+.
+	$·ck_što_‹nsÜ
+(
+fš®_»suÉs
+[2], 
+axis
+=1)
+
+216 
+£lf
+.
+·cked_memÜy_v›w
+ = {
+
+217 'ä“_g©es': 
+ut™y
+.
+	`·ck_što_‹nsÜ
+(
+fš®_»suÉs
+[3], 
+axis
+=1),
+
+218 '®loÿtiÚ_g©es': 
+ut™y
+.
+	`·ck_što_‹nsÜ
+(
+fš®_»suÉs
+[4], 
+axis
+=1),
+
+219 'wr™e_g©es': 
+ut™y
+.
+	`·ck_što_‹nsÜ
+(
+fš®_»suÉs
+[5], 
+axis
+=1),
+
+220 '»ad_weightšgs': 
+ut™y
+.
+	`·ck_što_‹nsÜ
+(
+fš®_»suÉs
+[6], 
+axis
+=1),
+
+221 'wr™e_weightšgs': 
+ut™y
+.
+	`·ck_što_‹nsÜ
+(
+fš®_»suÉs
+[7], 
+axis
+=1),
+
+222 'u§ge_veùÜs': 
+ut™y
+.
+	`·ck_što_‹nsÜ
+(
+fš®_»suÉs
+[8], 
+axis
+=1)
+
+223 
+	}
+}
+
+226 
+def
+ 
+	$g‘_ouuts
+(
+£lf
+):
+
+228 
+»tuºs
+ 
+the
+ 
+g¿ph
+ 
+nodes
+ th
+ouut
+ 
+ªd
+ 
+memÜy
+ 
+v›w
+
+
+230 
+R‘uºs
+: 
+Tu¶e
+
+
+231 
+ouuts
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+time_¡•s
+, 
+ouut_size
+)
+
+232 
+memÜy_v›w
+: 
+diù
+
+
+234  
+£lf
+.
+·cked_ouut
+, s–f.
+·cked_memÜy_v›w
+
+
+237 
+def
+ 
+	$§ve
+(
+£lf
+, 
+£ssiÚ
+, 
+ck±s_dœ
+, 
+Çme
+):
+
+239 
+§ves
+ 
+the
+ 
+cu¼’t
+ 
+v®ues
+ 
+of
+h
+mod–
+'s…arameterso‡ checkpoint
+
+241 
+P¬am‘”s
+:
+
+243 
+£ssiÚ
+: 
+tf
+.
+SessiÚ
+
+
+244 
+the
+ 
+‹nsÜæow
+ 
+£ssiÚ
+ 
+to
+ 
+§ve
+
+
+245 
+ck±s_dœ
+: 
+¡ršg
+
+
+246 
+the
+ 
+·th
+ 
+to
+h
+checkpošts
+ 
+dœeùÜ›s
+
+
+247 
+Çme
+: 
+¡ršg
+
+
+248 
+the
+ 
+Çme
+ 
+of
+h
+checkpošt
+ 
+subdœeùÜy
+
+
+250 
+checkpošt_dœ
+ = 
+os
+.
+·th
+.
+	$još
+(
+ck±s_dœ
+, 
+Çme
+)
+
+252 
+nÙ
+ 
+os
+.
+·th
+.
+	$exi¡s
+(
+checkpošt_dœ
+):
+
+253 
+os
+.
+	$makedœs
+(
+checkpošt_dœ
+)
+
+255 
+tf
+.
+Œaš
+.
+	`Sav”
+Ñf.
+	`ŒašabË_v¬ŸbËs
+()).
+	`§ve
+(
+£ssiÚ
+, 
+os
+.
+·th
+.
+	`još
+(
+checkpošt_dœ
+, 'model.ckpt'))
+
+258 
+def
+ 
+	$»¡Üe
+(
+£lf
+, 
+£ssiÚ
+, 
+ck±s_dœ
+, 
+Çme
+):
+
+260 
+£ssiÚ
+: 
+tf
+.
+SessiÚ
+
+
+261 
+the
+ 
+‹nsÜæow
+ 
+£ssiÚ
+ 
+to
+ 
+»¡Üe
+ 
+što
+
+
+262 
+ck±s_dœ
+: 
+¡ršg
+
+
+263 
+the
+ 
+·th
+ 
+to
+h
+checkpošts
+ 
+dœeùÜ›s
+
+
+264 
+Çme
+: 
+¡ršg
+
+
+265 
+the
+ 
+Çme
+ 
+of
+h
+checkpošt
+ 
+subdœeùÜy
+
+
+267 
+tf
+.
+Œaš
+.
+	`Sav”
+Ñf.
+	`ŒašabË_v¬ŸbËs
+()).
+	`»¡Üe
+(
+£ssiÚ
+, 
+os
+.
+·th
+.
+	`još
+(
+ck±s_dœ
+, 
+Çme
+, 'model.ckpt'))
+
+	@dnc/memory.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+3 
+impÜt
+ 
+ut™y
+
+
+5 
+şass
+ 
+	gMemÜy
+:
+
+7 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+wÜds_num
+=256, 
+wÜd_size
+=64, 
+»ad_h—ds
+=4, 
+b©ch_size
+=1):
+
+9 
+cÚ¡ruùs
+ 
+a
+ 
+memÜy
+ 
+m©rix
+ 
+w™h
+ 
+»ad
+ 
+h—ds
+ 
+ªd
+‡ 
+wr™e
+ 
+h—d
+ 
+as
+ 
+desüibed
+
+
+10 
+š
+ 
+the
+ 
+DNC
+ 
+·³r
+
+
+11 
+h‰p
+:
+
+13 
+P¬am‘”s
+:
+
+15 
+wÜds_num
+: 
+
+16 
+the
+ 
+maximum
+ 
+numb”
+ 
+of
+ 
+wÜds
+ 
+th©
+ 
+ÿn
+ 
+be
+ 
+¡Üed
+ 
+š
+h
+memÜy
+ 
+©
+he
+
+17 
+§me
+ 
+time
+
+
+18 
+wÜd_size
+: 
+
+19 
+the
+ 
+size
+ 
+of
+h
+šdividu®
+ 
+wÜd
+ 
+š
+h
+memÜy
+
+
+20 
+»ad_h—ds
+: 
+
+21 
+the
+ 
+numb”
+ 
+of
+ 
+»ad
+ 
+h—ds
+ 
+th©
+ 
+ÿn
+„—d 
+simuÉªeou¦y
+ 
+äom
+h
+memÜy
+
+
+22 
+b©ch_size
+: 
+
+23 
+the
+ 
+size
+ 
+of
+ 
+šput
+ 
+d©a
+ 
+b©ch
+
+
+26 
+£lf
+.
+wÜds_num
+ = words_num
+
+27 
+£lf
+.
+wÜd_size
+ = word_size
+
+28 
+£lf
+.
+»ad_h—ds
+ =„ead_heads
+
+29 
+£lf
+.
+b©ch_size
+ = batch_size
+
+31 #¨
+wÜds_num
+ 
+x
+ wÜds_num 
+id’t™y
+ 
+m©rix
+
+
+32 
+£lf
+.
+I
+ = 
+tf
+.
+	`cÚ¡ªt
+(
+Å
+.
+	$id’t™y
+(
+wÜds_num
+, 
+dty³
+=
+Å
+.
+æßt32
+))
+
+34 #m­ 
+the
+ 
+šdec›s
+ 
+äom
+h2D 
+¬¿y
+ 
+of
+ 
+ä“
+ 
+li¡
+ 
+³r
+ 
+b©ch
+ 
+to
+
+
+35 #theœ 
+cÜ»¥Údšg
+ 
+v®ues
+ 
+š
+ 
+the
+ 
+æ©
+ 1D 
+¬¿y
+ 
+of
+ 
+Üd”ed_®loÿtiÚ_weightšg
+
+
+36 
+£lf
+.
+šdex_m­³r
+ = 
+tf
+.
+	`cÚ¡ªt
+(
+
+37 
+Å
+.
+	`cumsum
+([0] + [
+wÜds_num
+] * (
+b©ch_size
+ - 1), 
+dty³
+òp.
+št32
+)[:,‚p.
+Ãwaxis
+]
+
+40 
+def
+ 
+	$š™_memÜy
+(
+£lf
+):
+
+42 
+»tuºs
+ 
+the
+ 
+š™Ÿl
+ 
+v®ues
+ th
+memÜy
+ 
+P¬am‘”s
+
+
+44 
+R‘uºs
+: 
+Tu¶e
+
+
+48 
+tf
+.
+	`fl
+([
+£lf
+.
+b©ch_size
+, s–f.
+wÜds_num
+, s–f.
+wÜd_size
+], 1e-6), #š™ŸÈ
+memÜy
+ 
+m©rix
+
+
+49 
+tf
+.
+	`z”os
+([
+£lf
+.
+b©ch_size
+, s–f.
+wÜds_num
+, ]), #š™ŸÈ
+u§ge
+ 
+veùÜ
+
+
+50 
+tf
+.
+	`z”os
+([
+£lf
+.
+b©ch_size
+, s–f.
+wÜds_num
+, ]), #š™ŸÈ
+´eûd’û
+ 
+veùÜ
+
+
+51 
+tf
+.
+	`z”os
+([
+£lf
+.
+b©ch_size
+, s–f.
+wÜds_num
+, s–f.wÜds_num]), #š™ŸÈ
+lšk
+ 
+m©rix
+
+
+52 
+tf
+.
+	`fl
+([
+£lf
+.
+b©ch_size
+, s–f.
+wÜds_num
+, ], 1e-6), #š™ŸÈ
+wr™e
+ 
+weightšg
+
+
+53 
+tf
+.
+	`fl
+([
+£lf
+.
+b©ch_size
+, s–f.
+wÜds_num
+, s–f.
+»ad_h—ds
+], 1e-6), #š™ŸÈ
+»ad
+ 
+weightšgs
+
+
+54 
+tf
+.
+	`fl
+([
+£lf
+.
+b©ch_size
+, s–f.
+wÜd_size
+, s–f.
+»ad_h—ds
+], 1e-6), #š™ŸÈ
+»ad
+ 
+veùÜs
+
+
+57 
+def
+ 
+	$g‘_lookup_weightšg
+(
+£lf
+, 
+memÜy_m©rix
+, 
+keys
+, 
+¡»ngths
+):
+
+59 
+»Œives
+ 
+a
+ 
+cÚ‹Á
+-
+ba£d
+ 
+add”ssšg
+ 
+weightšg
+ 
+giv’
+ 
+the
+ 
+keys
+
+
+61 
+P¬am‘”s
+:
+
+63 
+memÜy_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+wÜd_size
+)
+
+64 
+the
+ 
+memÜy
+ 
+m©rix
+ 
+to
+ 
+lookup
+ 
+š
+
+
+65 
+keys
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+, 
+numb”_of_keys
+)
+
+66 
+the
+ 
+keys
+ 
+to
+ 
+qu”y
+h
+memÜy
+ 
+w™h
+
+
+67 
+¡»ngths
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+numb”_of_keys
+, )
+
+68 
+the
+ 
+li¡
+ 
+of
+ 
+¡»ngths
+ 
+—ch
+ 
+lookup
+ 
+key
+
+
+70 
+R‘uºs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+numb”_of_keys
+)
+
+71 
+The
+ 
+li¡
+ 
+of
+ 
+lookup
+ 
+weightšgs
+ 
+—ch
+ 
+´ovided
+ 
+key
+
+
+74 
+nÜm®ized_memÜy
+ = 
+tf
+.
+Â
+.
+	$l2_nÜm®ize
+(
+memÜy_m©rix
+, 2)
+
+75 
+nÜm®ized_keys
+ = 
+tf
+.
+Â
+.
+	$l2_nÜm®ize
+(
+keys
+, 1)
+
+77 
+simŸr™y
+ = 
+tf
+.
+	$b©ch_m©mul
+(
+nÜm®ized_memÜy
+, 
+nÜm®ized_keys
+)
+
+78 
+¡»ngths
+ = 
+tf
+.
+	$ex·nd_dims
+(
+¡»ngths
+, 1)
+
+80  
+tf
+.
+Â
+.
+	$soámax
+(
+simŸr™y
+ * 
+¡»ngths
+, 1)
+
+83 
+def
+ 
+	$upd©e_u§ge_veùÜ
+(
+£lf
+, 
+u§ge_veùÜ
+, 
+»ad_weightšgs
+, 
+wr™e_weightšg
+, 
+ä“_g©es
+):
+
+85 
+upd©es
+ 
+ªd
+ 
+»tuºs
+ 
+the
+ 
+usg«
+ 
+veùÜ
+ 
+giv’
+h
+v®ues
+ 
+of
+h
+ä“
+ 
+g©es
+
+
+86 
+ªd
+ 
+the
+ 
+u§ge_veùÜ
+, 
+»ad_weightšgs
+, 
+wr™e_weightšg
+ 
+äom
+ 
+´evious
+ 
+¡•
+
+
+88 
+P¬am‘”s
+:
+
+90 
+u§ge_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+91 
+»ad_weightšgs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+92 
+wr™e_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+93 
+ä“_g©es
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+»ad_h—ds
+, )
+
+95 
+R‘uºs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, )
+
+96 
+the
+ 
+upd©ed
+ 
+u§ge
+ 
+veùÜ
+
+
+98 
+ä“_g©es
+ = 
+tf
+.
+	$ex·nd_dims
+(
+ä“_g©es
+, 1)
+
+100 
+»‹ÁiÚ_veùÜ
+ = 
+tf
+.
+	`»duû_´od
+(1 - 
+»ad_weightšgs
+ * 
+ä“_g©es
+, 2)
+
+101 
+upd©ed_u§ge
+ = (
+u§ge_veùÜ
+ + 
+wr™e_weightšg
+ - u§ge_veùÜ * wr™e_weightšgè* 
+»‹ÁiÚ_veùÜ
+
+
+103  
+upd©ed_u§ge
+
+
+106 
+def
+ 
+	$g‘_®loÿtiÚ_weightšg
+(
+£lf
+, 
+sÜ‹d_u§ge
+, 
+ä“_li¡
+):
+
+108 
+»Œeives
+ 
+the
+ 
+wr™šg
+ 
+®loÿtiÚ
+ 
+weightšg
+ 
+ba£d
+ 
+Ú
+h
+u§ge
+ 
+ä“
+ 
+li¡
+
+
+110 
+P¬am‘”s
+:
+
+112 
+sÜ‹d_u§ge
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, )
+
+113 
+the
+ 
+u§ge
+ 
+veùÜ
+ 
+sÜ‹d
+ 
+asúdšgly
+
+
+114 
+ä“_li¡
+: 
+	$T’sÜ
+ (
+b©ch
+, 
+wÜds_num
+, )
+
+115 
+the
+ 
+Üigš®
+ 
+šdec›s
+ 
+of
+h
+sÜ‹d
+ 
+u§ge
+ 
+veùÜ
+
+
+117 
+R‘uºs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, )
+
+118 
+the
+ 
+®loÿtiÚ
+ 
+weightšg
+ 
+—ch
+ 
+wÜd
+ 
+š
+ 
+memÜy
+
+
+121 
+shiáed_cum´od
+ = 
+tf
+.
+	$cum´od
+(
+sÜ‹d_u§ge
+, 
+axis
+ = 1, 
+exşusive
+=
+True
+)
+
+122 
+unÜd”ed_®loÿtiÚ_weightšg
+ = (1 - 
+sÜ‹d_u§ge
+è* 
+shiáed_cum´od
+
+
+124 
+m­³d_ä“_li¡
+ = 
+ä“_li¡
+ + 
+£lf
+.
+šdex_m­³r
+
+
+125 
+æ©_unÜd”ed_®loÿtiÚ_weightšg
+ = 
+tf
+.
+	`»sh­e
+(
+unÜd”ed_®loÿtiÚ_weightšg
+, (-1,))
+
+126 
+æ©_m­³d_ä“_li¡
+ = 
+tf
+.
+	`»sh­e
+(
+m­³d_ä“_li¡
+, (-1,))
+
+127 
+æ©_cÚš”
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+tf
+.
+æßt32
+, 
+£lf
+.
+b©ch_size
+ * s–f.
+wÜds_num
+)
+
+129 
+æ©_Üd”ed_weightšgs
+ = 
+æ©_cÚš”
+.
+	$sÿ‰”
+(
+
+130 
+æ©_m­³d_ä“_li¡
+,
+
+131 
+æ©_unÜd”ed_®loÿtiÚ_weightšg
+
+
+134 
+·cked_wightšgs
+ = 
+æ©_Üd”ed_weightšgs
+.
+	$·ck
+()
+
+135  
+tf
+.
+	`»sh­e
+(
+·cked_wightšgs
+, (
+£lf
+.
+b©ch_size
+, s–f.
+wÜds_num
+))
+
+138 
+def
+ 
+	$upd©e_wr™e_weightšg
+(
+£lf
+, 
+lookup_weightšg
+, 
+®loÿtiÚ_weightšg
+, 
+wr™e_g©e
+, 
+®loÿtiÚ_g©e
+):
+
+140 
+upd©es
+ 
+ªd
+ 
+»tuºs
+ 
+the
+ 
+cu¼’t
+ 
+wr™e_weightšg
+
+
+142 
+P¬am‘”s
+:
+
+144 
+lookup_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 1)
+
+145 
+the
+ 
+weight
+ 
+of
+h
+lookup
+ 
+İ”©iÚ
+ 
+š
+ 
+wr™šg
+
+
+146 
+®loÿtiÚ_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+147 
+the
+ 
+weight
+ 
+of
+h
+®loÿtiÚ
+ 
+İ”©iÚ
+ 
+š
+ 
+wr™šg
+
+
+148 
+wr™e_g©e
+: (
+b©ch_size
+, 1)
+
+149 
+the
+ 
+äaùiÚ
+ 
+of
+ 
+wr™šg
+ 
+to
+ 
+be
+ 
+dÚe
+
+
+150 
+®loÿtiÚ_g©e
+: (
+b©ch_size
+, 1)
+
+151 
+the
+ 
+äaùiÚ
+ 
+of
+ 
+®loÿtiÚ
+ 
+to
+ 
+be
+ 
+dÚe
+
+
+153 
+R‘uºs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+154 
+the
+ 
+upd©ed
+ 
+wr™e_weightšg
+
+
+157 #»mov
+the
+ 
+dim’siÚ
+ 
+of
+ 1 
+äom
+h
+lookup_weightšg
+
+
+158 
+lookup_weightšg
+ = 
+tf
+.
+	$squ“ze
+(
+lookup_weightšg
+)
+
+160 
+upd©ed_wr™e_weightšg
+ = 
+wr™e_g©e
+ * (
+®loÿtiÚ_g©e
+ * 
+®loÿtiÚ_weightšg
+ + (1 -‡ÎoÿtiÚ_g©eè* 
+lookup_weightšg
+)
+
+162  
+upd©ed_wr™e_weightšg
+
+
+165 
+def
+ 
+	$upd©e_memÜy
+(
+£lf
+, 
+memÜy_m©rix
+, 
+wr™e_weightšg
+, 
+wr™e_veùÜ
+, 
+”a£_veùÜ
+):
+
+167 
+upd©es
+ 
+ªd
+ 
+»tuºs
+ 
+the
+ 
+memÜy
+ 
+m©rix
+ 
+giv’
+h
+weightšg
+, 
+wr™e
+‡nd 
+”a£
+ 
+veùÜs
+
+
+168 
+ªd
+ 
+the
+ 
+memÜy
+ 
+m©rix
+ 
+äom
+ 
+´evious
+ 
+¡•
+
+
+170 
+P¬am‘”s
+:
+
+172 
+memÜy_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+wÜd_size
+)
+
+173 
+the
+ 
+memÜy
+ 
+m©rix
+ 
+äom
+ 
+´evious
+ 
+¡•
+
+
+174 
+wr™e_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+175 
+the
+ 
+weight
+ 
+of
+ 
+wr™šg
+ 
+©
+ 
+—ch
+ 
+memÜy
+ 
+loÿtiÚ
+
+
+176 
+wr™e_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+)
+
+177 
+a
+ 
+veùÜ
+ 
+¥ecifyšg
+ 
+wh©
+ 
+to
+ 
+wr™e
+
+
+178 
+”a£_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+)
+
+179 
+a
+ 
+veùÜ
+ 
+¥ecifyšg
+ 
+wh©
+ 
+to
+ 
+”a£
+ 
+äom
+ 
+memÜy
+
+
+181 
+R‘uºs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+wÜd_size
+)
+
+182 
+the
+ 
+upd©ed
+ 
+memÜy
+ 
+m©rix
+
+
+185 #ex·nd 
+d©a
+ 
+w™h
+ 
+a
+ 
+dim’siÚ
+ 
+of
+ 1 
+©
+ 
+muÉliÿtiÚ
+-
+adjaûÁ
+ 
+loÿtiÚ
+
+
+186 #tØ
+fÜû
+ 
+m©mul
+ 
+to
+ 
+behave
+ 
+as
+ 
+ª
+ 
+ou‹r
+ 
+´oduù
+
+
+187 
+wr™e_weightšg
+ = 
+tf
+.
+	$ex·nd_dims
+(
+wr™e_weightšg
+, 2)
+
+188 
+wr™e_veùÜ
+ = 
+tf
+.
+	$ex·nd_dims
+(
+wr™e_veùÜ
+, 1)
+
+189 
+”a£_veùÜ
+ = 
+tf
+.
+	$ex·nd_dims
+(
+”a£_veùÜ
+, 1)
+
+191 
+”asšg
+ = 
+memÜy_m©rix
+ * (1 - 
+tf
+.
+	$b©ch_m©mul
+(
+wr™e_weightšg
+, 
+”a£_veùÜ
+))
+
+192 
+wr™šg
+ = 
+tf
+.
+	$b©ch_m©mul
+(
+wr™e_weightšg
+, 
+wr™e_veùÜ
+)
+
+193 
+upd©ed_memÜy
+ = 
+”asšg
+ + 
+wr™šg
+
+
+195  
+upd©ed_memÜy
+
+
+198 
+def
+ 
+	$upd©e_´eûd’û_veùÜ
+(
+£lf
+, 
+´eûd’û_veùÜ
+, 
+wr™e_weightšg
+):
+
+200 
+upd©es
+ 
+the
+ 
+´eûd’û
+ 
+veùÜ
+ 
+giv’
+h
+Ï‹¡
+ 
+wr™e
+ 
+weightšg
+
+
+201 
+ªd
+ 
+the
+ 
+´eûd’û_veùÜ
+ 
+äom
+ 
+Ï¡
+ 
+¡•
+
+
+203 
+P¬am‘”s
+:
+
+205 
+´eûd’û_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+. 
+wÜds_num
+)
+
+206 
+the
+ 
+´eûd’û
+ 
+veùÜ
+ 
+äom
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+207 
+wr™e_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+,
+wÜds_num
+)
+
+208 
+the
+ 
+Ï‹¡
+ 
+wr™e
+ 
+weightšg
+ th
+memÜy
+
+
+210 
+R‘uºs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+211 
+the
+ 
+upd©ed
+ 
+´eûd’û
+ 
+veùÜ
+
+
+214 
+»£t_çùÜ
+ = 1 - 
+tf
+.
+	$»duû_sum
+(
+wr™e_weightšg
+, 1, 
+k“p_dims
+=
+True
+)
+
+215 
+upd©ed_´eûd’û_veùÜ
+ = 
+»£t_çùÜ
+ * 
+´eûd’û_veùÜ
+ + 
+wr™e_weightšg
+
+
+217  
+upd©ed_´eûd’û_veùÜ
+
+
+220 
+def
+ 
+	$upd©e_lšk_m©rix
+(
+£lf
+, 
+´eûd’û_veùÜ
+, 
+lšk_m©rix
+, 
+wr™e_weightšg
+):
+
+222 
+upd©es
+ 
+ªd
+ 
+»tuºs
+ 
+the
+ 
+‹mpÜ®
+ 
+lšk
+ 
+m©rix
+ th
+Ï‹¡
+ 
+wr™e
+
+
+223 
+giv’
+ 
+the
+ 
+´eûd’û
+ 
+veùÜ
+ 
+ªd
+h
+lšk
+ 
+m©rix
+ 
+äom
+ 
+´evious
+ 
+¡•
+
+
+225 
+P¬am‘”s
+:
+
+227 
+´eûd’û_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+228 
+the
+ 
+´eûd’û
+ 
+veùÜ
+ 
+äom
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+229 
+lšk_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, words_num)
+
+230 
+the
+ 
+lšk
+ 
+m©rix
+ 
+fÜm
+h
+Ï¡
+ 
+¡•
+
+
+231 
+wr™e_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+232 
+the
+ 
+Ï‹¡
+ 
+wr™e_weightšg
+ th
+memÜy
+
+
+234 
+R‘uºs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, words_num)
+
+235 
+the
+ 
+upd©ed
+ 
+‹mpÜ®
+ 
+lšk
+ 
+m©rix
+
+
+238 
+wr™e_weightšg
+ = 
+tf
+.
+	$ex·nd_dims
+(
+wr™e_weightšg
+, 2)
+
+239 
+´eûd’û_veùÜ
+ = 
+tf
+.
+	$ex·nd_dims
+(
+´eûd’û_veùÜ
+, 1)
+
+241 
+»£t_çùÜ
+ = 1 - 
+ut™y
+.
+	$·œwi£_add
+(
+wr™e_weightšg
+, 
+is_b©ch
+=
+True
+)
+
+242 
+upd©ed_lšk_m©rix
+ = 
+»£t_çùÜ
+ * 
+lšk_m©rix
+ + 
+tf
+.
+	$b©ch_m©mul
+(
+wr™e_weightšg
+, 
+´eûd’û_veùÜ
+)
+
+243 
+upd©ed_lšk_m©rix
+ = (1 - 
+£lf
+.
+I
+è* upd©ed_lšk_m©rix #–imš©e £lf-
+lšks
+
+
+245  
+upd©ed_lšk_m©rix
+
+
+248 
+def
+ 
+	$g‘_dœeùiÚ®_weightšgs
+(
+£lf
+, 
+»ad_weightšgs
+, 
+lšk_m©rix
+):
+
+250 
+compu‹s
+ 
+ªd
+ 
+»tuºs
+ 
+the
+ 
+fÜw¬d
+‡nd 
+backw¬d
+ 
+»adšg
+ 
+weightšgs
+
+
+251 
+giv’
+ 
+the
+ 
+»ad_weightšgs
+ 
+äom
+h
+´evious
+ 
+¡•
+
+
+253 
+P¬am‘”s
+:
+
+255 
+»ad_weightšgs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+256 
+the
+ 
+»ad
+ 
+weightšgs
+ 
+äom
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+257 
+lšk_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, words_num)
+
+258 
+the
+ 
+‹mpÜ®
+ 
+lšk
+ 
+m©rix
+
+
+260 
+R‘uºs
+: 
+Tu¶e
+
+
+261 
+fÜw¬d
+ 
+weightšg
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+),
+
+262 
+backw¬d
+ 
+weightšg
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+265 
+fÜw¬d_weightšg
+ = 
+tf
+.
+	$b©ch_m©mul
+(
+lšk_m©rix
+, 
+»ad_weightšgs
+)
+
+266 
+backw¬d_weightšg
+ = 
+tf
+.
+	$b©ch_m©mul
+(
+lšk_m©rix
+, 
+»ad_weightšgs
+, 
+adj_x
+=
+True
+)
+
+268  
+fÜw¬d_weightšg
+, 
+backw¬d_weightšg
+
+
+271 
+def
+ 
+	$upd©e_»ad_weightšgs
+(
+£lf
+, 
+lookup_weightšgs
+, 
+fÜw¬d_weightšg
+, 
+backw¬d_weightšg
+, 
+»ad_mode
+):
+
+273 
+upd©es
+ 
+ªd
+ 
+»tuºs
+ 
+the
+ 
+cu¼’t
+ 
+»ad_weightšgs
+
+
+275 
+P¬am‘”s
+:
+
+277 
+lookup_weightšgs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+278 
+the
+ 
+cÚ‹Á
+-
+ba£d
+ 
+»ad
+ 
+weightšg
+
+
+279 
+fÜw¬d_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+280 
+the
+ 
+fÜw¬d
+ 
+dœeùiÚ
+ 
+»ad
+ 
+weightšg
+
+
+281 
+backw¬d_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+282 
+the
+ 
+backw¬d
+ 
+dœeùiÚ
+ 
+»ad
+ 
+weightšg
+
+
+283 
+»ad_mode
+: 
+	$Te¢Ü
+ (
+b©ch_size
+, 3, 
+»ad_h—ds
+)
+
+284 
+the
+ 
+soámax
+ 
+di¡ributiÚ
+ 
+b‘w“n
+h
+th»e
+ 
+»ad
+ 
+modes
+
+
+286 
+R‘uºs
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+289 
+backw¬d_mode
+ = 
+tf
+.
+	`ex·nd_dims
+(
+»ad_mode
+[:, 0, :], 1è* 
+backw¬d_weightšg
+
+
+290 
+lookup_mode
+ = 
+tf
+.
+	`ex·nd_dims
+(
+»ad_mode
+[:, 1, :], 1è* 
+lookup_weightšgs
+
+
+291 
+fÜw¬d_mode
+ = 
+tf
+.
+	`ex·nd_dims
+(
+»ad_mode
+[:, 2, :], 1è* 
+fÜw¬d_weightšg
+
+
+292 
+upd©ed_»ad_weightšgs
+ = 
+backw¬d_mode
+ + 
+lookup_mode
+ + 
+fÜw¬d_mode
+
+
+294  
+upd©ed_»ad_weightšgs
+
+
+297 
+def
+ 
+	$upd©e_»ad_veùÜs
+(
+£lf
+, 
+memÜy_m©rix
+, 
+»ad_weightšgs
+):
+
+299 
+»ads
+, 
+upd©es
+, 
+ªd
+ 
+»tuºs
+ 
+the
+ 
+»ad
+ 
+veùÜs
+ 
+of
+h
+»ûÁly
+ 
+upd©ed
+ 
+memÜy
+
+
+301 
+P¬am‘”s
+:
+
+303 
+memÜy_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+wÜd_size
+)
+
+304 
+the
+ 
+»ûÁly
+ 
+upd©ed
+ 
+memÜy
+ 
+m©rix
+
+
+305 
+»ad_weightšgs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+306 
+the
+ 
+amouÁ
+ 
+of
+ 
+šfo
+ 
+to
+ 
+»ad
+ 
+äom
+ 
+—ch
+ 
+memÜy
+ 
+loÿtiÚ
+ 
+by
+ƒach„—d 
+h—d
+
+
+308 
+R‘uºs
+: 
+	`T’sÜ
+ (
+wÜd_size
+, 
+»ad_h—ds
+)
+
+311 
+upd©ed_»ad_veùÜs
+ = 
+tf
+.
+	$b©ch_m©mul
+(
+memÜy_m©rix
+, 
+»ad_weightšgs
+, 
+adj_x
+=
+True
+)
+
+313  
+upd©ed_»ad_veùÜs
+
+
+316 
+def
+ 
+	$wr™e
+(
+£lf
+, 
+memÜy_m©rix
+, 
+u§ge_veùÜ
+, 
+»ad_weightšgs
+, 
+wr™e_weightšg
+,
+
+317 
+´eûd’û_veùÜ
+, 
+lšk_m©rix
+, 
+key
+, 
+¡»ngth
+, 
+ä“_g©es
+,
+
+318 
+®loÿtiÚ_g©e
+, 
+wr™e_g©e
+, 
+wr™e_veùÜ
+, 
+”a£_veùÜ
+):
+
+320 
+defšes
+ 
+the
+ 
+com¶‘e
+ 
+p–še
+ 
+of
+ 
+wr™šg
+ 
+to
+ 
+memÜy
+ 
+g›vn
+h
+wr™e
+ 
+v¬ŸbËs
+
+
+321 
+ªd
+ 
+the
+ 
+memÜy_m©rix
+, 
+u§ge_veùÜ
+, 
+lšk_m©rix
+,‡nd 
+´eûd’û_veùÜ
+ 
+äom
+
+
+322 
+´evious
+ 
+¡•
+
+
+324 
+P¬am‘”s
+:
+
+326 
+memÜy_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+wÜd_size
+)
+
+327 
+the
+ 
+memÜy
+ 
+m©rix
+ 
+äom
+ 
+´evious
+ 
+¡•
+
+
+328 
+u§ge_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+329 
+the
+ 
+u§ge_veùÜ
+ 
+äom
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+330 
+»ad_weightšgs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+331 
+the
+ 
+»ad_weightšgs
+ 
+äom
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+332 
+wr™e_weightšg
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+333 
+the
+ 
+wr™e_weightšg
+ 
+äom
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+334 
+´eûd’û_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+335 
+the
+ 
+´eûd’û
+ 
+veùÜ
+ 
+äom
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+336 
+lšk_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, words_num)
+
+337 
+the
+ 
+lšk_m©rix
+ 
+äom
+ 
+´evious
+ 
+¡•
+
+
+338 
+key
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+, 1)
+
+339 
+the
+ 
+key
+ 
+to
+ 
+qu”y
+h
+memÜy
+ 
+loÿtiÚ
+ 
+w™h
+
+
+340 
+¡»ngth
+: (
+b©ch_size
+, 1)
+
+341 
+the
+ 
+¡»ngth
+ 
+of
+h
+qu”y
+ 
+key
+
+
+342 
+ä“_g©es
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+»ad_h—ds
+)
+
+343 
+the
+ 
+deg»e
+ 
+to
+ 
+which
+ 
+loÿtiÚ
+ 
+©
+ 
+»ad
+ 
+h«ds
+ 
+wl
+ 
+be
+ 
+ä“d
+
+
+344 
+®loÿtiÚ_g©e
+: (
+b©ch_size
+, 1)
+
+345 
+the
+ 
+äaùiÚ
+ 
+of
+ 
+wr™šg
+ 
+th©
+ 
+is
+ 
+bešg
+ 
+®loÿ‹d
+ 
+š
+ 
+a
+ 
+Ãw
+ 
+loÿtio
+
+
+346 
+wr™e_g©e
+: (
+b©ch_size
+, 1)
+
+347 
+the
+ 
+amouÁ
+ 
+of
+ 
+šfÜm©iÚ
+ 
+to
+ 
+be
+ 
+wr™‹n
+Ø
+memÜy
+
+
+348 
+wr™e_veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+)
+
+349 
+¥ecifiÿtiÚs
+ 
+of
+ 
+wh©
+ 
+to
+ 
+wr™e
+Ø
+memÜy
+
+
+350 
+”a£_veùÜ
+: 
+	$T’sÜ
+(
+b©ch_size
+, 
+wÜd_size
+)
+
+351 
+¥ecifiÿtiÚs
+ 
+of
+ 
+wh©
+ 
+to
+ 
+”a£
+ 
+äom
+ 
+memÜy
+
+
+353 
+R‘uºs
+ : 
+Tu¶e
+
+
+354 
+the
+ 
+upd©ed
+ 
+u§ge
+ 
+veùÜ
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+355 
+the
+ 
+upd©ed
+ 
+wr™e_weightšg
+: 
+	$T’sÜ
+(
+b©ch_size
+, 
+wÜds_num
+)
+
+356 
+the
+ 
+upd©ed
+ 
+memÜy_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+wÜds_size
+)
+
+357 
+the
+ 
+upd©ed
+ 
+lšk
+ 
+m©rix
+: 
+	$T’sÜ
+(
+b©ch_size
+, 
+wÜds_num
+, words_num)
+
+358 
+the
+ 
+upd©ed
+ 
+´eûd’û
+ 
+veùÜ
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+)
+
+361 
+lookup_weightšg
+ = 
+£lf
+.
+	$g‘_lookup_weightšg
+(
+memÜy_m©rix
+, 
+key
+, 
+¡»ngth
+)
+
+362 
+Ãw_u§ge_veùÜ
+ = 
+£lf
+.
+	$upd©e_u§ge_veùÜ
+(
+u§ge_veùÜ
+, 
+»ad_weightšgs
+, 
+wr™e_weightšg
+, 
+ä“_g©es
+)
+
+364 
+sÜ‹d_u§ge
+, 
+ä“_li¡
+ = 
+tf
+.
+Â
+.
+	`tİ_k
+(-1 * 
+Ãw_u§ge_veùÜ
+, 
+£lf
+.
+wÜds_num
+)
+
+365 
+sÜ‹d_u§ge
+ = -1 * sorted_usage
+
+367 
+®loÿtiÚ_weightšg
+ = 
+£lf
+.
+	$g‘_®loÿtiÚ_weightšg
+(
+sÜ‹d_u§ge
+, 
+ä“_li¡
+)
+
+368 
+Ãw_wr™e_weightšg
+ = 
+£lf
+.
+	$upd©e_wr™e_weightšg
+(
+lookup_weightšg
+, 
+®loÿtiÚ_weightšg
+, 
+wr™e_g©e
+, 
+®loÿtiÚ_g©e
+)
+
+369 
+Ãw_memÜy_m©rix
+ = 
+£lf
+.
+	$upd©e_memÜy
+(
+memÜy_m©rix
+, 
+Ãw_wr™e_weightšg
+, 
+wr™e_veùÜ
+, 
+”a£_veùÜ
+)
+
+370 
+Ãw_lšk_m©rix
+ = 
+£lf
+.
+	$upd©e_lšk_m©rix
+(
+´eûd’û_veùÜ
+, 
+lšk_m©rix
+, 
+Ãw_wr™e_weightšg
+)
+
+371 
+Ãw_´eûd’û_veùÜ
+ = 
+£lf
+.
+	$upd©e_´eûd’û_veùÜ
+(
+´eûd’û_veùÜ
+, 
+Ãw_wr™e_weightšg
+)
+
+373  
+Ãw_u§ge_veùÜ
+, 
+Ãw_wr™e_weightšg
+, 
+Ãw_memÜy_m©rix
+, 
+Ãw_lšk_m©rix
+, 
+Ãw_´eûd’û_veùÜ
+
+
+376 
+def
+ 
+	$»ad
+(
+£lf
+, 
+memÜy_m©rix
+, 
+»ad_weightšgs
+, 
+keys
+, 
+¡»ngths
+, 
+lšk_m©rix
+, 
+»ad_modes
+):
+
+378 
+defšes
+ 
+the
+ 
+com¶‘e
+ 
+p–še
+ 
+»adšg
+ 
+äom
+ 
+memÜy
+
+
+380 
+P¬am‘”s
+:
+
+382 
+memÜy_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+wÜd_size
+)
+
+383 
+the
+ 
+upd©ed
+ 
+memÜy
+ 
+m©rix
+ 
+äom
+h
+Ï¡
+ 
+wr™šg
+
+
+384 
+»ad_weightšgs
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+385 
+the
+ 
+»ad
+ 
+weightšgs
+ 
+fÜm
+h
+Ï¡
+ 
+time
+ 
+¡•
+
+
+386 
+keys
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+, 
+»ad_h—ds
+)
+
+387 
+the
+ 
+kyes
+ 
+to
+ 
+qu”y
+h
+memÜy
+ 
+loÿtiÚs
+ 
+w™h
+
+
+388 
+¡»ngths
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+»ad_h—ds
+)
+
+389 
+the
+ 
+¡»ngth
+ 
+of
+ 
+—ch
+ 
+»ad
+ 
+key
+
+
+390 
+lšk_m©rix
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 
+wÜds_num
+, words_num)
+
+391 
+the
+ 
+upd©ed
+ 
+lšk
+ 
+m©rix
+ 
+äom
+h
+Ï¡
+ 
+wr™šg
+
+
+392 
+»ad_modes
+: 
+	$T’sÜ
+ (
+b©ch_size
+, 3, 
+»ad_h—ds
+)
+
+393 
+the
+ 
+soámax
+ 
+di¡ributiÚ
+ 
+b‘w“n
+h
+th»e
+ 
+»ad
+ 
+modes
+
+
+395 
+R‘uºs
+: 
+Tu¶e
+
+
+396 
+the
+ 
+upd©ed
+ 
+»ad_weightšgs
+: 
+	$T’sÜ
+(
+b©ch_size
+, 
+wÜds_num
+, 
+»ad_h—ds
+)
+
+397 
+the
+ 
+»ûÁly
+ 
+»ad
+ 
+veùÜs
+: 
+	`T’sÜ
+ (
+b©ch_size
+, 
+wÜd_size
+, 
+»ad_h—ds
+)
+
+400 
+lookup_weightšg
+ = 
+£lf
+.
+	$g‘_lookup_weightšg
+(
+memÜy_m©rix
+, 
+keys
+, 
+¡»ngths
+)
+
+401 
+fÜw¬d_weightšg
+, 
+backw¬d_weightšg
+ = 
+£lf
+.
+	$g‘_dœeùiÚ®_weightšgs
+(
+»ad_weightšgs
+, 
+lšk_m©rix
+)
+
+402 
+Ãw_»ad_weightšgs
+ = 
+£lf
+.
+	$upd©e_»ad_weightšgs
+(
+lookup_weightšg
+, 
+fÜw¬d_weightšg
+, 
+backw¬d_weightšg
+, 
+»ad_modes
+)
+
+403 
+Ãw_»ad_veùÜs
+ = 
+£lf
+.
+	$upd©e_»ad_veùÜs
+(
+memÜy_m©rix
+, 
+Ãw_»ad_weightšgs
+)
+
+405  
+Ãw_»ad_weightšgs
+, 
+Ãw_»ad_veùÜs
+
+
+	@dnc/utility.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+3 
+äom
+ 
+	g‹nsÜæow
+.
+	gpythÚ
+.
+İs
+ 
+impÜt
+ 
+g’_¡©e_İs
+
+
+5 
+def
+ 
+	$·œwi£_add
+(
+u
+, 
+v
+=
+NÚe
+, 
+is_b©ch
+=
+F®£
+):
+
+7 
+³rfÜms
+ 
+a
+ 
+·œwi£
+ 
+summ©iÚ
+ 
+b‘w“n
+ 
+	$veùÜs
+ (
+possibly
+ 
+the
+ 
+§me
+)
+
+9 
+P¬am‘”s
+:
+
+11 
+u
+: 
+	`T’sÜ
+ (
+n
+, ) | (n, 1)
+
+12 
+v
+: 
+	`T’sÜ
+ (
+n
+, ) | (n, 1è[
+İtiÚ®
+]
+
+13 
+is_b©ch
+: 
+boŞ
+
+
+14 
+a
+ 
+æag
+ 
+wh‘h”
+ 
+the
+ 
+veùÜs
+ 
+come
+ 
+š
+‡ 
+b©ch
+
+
+15 
+›
+.: 
+wh‘h”
+ 
+the
+ 
+veùÜs
+ 
+has
+ 
+a
+ 
+sh­e
+ 
+	$of
+ (
+b
+,
+n
+è
+	$Ü
+ (
+b
+,
+n
+,1)
+
+17 
+R‘uºs
+: 
+	$T’sÜ
+ (
+n
+,‚)
+
+18 
+Rai£s
+: 
+V®ueE¼Ü
+
+
+20 
+u_sh­e
+ = 
+u
+.
+	`g‘_sh­e
+().
+	$as_li¡
+()
+
+22 
+	`Ën
+(
+u_sh­e
+è> 2 
+ªd
+ 
+nÙ
+ 
+is_b©ch
+:
+
+23 
+¿i£
+ 
+	`V®ueE¼Ü
+("Ex³ùed‡ˆmo¡ 2D’sÜs, buˆgÙ %dD" % 
+	$Ën
+(
+u_sh­e
+))
+
+24 
+	`Ën
+(
+u_sh­e
+è> 3 
+ªd
+ 
+is_b©ch
+:
+
+25 
+¿i£
+ 
+	`V®ueE¼Ü
+("Ex³ùed‡ˆmo¡ 2D’sÜ b©ches, buˆgÙ %dD" % 
+	$Ën
+(
+u_sh­e
+))
+
+27 
+v
+ 
+is
+ 
+NÚe
+:
+
+28 
+v
+ = 
+u
+
+
+30 
+v_sh­e
+ = 
+v
+.
+	`g‘_sh­e
+().
+	$as_li¡
+()
+
+31 
+u_sh­e
+ !ğ
+v_sh­e
+:
+
+32 
+¿i£
+ 
+	`VauËE¼Ü
+("Sh­e % ªd % dØnÙ m©ch" % (
+u_sh­e
+, 
+v_sh­e
+))
+
+34 
+n
+ = 
+u_sh­e
+[0] 
+nÙ
+ 
+is_b©ch
+ u_shape[1]
+
+36 
+cŞumn_u
+ = 
+tf
+.
+	`»sh­e
+(
+u
+, (-1, 1è
+nÙ
+ 
+is_b©ch
+ (-1, 
+n
+, 1))
+
+37 
+U
+ = 
+tf
+.
+	$cÚÿt
+(1 
+nÙ
+ 
+is_b©ch
+ 2, [
+cŞumn_u
+] * 
+n
+)
+
+39 
+v
+ 
+is
+ 
+u
+:
+
+40  
+U
+ + 
+tf
+.
+	$Œª¥o£
+(
+U
+, 
+NÚe
+ 
+nÙ
+ 
+is_b©ch
+ [0, 2, 1])
+
+42 
+row_v
+ = 
+tf
+.
+	`»sh­e
+(
+v
+, (1, -1è
+nÙ
+ 
+is_b©ch
+ (-1, 1, 
+n
+))
+
+43 
+V
+ = 
+tf
+.
+	$cÚÿt
+(0 
+nÙ
+ 
+is_b©ch
+ 1, [
+row_v
+] * 
+n
+)
+
+45  
+U
+ + 
+V
+
+
+48 
+def
+ 
+	$deÿyšg_soámax
+(
+sh­e
+, 
+axis
+):
+
+49 
+¿nk
+ = 
+	$Ën
+(
+sh­e
+)
+
+50 
+max_v®
+ = 
+sh­e
+[
+axis
+]
+
+52 
+weights_veùÜ
+ = 
+Å
+.
+	`¬ªge
+(1, 
+max_v®
+ + 1, 
+dty³
+òp.
+æßt32
+)
+
+53 
+weights_veùÜ
+ = weights_vector[::-1]
+
+54 
+weights_veùÜ
+ = 
+Å
+.
+	`exp
+(weights_veùÜè/‚p.
+	`sum
+Òp.
+	$exp
+(
+weights_veùÜ
+))
+
+56 
+cÚš”
+ = 
+Å
+.
+	$z”os
+(
+sh­e
+, 
+dty³
+=
+Å
+.
+æßt32
+)
+
+57 
+brßdÿ¡abË_sh­e
+ = [1] * 
+¿nk
+
+
+58 
+brßdÿ¡abË_sh­e
+[
+axis
+] = 
+max_v®
+
+
+60  
+cÚš”
+ + 
+Å
+.
+	$»sh­e
+(
+weights_veùÜ
+, 
+brßdÿ¡abË_sh­e
+)
+
+62 
+def
+ 
+	$uÅack_što_‹nsÜ¬¿y
+(
+v®ue
+, 
+axis
+, 
+size
+=
+NÚe
+):
+
+64 
+uÅacks
+ 
+a
+ 
+giv’
+ 
+‹nsÜ
+ 
+®Úg
+‡ giv’ 
+axis
+ 
+što
+‡ 
+T’sÜA¼ay
+
+
+66 
+P¬am‘”s
+:
+
+68 
+v®ue
+: 
+T’sÜ
+
+
+69 
+the
+ 
+‹nsÜ
+ 
+to
+ 
+be
+ 
+uÅacked
+
+
+70 
+axis
+: 
+
+71 
+the
+ 
+axis
+ 
+to
+ 
+uÅack
+h
+‹nsÜ
+ 
+®Úg
+
+
+72 
+size
+: 
+
+73 
+the
+ 
+size
+ 
+of
+h
+¬¿y
+ 
+to
+ 
+be
+ 
+u£d
+ 
+sh­e
+ 
+šã»nû
+ 
+»suÉed
+ 
+š
+ 
+NÚe
+
+
+75 
+R‘uºs
+: 
+T’sÜA¼ay
+
+
+76 
+the
+ 
+uÅacked
+ 
+T’sÜA¼ay
+
+
+79 
+sh­e
+ = 
+v®ue
+.
+	`g‘_sh­e
+().
+	$as_li¡
+()
+
+80 
+¿nk
+ = 
+	$Ën
+(
+sh­e
+)
+
+81 
+dty³
+ = 
+v®ue
+.dtype
+
+82 
+¬¿y_size
+ = 
+sh­e
+[
+axis
+] 
+nÙ
+ sh­e[axis] 
+is
+ 
+NÚe
+ 
+size
+
+
+84 
+¬¿y_size
+ 
+is
+ 
+NÚe
+:
+
+85 
+¿i£
+ 
+	`V®ueE¼Ü
+("Can't create TensorArray with size None")
+
+87 
+¬¿y
+ = 
+tf
+.
+	$T’sÜA¼ay
+(
+dty³
+=dty³, 
+size
+=
+¬¿y_size
+)
+
+88 
+dim_³rmutiÚ
+ = [
+axis
+] + 
+	`¿nge
+(1,‡xisè+ [0] +„ªge×xi + 1, 
+¿nk
+)
+
+89 
+uÅack_axis_majÜ_v®ue
+ = 
+tf
+.
+	$Œª¥o£
+(
+v®ue
+, 
+dim_³rmutiÚ
+)
+
+90 
+fuÎ_¬¿y
+ = 
+¬¿y
+.
+	$uÅack
+(
+uÅack_axis_majÜ_v®ue
+)
+
+92  
+fuÎ_¬¿y
+
+
+94 
+def
+ 
+	$·ck_što_‹nsÜ
+(
+¬¿y
+, 
+axis
+):
+
+96 
+·cks
+ 
+a
+ 
+giv’
+ 
+T’sÜA¼ay
+ 
+što
+‡ 
+‹nsÜ
+ 
+®Úg
+‡ giv’ 
+axis
+
+
+98 
+P¬am‘”s
+:
+
+100 
+¬¿y
+: 
+T’sÜA¼ay
+
+
+101 
+the
+ 
+‹nsÜ
+ 
+¬¿y
+ 
+to
+ 
+·ck
+
+
+102 
+axis
+: 
+
+103 
+the
+ 
+axis
+ 
+to
+ 
+·ck
+h
+¬¿y
+ 
+®Úg
+
+
+105 
+R‘uºs
+: 
+T’sÜ
+
+
+106 
+the
+ 
+·cked
+ 
+‹nsÜ
+
+
+109 
+·cked_‹nsÜ
+ = 
+¬¿y
+.
+	$·ck
+()
+
+110 
+sh­e
+ = 
+·cked_‹nsÜ
+.
+	$g‘_sh­e
+()
+
+111 
+¿nk
+ = 
+	$Ën
+(
+sh­e
+)
+
+113 
+dim_³rmutiÚ
+ = [
+axis
+] + 
+	`¿nge
+(1,‡xisè+ [0] +„ªge×xi + 1, 
+¿nk
+)
+
+114 
+cÜ»ù_sh­e_‹nsÜ
+ = 
+tf
+.
+	$Œª¥o£
+(
+·cked_‹nsÜ
+, 
+dim_³rmutiÚ
+)
+
+116  
+cÜ»ù_sh­e_‹nsÜ
+
+
+	@tasks/babi/preprocess.py
+
+1 
+impÜt
+ 
+sys
+
+
+2 
+impÜt
+ 
+pickË
+
+
+3 
+impÜt
+ 
+g‘İt
+
+
+4 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+5 
+äom
+ 
+shut
+ 
+impÜt
+ 
+rmŒ“
+
+
+6 
+äom
+ 
+os
+ 
+impÜt
+ 
+	gli¡dœ
+, 
+mkdœ
+
+
+7 
+äom
+ 
+	gos
+.
+·th
+ 
+impÜt
+ 
+	gjoš
+, 
+	gisfe
+, 
+	gisdœ
+, 
+	gdœÇme
+, 
+	gba£Çme
+, 
+	gnÜm·th
+, 
+	gab¥©h
+, 
+exi¡s
+
+
+9 
+def
+ 
+	$Î´št
+(
+mes§ge
+):
+
+10 
+sys
+.
+¡dout
+.
+	$wr™e
+(
+mes§ge
+)
+
+11 
+sys
+.
+¡dout
+.
+	$æush
+()
+
+13 
+def
+ 
+	$ü—‹_diùiÚ¬y
+(
+fes_li¡
+):
+
+15 
+ü—‹s
+ 
+a
+ 
+diùiÚ¬y
+ 
+of
+ 
+unique
+ 
+ËxicÚs
+ 
+š
+ 
+the
+ 
+d©a£t
+ 
+ªd
+ 
+theœ
+ 
+m­pšg
+ 
+to
+ 
+numb”s
+
+
+17 
+P¬am‘”s
+:
+
+19 
+fes_li¡
+: 
+li¡
+
+
+20 
+the
+ 
+li¡
+ 
+of
+ 
+fes
+ 
+to
+ 
+sÿn
+ 
+through
+
+
+22 
+R‘uºs
+: 
+diù
+
+
+23 
+the
+ 
+cÚ¡ruùed
+ 
+diùiÚ¬y
+ 
+of
+ 
+ËxicÚs
+
+
+26 
+ËxicÚs_diù
+ = {
+	}
+}
+
+27 
+id_couÁ”
+ = 0
+
+29 
+Î´št
+("C»©šg DiùiÚ¬y ... 0/%d" % (
+	$Ën
+(
+fes_li¡
+)))
+
+31 
+šdx
+, 
+f’ame
+ 
+š
+ 
+	$’um”©e
+(
+fes_li¡
+):
+
+32 
+w™h
+ 
+	`İ’
+(
+f’ame
+, 'r'è
+as
+ 
+fobj
+:
+
+33 
+lše
+ 
+š
+ 
+fobj
+:
+
+35 #fœ¡ 
+£³¿‹
+ . 
+ªd
+ ? 
+away
+ 
+äom
+ 
+wÜds
+ 
+što
+ s•”©
+ËxicÚs
+
+
+36 
+lše
+ =†še.
+	`»¶aû
+('.', ' .')
+
+37 
+lše
+ =†še.
+	`»¶aû
+('?', ' ?')
+
+38 
+lše
+ =†še.
+	`»¶aû
+(',', ' ')
+
+40 
+wÜd
+ 
+š
+ 
+lše
+.
+	$¥l™
+():
+
+41 
+nÙ
+ 
+wÜd
+.
+	$low”
+(è
+š
+ 
+ËxicÚs_diù
+ 
+ªd
+ 
+wÜd
+.
+	$i§Íha
+():
+
+42 
+ËxicÚs_diù
+[
+wÜd
+.
+	`low”
+()] = 
+id_couÁ”
+
+
+43 
+id_couÁ”
+ += 1
+
+45 
+	`Î´št
+("\rC»©šg DiùiÚ¬y ... %d/%d" % ((
+šdx
+ + 1), 
+	$Ën
+(
+fes_li¡
+)))
+
+47 
+´št
+ "\rCreating Dictionary ... Done!"
+
+48  
+ËxicÚs_diù
+
+
+51 
+def
+ 
+	$’code_d©a
+(
+fes_li¡
+, 
+ËxicÚs_diùiÚ¬y
+, 
+Ëngth_lim™
+=
+NÚe
+):
+
+53 
+’codes
+ 
+the
+ 
+d©a£t
+ 
+što
+ 
+™s
+ 
+num”ic
+ 
+fÜm
+ 
+giv’
+ 
+a
+ 
+cÚ¡ruùed
+ 
+diùiÚ¬y
+
+
+55 
+P¬am‘”s
+:
+
+57 
+fes_li¡
+: 
+li¡
+
+
+58 
+the
+ 
+li¡
+ 
+of
+ 
+fes
+ 
+to
+ 
+sÿn
+ 
+through
+
+
+59 
+ËxicÚs_diùiÚ¬y
+: 
+diù
+
+
+60 
+the
+ 
+m­pšgs
+ 
+of
+ 
+unique
+ 
+ËxicÚs
+
+
+62 
+R‘uºs
+: 
+	$tu¶e
+ (
+diù
+, )
+
+63 
+the
+ 
+d©a
+ 
+š
+ 
+™s
+ 
+num”ic
+ 
+fÜm
+, 
+maximum
+ 
+¡Üy
+ 
+Ëngth
+
+
+66 
+fes
+ = {
+	}
+}
+
+67 
+¡Üy_šputs
+ = 
+NÚe
+
+
+68 
+¡Üy_ouuts
+ = 
+NÚe
+
+
+69 
+¡Ü›s_Ëngths
+ = []
+
+70 
+ªsw”s_æag
+ = 
+F®£
+ #¨
+æag
+ 
+to
+ 
+¥ecify
+ 
+wh’
+Ø
+put
+ 
+d©a
+ 
+što
+ 
+ouuts
+ 
+li¡
+
+
+71 
+lim™
+ = 
+Ëngth_lim™
+ 
+nÙ
+†’gth_lim™ 
+is
+ 
+NÚe
+ ("inf")
+
+73 
+Î´št
+("Encodšg D©¨... 0/%d" % (
+	$Ën
+(
+fes_li¡
+)))
+
+75 
+šdx
+, 
+f’ame
+ 
+š
+ 
+	$’um”©e
+(
+fes_li¡
+):
+
+77 
+fes
+[
+f’ame
+] = []
+
+79 
+w™h
+ 
+	`İ’
+(
+f’ame
+, 'r'è
+as
+ 
+fobj
+:
+
+80 
+lše
+ 
+š
+ 
+fobj
+:
+
+82 #fœ¡ 
+£³¿‹
+ . 
+ªd
+ ? 
+away
+ 
+äom
+ 
+wÜds
+ 
+što
+ s•”©
+ËxicÚs
+
+
+83 
+lše
+ =†še.
+	`»¶aû
+('.', ' .')
+
+84 
+lše
+ =†še.
+	`»¶aû
+('?', ' ?')
+
+85 
+lše
+ =†še.
+	`»¶aû
+(',', ' ')
+
+87 
+ªsw”s_æag
+ = 
+F®£
+ #»£ˆ
+as
+ 
+ªsw”s
+ 
+’d
+ 
+by
+ƒnd 
+of
+ 
+lše
+
+
+89 
+i
+, 
+wÜd
+ 
+š
+ 
+	`’um”©e
+(
+lše
+.
+	$¥l™
+()):
+
+91 
+wÜd
+ =ğ'1' 
+ªd
+ 
+i
+ == 0:
+
+92 #begšnšg 
+of
+ 
+a
+ 
+Ãw
+ 
+¡Üy
+
+
+93 
+nÙ
+ 
+¡Üy_šputs
+ 
+is
+ 
+NÚe
+:
+
+94 
+¡Ü›s_Ëngths
+.
+	`­³nd
+(
+	$Ën
+(
+¡Üy_šputs
+))
+
+95 
+	`Ën
+(
+¡Üy_šputs
+è<ğ
+lim™
+:
+
+96 
+fes
+[
+f’ame
+].
+	`­³nd
+({
+
+97 'šputs':
+¡Üy_šputs
+,
+
+98 'ouuts': 
+¡Üy_ouuts
+
+
+99 
+	}
+})
+
+100 
+¡Üy_šputs
+ = []
+
+101 
+¡Üy_ouuts
+ = []
+
+103 
+wÜd
+.
+	$i§Íha
+(è
+Ü
+ 
+wÜd
+ == '?' or word == '.':
+
+104 
+nÙ
+ 
+ªsw”s_æag
+:
+
+105 
+¡Üy_šputs
+.
+	`­³nd
+(
+ËxicÚs_diùiÚ¬y
+[
+wÜd
+.
+	`low”
+()])
+
+107 
+¡Üy_šputs
+.
+	`­³nd
+(
+ËxicÚs_diùiÚ¬y
+['-'])
+
+108 
+¡Üy_ouuts
+.
+	`­³nd
+(
+ËxicÚs_diùiÚ¬y
+[
+wÜd
+.
+	`low”
+()])
+
+110 #£ˆ
+the
+ 
+ªsw”s_æags
+ 
+a
+ 
+que¡iÚ
+ 
+m¬k
+ 
+is
+ 
+’couÁ”ed
+
+
+111 
+nÙ
+ 
+ªsw”s_æag
+:
+
+112 
+ªsw”s_æag
+ = (
+wÜd
+ == '?')
+
+114 
+	`Î´št
+("\rEncodšg D©¨... %d/%d" % (
+šdx
+ + 1, 
+	$Ën
+(
+fes_li¡
+)))
+
+116 
+´št
+ "\rEncoding Data ... Done!"
+
+117  
+fes
+, 
+¡Ü›s_Ëngths
+
+
+120 
+__Çme__
+ == '__main__':
+
+121 
+sk_dœ
+ = 
+	`dœÇme
+(
+	$ab¥©h
+(
+__fe__
+))
+
+122 
+İtiÚs
+,
+_
+ = 
+g‘İt
+.
+	`g‘İt
+(
+sys
+.
+¬gv
+[1:], '', ['data_dir=', 'single_train', 'length_limit='])
+
+123 
+d©a_dœ
+ = 
+NÚe
+
+
+124 
+jošt_Œaš
+ = 
+True
+
+
+125 
+Ëngth_lim™
+ = 
+NÚe
+
+
+126 
+fes_li¡
+ = []
+
+128 
+nÙ
+ 
+	`exi¡s
+(
+	`još
+(
+sk_dœ
+, 'data')):
+
+129 
+	`mkdœ
+(
+	`još
+(
+sk_dœ
+, 'data'))
+
+131 
+İt
+ 
+š
+ 
+İtiÚs
+:
+
+132 
+İt
+[0] == '--data_dir':
+
+133 
+d©a_dœ
+ = 
+İt
+[1]
+
+134 
+İt
+[0] == '--single_train':
+
+135 
+jošt_Œaš
+ = 
+F®£
+
+
+136 
+İt
+[0] == '--length_limit':
+
+137 
+Ëngth_lim™
+ = (
+İt
+[1])
+
+139 
+d©a_dœ
+ 
+is
+ 
+NÚe
+:
+
+140 
+¿i£
+ 
+	`V®ueE¼Ü
+("data_dir‡rgument cannot be None")
+
+142 
+’ŒyÇme
+ 
+š
+ 
+	$li¡dœ
+(
+d©a_dœ
+):
+
+143 
+’Œy_·th
+ = 
+	$još
+(
+d©a_dœ
+, 
+’ŒyÇme
+)
+
+144 
+	$isfe
+(
+’Œy_·th
+):
+
+145 
+fes_li¡
+.
+	$­³nd
+(
+’Œy_·th
+)
+
+147 
+ËxicÚ_diùiÚ¬y
+ = 
+	$ü—‹_diùiÚ¬y
+(
+fes_li¡
+)
+
+148 
+ËxicÚ_couÁ
+ = 
+	$Ën
+(
+ËxicÚ_diùiÚ¬y
+)
+
+150 #­³nd 
+u£d
+ 
+punùu©iÚ
+ 
+to
+ 
+diùiÚ¬y
+
+
+151 
+ËxicÚ_diùiÚ¬y
+['?'] = 
+ËxicÚ_couÁ
+
+
+152 
+ËxicÚ_diùiÚ¬y
+['.'] = 
+ËxicÚ_couÁ
+ + 1
+
+153 
+ËxicÚ_diùiÚ¬y
+['-'] = 
+ËxicÚ_couÁ
+ + 2
+
+155 
+’coded_fes
+, 
+¡Ü›s_Ëngths
+ = 
+	$’code_d©a
+(
+fes_li¡
+, 
+ËxicÚ_diùiÚ¬y
+, 
+Ëngth_lim™
+)
+
+157 
+¡Ü›s_Ëngths
+ = 
+Å
+.
+	$¬¿y
+(
+¡Ü›s_Ëngths
+)
+
+158 
+Ëngth_lim™
+ = 
+Å
+.
+	$max
+(
+¡Ü›s_Ëngths
+è
+Ëngth_lim™
+ 
+is
+ 
+NÚe
+ length_limit
+
+159 
+´št
+ "TÙ® Numb” oà¡Ü›s: %d" % (
+	$Ën
+(
+¡Ü›s_Ëngths
+))
+
+160 
+´št
+ "Numb” oà¡Ü› w™h†’gthe > %d: %d (%% %.2fè[disÿrded]" % (
+Ëngth_lim™
+, 
+Å
+.
+	`sum
+(
+¡Ü›s_Ëngths
+ >†’gth_lim™),‚p.
+	`m—n
+(stories_lengths >†ength_limit) * 100.0)
+
+161 
+´št
+ "Numb” oàRemaššg StÜ›s: %d" % (
+	`Ën
+(
+¡Ü›s_Ëngths
+[¡Ü›s_Ëngth <ğ
+Ëngth_lim™
+]))
+
+163 
+´oûs£d_d©a_dœ
+ = 
+	`još
+(
+sk_dœ
+, 'd©a', 
+	`ba£Çme
+(
+	$nÜm·th
+(
+d©a_dœ
+)))
+
+164 
+Œaš_d©a_dœ
+ = 
+	`još
+(
+´oûs£d_d©a_dœ
+, 'train')
+
+165 
+‹¡_d©a_dœ
+ = 
+	`još
+(
+´oûs£d_d©a_dœ
+, 'test')
+
+166 
+	$exi¡s
+(
+´oûs£d_d©a_dœ
+è
+ªd
+ 
+	$isdœ
+(
+´oûs£d_d©a_dœ
+):
+
+167 
+	$rmŒ“
+(
+´oûs£d_d©a_dœ
+)
+
+169 
+	$mkdœ
+(
+´oûs£d_d©a_dœ
+)
+
+170 
+	$mkdœ
+(
+Œaš_d©a_dœ
+)
+
+171 
+	$mkdœ
+(
+‹¡_d©a_dœ
+)
+
+173 
+	`Î´št
+("Saving…rocessed datao disk ... ")
+
+175 
+pickË
+.
+	`dump
+(
+ËxicÚ_diùiÚ¬y
+, 
+	`İ’
+(
+	`još
+(
+´oûs£d_d©a_dœ
+, 'lexicon-dict.pkl'), 'wb'))
+
+177 
+jošt_Œaš_d©a
+ = []
+
+179 
+f’ame
+ 
+š
+ 
+’coded_fes
+:
+
+180 
+f’ame
+.
+	`’dsw™h
+("test.txt"):
+
+181 
+pickË
+.
+	`dump
+(
+’coded_fes
+[
+f’ame
+], 
+	`İ’
+(
+	`još
+(
+‹¡_d©a_dœ
+, 
+	`ba£Çme
+(filename) + '.pkl'), 'wb'))
+
+182 
+–if
+ 
+f’ame
+.
+	`’dsw™h
+("train.txt"):
+
+183 
+nÙ
+ 
+jošt_Œaš
+:
+
+184 
+pickË
+.
+	`dump
+(
+’coded_fes
+[
+f’ame
+], 
+	`İ’
+(
+	`još
+(
+Œaš_d©a_dœ
+, 
+	`ba£Çme
+(filename) + '.pkl'), 'wb'))
+
+186 
+jošt_Œaš_d©a
+.
+	$ex‹nd
+(
+’coded_fes
+[
+f’ame
+])
+
+188 
+jošt_Œaš
+:
+
+189 
+pickË
+.
+	`dump
+(
+jošt_Œaš_d©a
+, 
+	`İ’
+(
+	`još
+(
+Œaš_d©a_dœ
+, 'train.pkl'), 'wb'))
+
+191 
+	`Î´št
+("Done!\n")
+
+	@tasks/babi/recurrent_controller.py
+
+1 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+2 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+3 
+äom
+ 
+	gdnc
+.
+cÚŒŞËr
+ 
+impÜt
+ 
+	gBa£CÚŒŞËr
+
+
+6 
+	gA
+ 1-
+Ïy”
+ 
+LSTM
+ 
+»cu¼’t
+ 
+Ãu¿l
+ 
+ÃtwÜk
+ 
+	gw™h
+ 256 
+hidd’
+ 
+un™s
+
+
+7 
+	gNÙe
+: 
+the
+ 
+¡©e
+ 
+of
+h
+LSTM
+ 
+is
+ 
+nÙ
+ 
+§ved
+ 
+š
+ 
+a
+ 
+v¬ŸbË
+ 
+becua£
+ 
+we
+ 
+wªt
+
+
+8 
+the
+ 
+¡©e
+ 
+to
+ 
+»£t
+Ø
+z”o
+ 
+Ú
+ 
+ev”y
+ 
+šput
+ 
+£quÃû
+
+
+11 
+şass
+ 
+	$Recu¼’tCÚŒŞËr
+(
+Ba£CÚŒŞËr
+):
+
+13 
+def
+ 
+	$ÃtwÜk_v¬s
+(
+£lf
+):
+
+14 
+£lf
+.
+l¡m_ûÎ
+ = 
+tf
+.
+Â
+.
+ºn_ûÎ
+.
+	$BasicLSTMC–l
+(256)
+
+15 
+£lf
+.
+¡©e
+ = s–f.
+l¡m_ûÎ
+.
+	$z”o_¡©e
+(
+£lf
+.
+b©ch_size
+, 
+tf
+.
+æßt32
+)
+
+17 
+def
+ 
+	$ÃtwÜk_İ
+(
+£lf
+, 
+X
+, 
+¡©e
+):
+
+18 
+X
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+X
+)
+
+19  
+£lf
+.
+	$l¡m_ûÎ
+(
+X
+, 
+¡©e
+)
+
+21 
+def
+ 
+	$g‘_¡©e
+(
+£lf
+):
+
+22  
+£lf
+.
+¡©e
+
+
+24 
+def
+ 
+	$upd©e_¡©e
+(
+£lf
+, 
+Ãw_¡©e
+):
+
+25  
+tf
+.
+	`no_İ
+()
+
+	@tasks/babi/test.py
+
+1 #-*- 
+codšg
+: 
+utf
+-8 -*-
+
+3 
+äom
+ 
+»cu¼’t_cÚŒŞËr
+ 
+impÜt
+ 
+Recu¼’tCÚŒŞËr
+
+
+4 
+äom
+ 
+	gdnc
+.
+dnc
+ 
+impÜt
+ 
+DNC
+
+
+5 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+6 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+7 
+impÜt
+ 
+pickË
+
+
+8 
+impÜt
+ 
+sys
+
+
+9 
+impÜt
+ 
+os
+
+
+10 
+impÜt
+ 
+»
+
+
+12 
+def
+ 
+	$Î´št
+(
+mes§ge
+):
+
+13 
+sys
+.
+¡dout
+.
+	$wr™e
+(
+mes§ge
+)
+
+14 
+sys
+.
+¡dout
+.
+	$æush
+()
+
+16 
+def
+ 
+	$lßd
+(
+·th
+):
+
+17  
+pickË
+.
+	`lßd
+(
+	`İ’
+(
+·th
+, 'rb'))
+
+19 
+def
+ 
+	$ÚehÙ
+(
+šdex
+, 
+size
+):
+
+20 
+vec
+ = 
+Å
+.
+	$z”os
+(
+size
+, 
+dty³
+=
+Å
+.
+æßt32
+)
+
+21 
+vec
+[
+šdex
+] = 1.0
+
+22  
+vec
+
+
+24 
+def
+ 
+	$´•¬e_§m¶e
+(
+§m¶e
+, 
+rg‘_code
+, 
+wÜd_¥aû_size
+):
+
+25 
+šput_vec
+ = 
+Å
+.
+	`¬¿y
+(
+§m¶e
+[0]['šputs'], 
+dty³
+òp.
+æßt32
+)
+
+26 
+ouut_vec
+ = 
+Å
+.
+	`¬¿y
+(
+§m¶e
+[0]['šputs'], 
+dty³
+òp.
+æßt32
+)
+
+27 
+£q_Ën
+ = 
+šput_vec
+.
+sh­e
+[0]
+
+28 
+weights_vec
+ = 
+Å
+.
+	$z”os
+(
+£q_Ën
+, 
+dty³
+=
+Å
+.
+æßt32
+)
+
+30 
+rg‘_mask
+ = (
+šput_vec
+ =ğ
+rg‘_code
+)
+
+31 
+ouut_vec
+[
+rg‘_mask
+] = 
+§m¶e
+[0]['outputs']
+
+32 
+weights_vec
+[
+rg‘_mask
+] = 1.0
+
+34 
+šput_vec
+ = 
+Å
+.
+	`¬¿y
+([
+	$ÚehÙ
+(
+code
+, 
+wÜd_¥aû_size
+ècod
+š
+ 
+šput_vec
+])
+
+35 
+ouut_vec
+ = 
+Å
+.
+	`¬¿y
+([
+	$ÚehÙ
+(
+code
+, 
+wÜd_¥aû_size
+ècod
+š
+ 
+ouut_vec
+])
+
+38 
+Å
+.
+	`»sh­e
+(
+šput_vec
+, (1, -1, 
+wÜd_¥aû_size
+)),
+
+39 
+Å
+.
+	`»sh­e
+(
+ouut_vec
+, (1, -1, 
+wÜd_¥aû_size
+)),
+
+40 
+£q_Ën
+,
+
+41 
+Å
+.
+	`»sh­e
+(
+weights_vec
+, (1, -1, 1))
+
+44 
+ck±s_dœ
+ = './checkpoints/'
+
+45 
+ËxicÚ_diùiÚ¬y
+ = 
+	`lßd
+('./data/en-10k/lexicon-dict.pkl')
+
+46 
+que¡iÚ_code
+ = 
+ËxicÚ_diùiÚ¬y
+["?"]
+
+47 
+rg‘_code
+ = 
+ËxicÚ_diùiÚ¬y
+["-"]
+
+48 
+‹¡_fes
+ = []
+
+50 
+’ŒyÇme
+ 
+š
+ 
+os
+.
+	`li¡dœ
+('./data/en-10k/test/'):
+
+51 
+’Œy_·th
+ = 
+os
+.
+·th
+.
+	`još
+('./d©a/’-10k/‹¡/', 
+’ŒyÇme
+)
+
+52 
+os
+.
+·th
+.
+	$isfe
+(
+’Œy_·th
+):
+
+53 
+‹¡_fes
+.
+	$­³nd
+(
+’Œy_·th
+)
+
+55 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+56 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+57 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+59 
+ncompu‹r
+ = 
+	`DNC
+(
+
+60 
+Recu¼’tCÚŒŞËr
+,
+
+61 
+šput_size
+=
+	`Ën
+(
+ËxicÚ_diùiÚ¬y
+),
+
+62 
+ouut_size
+=
+	`Ën
+(
+ËxicÚ_diùiÚ¬y
+),
+
+63 
+max_£qu’û_Ëngth
+=100,
+
+64 
+memÜy_wÜds_num
+=256,
+
+65 
+memÜy_wÜd_size
+=64,
+
+66 
+memÜy_»ad_h—ds
+=4,
+
+69 
+ncompu‹r
+.
+	`»¡Üe
+(
+£ssiÚ
+, 
+ck±s_dœ
+, 'step-500005')
+
+71 
+ouuts
+, 
+_
+ = 
+ncompu‹r
+.
+	$g‘_ouuts
+()
+
+72 
+soámaxed
+ = 
+tf
+.
+Â
+.
+	$soámax
+(
+ouuts
+)
+
+74 
+sks_»suÉs
+ = {
+	}
+}
+
+75 
+sks_Çmes
+ = {}
+
+76 
+‹¡_fe
+ 
+š
+ 
+‹¡_fes
+:
+
+77 
+‹¡_d©a
+ = 
+	$lßd
+(
+‹¡_fe
+)
+
+78 
+sk_»gexp
+ = 
+r
+'qa([0-9]{1,2})_([a-z\-]*)_test.txt.pkl'
+
+79 
+sk_f’ame
+ = 
+os
+.
+·th
+.
+	$ba£Çme
+(
+‹¡_fe
+)
+
+80 
+sk_m©ch_obj
+ = 
+»
+.
+	$m©ch
+(
+sk_»gexp
+, 
+sk_f’ame
+)
+
+81 
+sk_numb”
+ = 
+sk_m©ch_obj
+.
+	$group
+(1)
+
+82 
+sk_Çme
+ = 
+sk_m©ch_obj
+.
+	`group
+(2).
+	`»¶aû
+('-', ' ')
+
+83 
+sks_Çmes
+[
+sk_numb”
+] = 
+sk_Çme
+
+
+84 
+couÁ”
+ = 0
+
+85 
+»suÉs
+ = []
+
+87 
+	`Î´št
+("% ... %d/%d" % (
+sk_Çme
+, 
+couÁ”
+, 
+	$Ën
+(
+‹¡_d©a
+)))
+
+89 
+¡Üy
+ 
+š
+ 
+‹¡_d©a
+:
+
+90 
+a¡Üy
+ = 
+Å
+.
+	`¬¿y
+(
+¡Üy
+['inputs'])
+
+91 
+que¡iÚs_šdec›s
+ = 
+Å
+.
+	$¬gwh”e
+(
+a¡Üy
+ =ğ
+que¡iÚ_code
+)
+
+92 
+que¡iÚs_šdec›s
+ = 
+Å
+.
+	`»sh­e
+(questions_indecies, (-1,))
+
+93 
+rg‘_mask
+ = (
+a¡Üy
+ =ğ
+rg‘_code
+)
+
+95 
+desœed_ªsw”s
+ = 
+Å
+.
+	`¬¿y
+(
+¡Üy
+['outputs'])
+
+96 
+šput_vec
+, 
+_
+, 
+£q_Ën
+, _ = 
+	`´•¬e_§m¶e
+([
+¡Üy
+], 
+rg‘_code
+, 
+	$Ën
+(
+ËxicÚ_diùiÚ¬y
+))
+
+97 
+soámax_ouut
+ = 
+£ssiÚ
+.
+	`run
+(
+soámaxed
+, 
+ãed_diù
+={
+
+98 
+ncompu‹r
+.
+šput_d©a
+: 
+šput_vec
+,
+
+99 
+ncompu‹r
+.
+£qu’û_Ëngth
+: 
+£q_Ën
+
+
+100 
+	}
+})
+
+102 
+soámax_ouut
+ = 
+Å
+.
+	$squ“ze
+(
+soámax_ouut
+, 
+axis
+=0)
+
+103 
+giv’_ªsw”s
+ = 
+Å
+.
+	$¬gmax
+(
+soámax_ouut
+[
+rg‘_mask
+], 
+axis
+=1)
+
+106 
+ªsw”s_cursÜ
+ = 0
+
+107 
+que¡iÚ_šdx
+ 
+š
+ 
+que¡iÚs_šdec›s
+:
+
+108 
+que¡iÚ_g¿de
+ = []
+
+109 
+rg‘s_cursÜ
+ = 
+que¡iÚ_šdx
+ + 1
+
+110 
+rg‘s_cursÜ
+ < 
+	$Ën
+(
+a¡Üy
+è
+ªd
+‡¡Üy[
+rg‘s_cursÜ
+] =ğ
+rg‘_code
+:
+
+111 
+que¡iÚ_g¿de
+.
+	$­³nd
+(
+giv’_ªsw”s
+[
+ªsw”s_cursÜ
+] =ğ
+desœed_ªsw”s
+[answers_cursor])
+
+112 
+ªsw”s_cursÜ
+ += 1
+
+113 
+rg‘s_cursÜ
+ += 1
+
+114 
+»suÉs
+.
+	`­³nd
+(
+Å
+.
+	$´od
+(
+que¡iÚ_g¿de
+))
+
+116 
+couÁ”
+ += 1
+
+117 
+	`Î´št
+("\r% ... %d/%d" % (
+sk_Çme
+, 
+couÁ”
+, 
+	$Ën
+(
+‹¡_d©a
+)))
+
+119 
+”rÜ_¿‹
+ = 1. - 
+Å
+.
+	$m—n
+(
+»suÉs
+)
+
+120 
+sks_»suÉs
+[
+sk_numb”
+] = 
+”rÜ_¿‹
+
+
+121 
+	`Î´št
+("\r% ... %.3f%% E¼Ü R©e.\n" % (
+sk_Çme
+, 
+”rÜ_¿‹
+ * 100))
+
+123 
+´št
+ "\n"
+
+124 
+´št
+ "%-27s%-27s%s" % ("Task", "Result", "Paper's Mean")
+
+125 
+´št
+ "-------------------------------------------------------------------"
+
+126 
+·³r_m—ns
+ = {
+
+133 
+	}
+}
+
+134 
+k
+ 
+š
+ 
+	$¿nge
+(20):
+
+135 
+sk_id
+ = 
+	`¡r
+(
+k
+ + 1)
+
+136 
+sk_»suÉ
+ = "%.2f%%" % (
+sks_»suÉs
+[
+sk_id
+] * 100)
+
+137 
+´št
+ "%-27s%-27s%s" % (
+sks_Çmes
+[
+sk_id
+], 
+sk_»suÉ
+, 
+·³r_m—ns
+[task_id])
+
+138 
+´št
+ "-------------------------------------------------------------------"
+
+139 
+®l_sks_»suÉs
+ = [
+v
+ 
+_
+,v 
+š
+ 
+sks_»suÉs
+.
+	`™”™ems
+()]
+
+140 
+»suÉs_m—n
+ = "%.2f%%" % (
+Å
+.
+	`m—n
+(
+®l_sks_»suÉs
+) * 100)
+
+141 
+çed_couÁ
+ = "%d" % (
+Å
+.
+	`sum
+Òp.
+	`¬¿y
+(
+®l_sks_»suÉs
+) > 0.05))
+
+143 
+´št
+ "%-27s%-27s%s" % ("M—ÀE¼.", 
+»suÉs_m—n
+, 
+·³r_m—ns
+['mean'])
+
+144 
+´št
+ "%-27s%-27s%s" % ("Faed (”r. > 5%)", 
+çed_couÁ
+, 
+·³r_m—ns
+['fail'])
+
+	@tasks/babi/train.py
+
+1 
+impÜt
+ 
+w¬nšgs
+
+
+2 
+	gw¬nšgs
+.
+f‹rw¬nšgs
+('ignore')
+
+4 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+5 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+6 
+impÜt
+ 
+pickË
+
+
+7 
+impÜt
+ 
+g‘İt
+
+
+8 
+impÜt
+ 
+time
+
+
+9 
+impÜt
+ 
+sys
+
+
+10 
+impÜt
+ 
+os
+
+
+12 
+äom
+ 
+	gdnc
+.
+dnc
+ 
+impÜt
+ 
+DNC
+
+
+13 
+äom
+ 
+»cu¼’t_cÚŒŞËr
+ 
+impÜt
+ 
+Recu¼’tCÚŒŞËr
+
+
+15 
+def
+ 
+	$Î´št
+(
+mes§ge
+):
+
+16 
+sys
+.
+¡dout
+.
+	$wr™e
+(
+mes§ge
+)
+
+17 
+sys
+.
+¡dout
+.
+	$æush
+()
+
+19 
+def
+ 
+	$lßd
+(
+·th
+):
+
+20  
+pickË
+.
+	`lßd
+(
+	`İ’
+(
+·th
+, 'rb'))
+
+22 
+def
+ 
+	$ÚehÙ
+(
+šdex
+, 
+size
+):
+
+23 
+vec
+ = 
+Å
+.
+	$z”os
+(
+size
+, 
+dty³
+=
+Å
+.
+æßt32
+)
+
+24 
+vec
+[
+šdex
+] = 1.0
+
+25  
+vec
+
+
+27 
+def
+ 
+	$´•¬e_§m¶e
+(
+§m¶e
+, 
+rg‘_code
+, 
+wÜd_¥aû_size
+):
+
+28 
+šput_vec
+ = 
+Å
+.
+	`¬¿y
+(
+§m¶e
+[0]['šputs'], 
+dty³
+òp.
+æßt32
+)
+
+29 
+ouut_vec
+ = 
+Å
+.
+	`¬¿y
+(
+§m¶e
+[0]['šputs'], 
+dty³
+òp.
+æßt32
+)
+
+30 
+£q_Ën
+ = 
+šput_vec
+.
+sh­e
+[0]
+
+31 
+weights_vec
+ = 
+Å
+.
+	$z”os
+(
+£q_Ën
+, 
+dty³
+=
+Å
+.
+æßt32
+)
+
+33 
+rg‘_mask
+ = (
+šput_vec
+ =ğ
+rg‘_code
+)
+
+34 
+ouut_vec
+[
+rg‘_mask
+] = 
+§m¶e
+[0]['outputs']
+
+35 
+weights_vec
+[
+rg‘_mask
+] = 1.0
+
+37 
+šput_vec
+ = 
+Å
+.
+	`¬¿y
+([
+	$ÚehÙ
+(
+code
+, 
+wÜd_¥aû_size
+ècod
+š
+ 
+šput_vec
+])
+
+38 
+ouut_vec
+ = 
+Å
+.
+	`¬¿y
+([
+	$ÚehÙ
+(
+code
+, 
+wÜd_¥aû_size
+ècod
+š
+ 
+ouut_vec
+])
+
+41 
+Å
+.
+	`»sh­e
+(
+šput_vec
+, (1, -1, 
+wÜd_¥aû_size
+)),
+
+42 
+Å
+.
+	`»sh­e
+(
+ouut_vec
+, (1, -1, 
+wÜd_¥aû_size
+)),
+
+43 
+£q_Ën
+,
+
+44 
+Å
+.
+	`»sh­e
+(
+weights_vec
+, (1, -1, 1))
+
+49 
+__Çme__
+ == '__main__':
+
+51 
+dœÇme
+ = 
+os
+.
+·th
+.
+	$dœÇme
+(
+__fe__
+)
+
+52 
+ck±s_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+dœÇme
+ , 'checkpoints')
+
+53 
+d©a_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+dœÇme
+, 'data', 'en-10k')
+
+54 
+tb_logs_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+dœÇme
+, 'logs')
+
+56 
+	`Î´št
+("Loading Data ... ")
+
+57 
+ËxicÚ_diù
+ = 
+	`lßd
+(
+os
+.
+·th
+.
+	`još
+(
+d©a_dœ
+, 'lexicon-dict.pkl'))
+
+58 
+d©a
+ = 
+	`lßd
+(
+os
+.
+·th
+.
+	`još
+(
+d©a_dœ
+, 'train', 'train.pkl'))
+
+59 
+	`Î´št
+("Done!\n")
+
+61 
+b©ch_size
+ = 1
+
+62 
+šput_size
+ = 
+ouut_size
+ = 
+	$Ën
+(
+ËxicÚ_diù
+)
+
+63 
+£qu’û_max_Ëngth
+ = 100
+
+64 
+wÜd_¥aû_size
+ = 
+	$Ën
+(
+ËxicÚ_diù
+)
+
+65 
+wÜds_couÁ
+ = 256
+
+66 
+wÜd_size
+ = 64
+
+67 
+»ad_h—ds
+ = 4
+
+69 
+Ë¬nšg_¿‹
+ = 1e-4
+
+70 
+mom’tum
+ = 0.9
+
+72 
+äom_checkpošt
+ = 
+NÚe
+
+
+73 
+™”©iÚs
+ = 100000
+
+74 
+¡¬t_¡•
+ = 0
+
+76 
+İtiÚs
+,
+_
+ = 
+g‘İt
+.
+	`g‘İt
+(
+sys
+.
+¬gv
+[1:], '', ['checkpoint=', 'iterations=', 'start='])
+
+78 
+İt
+ 
+š
+ 
+İtiÚs
+:
+
+79 
+İt
+[0] == '--checkpoint':
+
+80 
+äom_checkpošt
+ = 
+İt
+[1]
+
+81 
+–if
+ 
+İt
+[0] == '--iterations':
+
+82 
+™”©iÚs
+ = (
+İt
+[1])
+
+83 
+–if
+ 
+İt
+[0] == '--start':
+
+84 
+¡¬t_¡•
+ = (
+İt
+[1])
+
+86 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+87 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+88 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+90 
+	`Î´št
+("Building Computational Graph ... ")
+
+92 
+İtimiz”
+ = 
+tf
+.
+Œaš
+.
+	$RMSPrİO±imiz”
+(
+Ë¬nšg_¿‹
+, 
+mom’tum
+=momentum)
+
+93 
+summ”iz”
+ = 
+tf
+.
+Œaš
+.
+	$Summ¬yWr™”
+(
+tb_logs_dœ
+, 
+£ssiÚ
+.
+g¿ph
+)
+
+95 
+ncompu‹r
+ = 
+	$DNC
+(
+
+96 
+Recu¼’tCÚŒŞËr
+,
+
+97 
+šput_size
+,
+
+98 
+ouut_size
+,
+
+99 
+£qu’û_max_Ëngth
+,
+
+100 
+wÜds_couÁ
+,
+
+101 
+wÜd_size
+,
+
+102 
+»ad_h—ds
+,
+
+103 
+b©ch_size
+
+
+106 
+ouut
+, 
+_
+ = 
+ncompu‹r
+.
+	$g‘_ouuts
+()
+
+108 
+loss_weights
+ = 
+tf
+.
+	$¶aûhŞd”
+(
+tf
+.
+æßt32
+, [
+b©ch_size
+, 
+NÚe
+, 1])
+
+109 
+loss
+ = 
+tf
+.
+	`»duû_m—n
+(
+
+110 
+loss_weights
+ * 
+tf
+.
+Â
+.
+	$soámax_üoss_’Œİy_w™h_log™s
+(
+ouut
+, 
+ncompu‹r
+.
+rg‘_ouut
+)
+
+113 
+summ”›s
+ = []
+
+115 
+g¿d›Ás
+ = 
+İtimiz”
+.
+	$compu‹_g¿d›Ás
+(
+loss
+)
+
+116 
+i
+, (
+g¿d
+, 
+v¬
+è
+š
+ 
+	$’um”©e
+(
+g¿d›Ás
+):
+
+117 
+g¿d
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+118 
+g¿d›Ás
+[
+i
+] = (
+tf
+.
+	`ş_by_v®ue
+(
+g¿d
+, -10, 10), 
+v¬
+)
+
+119 
+g¿d
+, 
+v¬
+è
+š
+ 
+g¿d›Ás
+:
+
+120 
+g¿d
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+121 
+summ”›s
+.
+	`­³nd
+(
+tf
+.
+	`hi¡og¿m_summ¬y
+(
+v¬
+.
+Çme
+ + '/g¿d', 
+g¿d
+))
+
+123 
+­¶y_g¿d›Ás
+ = 
+İtimiz”
+.
+	$­¶y_g¿d›Ás
+(
+g¿d›Ás
+)
+
+125 
+summ”›s
+.
+	`­³nd
+(
+tf
+.
+	`sÿÏr_summ¬y
+("Loss", 
+loss
+))
+
+127 
+summ”ize_İ
+ = 
+tf
+.
+	$m”ge_summ¬y
+(
+summ”›s
+)
+
+128 
+no_summ”ize
+ = 
+tf
+.
+	$no_İ
+()
+
+130 
+	`Î´št
+("Done!\n")
+
+132 
+	`Î´št
+("Initializing Variables ... ")
+
+133 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+134 
+	`Î´št
+("Done!\n")
+
+136 
+äom_checkpošt
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+137 
+	`Î´št
+("Re¡Üšg Checkpošˆ% ... " % (
+äom_checkpošt
+))
+
+138 
+ncompu‹r
+.
+	$»¡Üe
+(
+£ssiÚ
+, 
+ck±s_dœ
+, 
+äom_checkpošt
+)
+
+139 
+	`Î´št
+("Done!\n")
+
+142 
+Ï¡_100_los£s
+ = []
+
+144 
+¡¬t
+ = 0 
+¡¬t_¡•
+ == 0 start_step + 1
+
+145 
+’d
+ = 
+¡¬t_¡•
+ + 
+™”©iÚs
+ + 1
+
+147 
+¡¬t_time_100
+ = 
+time
+.
+	$time
+()
+
+148 
+’d_time_100
+ = 
+NÚe
+
+
+149 
+avg_100_time
+ = 0.
+
+150 
+avg_couÁ”
+ = 0
+
+152 
+i
+ 
+š
+ 
+	`x¿nge
+(
+¡¬t
+, 
+’d
+ + 1):
+
+153 
+Œy
+:
+
+154 
+	`Î´št
+("\rI‹¿tiÚ %d/%d" % (
+i
+, 
+’d
+))
+
+156 
+§m¶e
+ = 
+Å
+.
+¿ndom
+.
+	$choiû
+(
+d©a
+, 1)
+
+157 
+šput_d©a
+, 
+rg‘_ouut
+, 
+£q_Ën
+, 
+weights
+ = 
+	`´•¬e_§m¶e
+(
+§m¶e
+, 
+ËxicÚ_diù
+['-'], 
+wÜd_¥aû_size
+)
+
+159 
+summ”ize
+ = (
+i
+ % 100 == 0)
+
+160 
+ke_checkpošt
+ = (
+i
+ !ğ0è
+	`ªd
+ (˜% 
+’d
+ == 0)
+
+162 
+loss_v®ue
+, 
+_
+, 
+summ¬y
+ = 
+£ssiÚ
+.
+	`run
+([
+
+163 
+loss
+,
+
+164 
+­¶y_g¿d›Ás
+,
+
+165 
+summ”ize_İ
+ 
+summ”ize
+ 
+no_summ”ize
+
+
+166 ], 
+ãed_diù
+={
+
+167 
+ncompu‹r
+.
+šput_d©a
+: input_data,
+
+168 
+ncompu‹r
+.
+rg‘_ouut
+:arget_output,
+
+169 
+ncompu‹r
+.
+£qu’û_Ëngth
+: 
+£q_Ën
+,
+
+170 
+loss_weights
+: 
+weights
+
+
+171 
+	}
+})
+
+173 
+Ï¡_100_los£s
+.
+	$­³nd
+(
+loss_v®ue
+)
+
+174 
+summ”iz”
+.
+	$add_summ¬y
+(
+summ¬y
+, 
+i
+)
+
+176 
+summ”ize
+:
+
+177 
+	`Î´št
+("\n\tAvg. Cross-EÁrİy: %.7f\n" % (
+Å
+.
+	$m—n
+(
+Ï¡_100_los£s
+)))
+
+179 
+’d_time_100
+ = 
+time
+.
+	$time
+()
+
+180 
+–­£d_time
+ = (
+’d_time_100
+ - 
+¡¬t_time_100
+) / 60
+
+181 
+avg_couÁ”
+ += 1
+
+182 
+avg_100_time
+ +ğ(1. / 
+avg_couÁ”
+è* (
+–­£d_time
+ -‡vg_100_time)
+
+183 
+e¡im©ed_time
+ = (
+avg_100_time
+ * ((
+’d
+ - 
+i
+) / 100.)) / 60.
+
+185 
+´št
+ "\tAvg. 100 i‹¿tiÚ time: %.2àmšu‹s" % (
+avg_100_time
+)
+
+186 
+´št
+ "\tAµrox.imtØcom¶‘iÚ: %.2àhours" % (
+e¡im©ed_time
+)
+
+188 
+¡¬t_time_100
+ = 
+time
+.
+	$time
+()
+
+189 
+Ï¡_100_los£s
+ = []
+
+191 
+ke_checkpošt
+:
+
+192 
+	`Î´št
+("\nSaving Checkpoint ... "),
+
+193 
+ncompu‹r
+.
+	`§ve
+(
+£ssiÚ
+, 
+ck±s_dœ
+, '¡•-%d' % (
+i
+))
+
+194 
+	`Î´št
+("Done!\n")
+
+196 
+exû±
+ 
+KeybßrdIÁ”ru±
+:
+
+198 
+	`Î´št
+("\nSaving Checkpoint ... "),
+
+199 
+ncompu‹r
+.
+	`§ve
+(
+£ssiÚ
+, 
+ck±s_dœ
+, '¡•-%d' % (
+i
+))
+
+200 
+	`Î´št
+("Done!\n")
+
+201 
+sys
+.
+	`ex™
+(0)
+
+	@tasks/copy/feedforward_controller.py
+
+1 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+2 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+3 
+äom
+ 
+	gdnc
+.
+cÚŒŞËr
+ 
+impÜt
+ 
+	gBa£CÚŒŞËr
+
+
+7 
+	gA
+ 2-
+Lay”s
+ 
+ãedfÜw¬d
+ 
+Ãu¿l
+ 
+ÃtwÜk
+ 
+	gw™h
+ 128, 256 
+nodes
+ 
+	g»¥eùiv–y
+
+
+10 
+şass
+ 
+	$F“dfÜw¬dCÚŒŞËr
+(
+Ba£CÚŒŞËr
+):
+
+12 
+def
+ 
+	$ÃtwÜk_v¬s
+(
+£lf
+):
+
+13 
+š™Ÿl_¡d
+ = 
+Ïmbda
+ 
+š_nodes
+: 
+Å
+.
+	`mš
+(1e-2,‚p.
+	`sq¹
+(2.0 / in_nodes))
+
+14 
+šput_
+ = 
+£lf
+.
+Â_šput_size
+
+
+16 
+£lf
+.
+W1
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`Œunÿ‹d_nÜm®
+([
+šput_
+, 128], 
+¡ddev
+=
+	`š™Ÿl_¡d
+(šput_)), 
+Çme
+='layer1_W')
+
+17 
+£lf
+.
+W2
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`Œunÿ‹d_nÜm®
+([128, 256], 
+¡ddev
+=
+	`š™Ÿl_¡d
+(128)), 
+Çme
+='layer2_W')
+
+18 
+£lf
+.
+b1
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`z”os
+([128]), 
+Çme
+='layer1_b')
+
+19 
+£lf
+.
+b2
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`z”os
+([256]), 
+Çme
+='layer2_b')
+
+22 
+def
+ 
+	$ÃtwÜk_İ
+(
+£lf
+, 
+X
+):
+
+23 
+l1_ouut
+ = 
+tf
+.
+	`m©mul
+(
+X
+, 
+£lf
+.
+W1
+è+ s–f.
+b1
+
+
+24 
+l1_aùiv©iÚ
+ = 
+tf
+.
+Â
+.
+	$»lu
+(
+l1_ouut
+)
+
+26 
+l2_ouut
+ = 
+tf
+.
+	`m©mul
+(
+l1_aùiv©iÚ
+, 
+£lf
+.
+W2
+è+ s–f.
+b2
+
+
+27 
+l2_aùiv©iÚ
+ = 
+tf
+.
+Â
+.
+	$»lu
+(
+l2_ouut
+)
+
+29  
+l2_aùiv©iÚ
+
+
+31 
+def
+ 
+	$š™Ÿls
+(
+£lf
+):
+
+32 
+š™Ÿl_¡d
+ = 
+Ïmbda
+ 
+š_nodes
+: 
+Å
+.
+	`mš
+(1e-2,‚p.
+	`sq¹
+(2.0 / in_nodes))
+
+34 #defššg 
+š‹º®
+ 
+weights
+ 
+of
+ 
+the
+ 
+cÚŒŞËr
+
+
+35 
+£lf
+.
+š‹rçû_weights
+ = 
+tf
+.
+	`V¬ŸbË
+(
+
+36 
+tf
+.
+	`Œunÿ‹d_nÜm®
+([
+£lf
+.
+Â_ouut_size
+, s–f.
+š‹rçû_veùÜ_size
+], 
+¡ddev
+=
+	`š™Ÿl_¡d
+(self.nn_output_size)),
+
+37 
+Çme
+='interface_weights'
+
+39 
+£lf
+.
+Â_ouut_weights
+ = 
+tf
+.
+	`V¬ŸbË
+(
+
+40 
+tf
+.
+	`Œunÿ‹d_nÜm®
+([
+£lf
+.
+Â_ouut_size
+, s–f.
+ouut_size
+], 
+¡ddev
+=
+	`š™Ÿl_¡d
+(self.nn_output_size)),
+
+41 
+Çme
+='nn_output_weights'
+
+43 
+£lf
+.
+mem_ouut_weights
+ = 
+tf
+.
+	`V¬ŸbË
+(
+
+44 
+tf
+.
+	`Œunÿ‹d_nÜm®
+([
+£lf
+.
+wÜd_size
+ * s–f.
+»ad_h—ds
+, s–f.
+ouut_size
+], 
+¡ddev
+=
+	`š™Ÿl_¡d
+(self.word_size * self.read_heads)),
+
+45 
+Çme
+='mem_output_weights'
+
+	@tasks/copy/train-series.py
+
+1 
+impÜt
+ 
+w¬nšgs
+
+
+2 
+	gw¬nšgs
+.
+f‹rw¬nšgs
+('ignore')
+
+4 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+5 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+6 
+impÜt
+ 
+g‘İt
+
+
+7 
+impÜt
+ 
+sys
+
+
+8 
+impÜt
+ 
+os
+
+
+10 
+äom
+ 
+	gdnc
+.
+dnc
+ 
+impÜt
+ 
+DNC
+
+
+11 
+äom
+ 
+ãedfÜw¬d_cÚŒŞËr
+ 
+impÜt
+ 
+F“dfÜw¬dCÚŒŞËr
+
+
+13 
+def
+ 
+	$Î´št
+(
+mes§ge
+):
+
+14 
+sys
+.
+¡dout
+.
+	$wr™e
+(
+mes§ge
+)
+
+15 
+sys
+.
+¡dout
+.
+	$æush
+()
+
+17 
+def
+ 
+	$g’”©e_d©a
+(
+b©ch_size
+, 
+Ëngth
+, 
+size
+):
+
+19 
+šput_d©a
+ = 
+Å
+.
+	`z”os
+((
+b©ch_size
+, 2 * 
+Ëngth
+ + 1, 
+size
+), 
+dty³
+òp.
+æßt32
+)
+
+20 
+rg‘_ouut
+ = 
+Å
+.
+	`z”os
+((
+b©ch_size
+, 2 * 
+Ëngth
+ + 1, 
+size
+), 
+dty³
+òp.
+æßt32
+)
+
+22 
+£qu’û
+ = 
+Å
+.
+¿ndom
+.
+	`bšomŸl
+(1, 0.5, (
+b©ch_size
+, 
+Ëngth
+, 
+size
+ - 1))
+
+24 
+šput_d©a
+[:, :
+Ëngth
+, :
+size
+ - 1] = 
+£qu’û
+
+
+25 
+šput_d©a
+[:, 
+Ëngth
+, -1] = 1 #th
+’d
+ 
+symbŞ
+
+
+26 
+rg‘_ouut
+[:, 
+Ëngth
+ + 1:, :
+size
+ - 1] = 
+£qu’û
+
+
+28  
+šput_d©a
+, 
+rg‘_ouut
+
+
+31 
+def
+ 
+	$bš¬y_üoss_’Œİy
+(
+´ediùiÚs
+, 
+rg‘s
+):
+
+33  
+tf
+.
+	`»duû_m—n
+(
+
+34 -1 * 
+rg‘s
+ * 
+tf
+.
+	`log
+(
+´ediùiÚs
+) - (1 -argets) *f.log(1 -…redictions)
+
+38 
+__Çme__
+ == '__main__':
+
+40 
+dœÇme
+ = 
+os
+.
+·th
+.
+	$dœÇme
+(
+__fe__
+)
+
+41 
+ck±s_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+dœÇme
+ , 'checkpoints')
+
+42 
+tb_logs_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+dœÇme
+, 'logs')
+
+44 
+b©ch_size
+ = 1
+
+45 
+šput_size
+ = 
+ouut_size
+ = 6
+
+46 
+£r›s_Ëngth
+ = 2
+
+47 
+£qu’û_max_Ëngth
+ = 22
+
+48 
+wÜds_couÁ
+ = 10
+
+49 
+wÜd_size
+ = 10
+
+50 
+»ad_h—ds
+ = 1
+
+52 
+Ë¬nšg_¿‹
+ = 1e-4
+
+53 
+mom’tum
+ = 0.9
+
+55 
+äom_checkpošt
+ = 
+NÚe
+
+
+56 
+™”©iÚs
+ = 100000
+
+57 
+¡¬t_¡•
+ = 0
+
+59 
+İtiÚs
+,
+_
+ = 
+g‘İt
+.
+	`g‘İt
+(
+sys
+.
+¬gv
+[1:], '', ['checkpoint=', 'iterations=', 'start=', 'length='])
+
+61 
+İt
+ 
+š
+ 
+İtiÚs
+:
+
+62 
+İt
+[0] == '--checkpoint':
+
+63 
+äom_checkpošt
+ = 
+İt
+[1]
+
+64 
+–if
+ 
+İt
+[0] == '--iterations':
+
+65 
+™”©iÚs
+ = (
+İt
+[1])
+
+66 
+–if
+ 
+İt
+[0] == '--start':
+
+67 
+¡¬t_¡•
+ = (
+İt
+[1])
+
+68 
+–if
+ 
+İt
+[0] == '--length':
+
+69 
+£r›s_Ëngth
+ = (
+İt
+[1])
+
+70 
+£qu’û_max_Ëngth
+ = 11 * (
+İt
+[1])
+
+72 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+74 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+75 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+77 
+	`Î´št
+("Building Computational Graph ... ")
+
+79 
+İtimiz”
+ = 
+tf
+.
+Œaš
+.
+	$RMSPrİO±imiz”
+(
+Ë¬nšg_¿‹
+, 
+mom’tum
+=momentum)
+
+80 
+summ”iz”
+ = 
+tf
+.
+Œaš
+.
+	$Summ¬yWr™”
+(
+tb_logs_dœ
+, 
+£ssiÚ
+.
+g¿ph
+)
+
+82 
+ncompu‹r
+ = 
+	$DNC
+(
+
+83 
+F“dfÜw¬dCÚŒŞËr
+,
+
+84 
+šput_size
+,
+
+85 
+ouut_size
+,
+
+86 
+£qu’û_max_Ëngth
+,
+
+87 
+wÜds_couÁ
+,
+
+88 
+wÜd_size
+,
+
+89 
+»ad_h—ds
+,
+
+90 
+b©ch_size
+
+
+93 
+ouut
+, 
+_
+ = 
+ncompu‹r
+.
+	$g‘_ouuts
+()
+
+94 
+squashed_ouut
+ = 
+tf
+.
+	`ş_by_v®ue
+Ñf.
+	`sigmoid
+(
+ouut
+), 1e-6, 1. - 1e-6)
+
+96 
+loss
+ = 
+	$bš¬y_üoss_’Œİy
+(
+squashed_ouut
+, 
+ncompu‹r
+.
+rg‘_ouut
+)
+
+98 
+summ”›s
+ = []
+
+100 
+g¿d›Ás
+ = 
+İtimiz”
+.
+	$compu‹_g¿d›Ás
+(
+loss
+)
+
+101 
+i
+, (
+g¿d
+, 
+v¬
+è
+š
+ 
+	$’um”©e
+(
+g¿d›Ás
+):
+
+102 
+g¿d
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+103 
+summ”›s
+.
+	`­³nd
+(
+tf
+.
+	`hi¡og¿m_summ¬y
+(
+v¬
+.
+Çme
+ + '/g¿d', 
+g¿d
+))
+
+104 
+g¿d›Ás
+[
+i
+] = (
+tf
+.
+	`ş_by_v®ue
+(
+g¿d
+, -10, 10), 
+v¬
+)
+
+106 
+­¶y_g¿d›Ás
+ = 
+İtimiz”
+.
+	$­¶y_g¿d›Ás
+(
+g¿d›Ás
+)
+
+108 
+summ”›s
+.
+	`­³nd
+(
+tf
+.
+	`sÿÏr_summ¬y
+("Loss", 
+loss
+))
+
+110 
+summ”ize_İ
+ = 
+tf
+.
+	$m”ge_summ¬y
+(
+summ”›s
+)
+
+111 
+no_summ”ize
+ = 
+tf
+.
+	$no_İ
+()
+
+113 
+	`Î´št
+("Done!\n")
+
+115 
+	`Î´št
+("Initializing Variables ... ")
+
+116 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+117 
+	`Î´št
+("Done!\n")
+
+119 
+äom_checkpošt
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+120 
+	`Î´št
+("Re¡Üšg Checkpošˆ% ... " % (
+äom_checkpošt
+))
+
+121 
+ncompu‹r
+.
+	$»¡Üe
+(
+£ssiÚ
+, 
+ck±s_dœ
+, 
+äom_checkpošt
+)
+
+122 
+	`Î´št
+("Done!\n")
+
+125 
+Ï¡_100_los£s
+ = []
+
+127 
+¡¬t
+ = 0 
+¡¬t_¡•
+ == 0 start_step + 1
+
+128 
+’d
+ = 
+¡¬t_¡•
+ + 
+™”©iÚs
+ + 1
+
+130 
+i
+ 
+š
+ 
+	$x¿nge
+(
+¡¬t
+, 
+’d
+):
+
+131 
+	`Î´št
+("\rI‹¿tiÚ %d/%d" % (
+i
+, 
+’d
+ - 1))
+
+133 
+šput_£r›s
+ = []
+
+134 
+ouut_£r›s
+ = []
+
+136 
+k
+ 
+š
+ 
+	$¿nge
+(
+£r›s_Ëngth
+):
+
+137 
+šput_d©a
+, 
+rg‘_ouut
+ = 
+	$g’”©e_d©a
+(
+b©ch_size
+, 5, 
+šput_size
+)
+
+138 
+šput_£r›s
+.
+	$­³nd
+(
+šput_d©a
+)
+
+139 
+ouut_£r›s
+.
+	$­³nd
+(
+rg‘_ouut
+)
+
+141 
+Úe_big_šput
+ = 
+Å
+.
+	$cÚÿ‹Ç‹
+(
+šput_£r›s
+, 
+axis
+=1)
+
+142 
+Úe_big_ouut
+ = 
+Å
+.
+	$cÚÿ‹Ç‹
+(
+ouut_£r›s
+, 
+axis
+=1)
+
+144 
+summ”ize
+ = (
+i
+ % 100 == 0)
+
+145 
+ke_checkpošt
+ = (
+i
+ !ğ0è
+	`ªd
+ (˜% 
+™”©iÚs
+ == 0)
+
+147 
+loss_v®ue
+, 
+_
+, 
+summ¬y
+ = 
+£ssiÚ
+.
+	`run
+([
+
+148 
+loss
+,
+
+149 
+­¶y_g¿d›Ás
+,
+
+150 
+summ”ize_İ
+ 
+summ”ize
+ 
+no_summ”ize
+
+
+151 ], 
+ãed_diù
+={
+
+152 
+ncompu‹r
+.
+šput_d©a
+: 
+Úe_big_šput
+,
+
+153 
+ncompu‹r
+.
+rg‘_ouut
+: 
+Úe_big_ouut
+,
+
+154 
+ncompu‹r
+.
+£qu’û_Ëngth
+: 
+£qu’û_max_Ëngth
+
+
+155 
+	}
+})
+
+157 
+Ï¡_100_los£s
+.
+	$­³nd
+(
+loss_v®ue
+)
+
+158 
+summ”iz”
+.
+	$add_summ¬y
+(
+summ¬y
+, 
+i
+)
+
+160 
+summ”ize
+:
+
+161 
+	`Î´št
+("\n\tAvg. Logi¡iøLoss: %.4f\n" % (
+Å
+.
+	$m—n
+(
+Ï¡_100_los£s
+)))
+
+162 
+Ï¡_100_los£s
+ = []
+
+164 
+ke_checkpošt
+:
+
+165 
+	`Î´št
+("\nSaving Checkpoint ... "),
+
+166 
+ncompu‹r
+.
+	`§ve
+(
+£ssiÚ
+, 
+ck±s_dœ
+, '¡•-%d' % (
+i
+))
+
+167 
+	`Î´št
+("Done!\n")
+
+	@tasks/copy/train.py
+
+1 
+impÜt
+ 
+w¬nšgs
+
+
+2 
+	gw¬nšgs
+.
+f‹rw¬nšgs
+('ignore')
+
+4 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+5 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+6 
+impÜt
+ 
+g‘İt
+
+
+7 
+impÜt
+ 
+sys
+
+
+8 
+impÜt
+ 
+os
+
+
+10 
+äom
+ 
+	gdnc
+.
+dnc
+ 
+impÜt
+ 
+DNC
+
+
+11 
+äom
+ 
+ãedfÜw¬d_cÚŒŞËr
+ 
+impÜt
+ 
+F“dfÜw¬dCÚŒŞËr
+
+
+13 
+def
+ 
+	$Î´št
+(
+mes§ge
+):
+
+14 
+sys
+.
+¡dout
+.
+	$wr™e
+(
+mes§ge
+)
+
+15 
+sys
+.
+¡dout
+.
+	$æush
+()
+
+17 
+def
+ 
+	$g’”©e_d©a
+(
+b©ch_size
+, 
+Ëngth
+, 
+size
+):
+
+19 
+šput_d©a
+ = 
+Å
+.
+	`z”os
+((
+b©ch_size
+, 2 * 
+Ëngth
+ + 1, 
+size
+), 
+dty³
+òp.
+æßt32
+)
+
+20 
+rg‘_ouut
+ = 
+Å
+.
+	`z”os
+((
+b©ch_size
+, 2 * 
+Ëngth
+ + 1, 
+size
+), 
+dty³
+òp.
+æßt32
+)
+
+22 
+£qu’û
+ = 
+Å
+.
+¿ndom
+.
+	`bšomŸl
+(1, 0.5, (
+b©ch_size
+, 
+Ëngth
+, 
+size
+ - 1))
+
+24 
+šput_d©a
+[:, :
+Ëngth
+, :
+size
+ - 1] = 
+£qu’û
+
+
+25 
+šput_d©a
+[:, 
+Ëngth
+, -1] = 1 #th
+’d
+ 
+symbŞ
+
+
+26 
+rg‘_ouut
+[:, 
+Ëngth
+ + 1:, :
+size
+ - 1] = 
+£qu’û
+
+
+28  
+šput_d©a
+, 
+rg‘_ouut
+
+
+31 
+def
+ 
+	$bš¬y_üoss_’Œİy
+(
+´ediùiÚs
+, 
+rg‘s
+):
+
+33  
+tf
+.
+	`»duû_m—n
+(
+
+34 -1 * 
+rg‘s
+ * 
+tf
+.
+	`log
+(
+´ediùiÚs
+) - (1 -argets) *f.log(1 -…redictions)
+
+38 
+__Çme__
+ == '__main__':
+
+40 
+dœÇme
+ = 
+os
+.
+·th
+.
+	$dœÇme
+(
+__fe__
+)
+
+41 
+ck±s_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+dœÇme
+ , 'checkpoints')
+
+42 
+tb_logs_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+dœÇme
+, 'logs')
+
+44 
+b©ch_size
+ = 1
+
+45 
+šput_size
+ = 
+ouut_size
+ = 6
+
+46 
+£qu’û_max_Ëngth
+ = 10
+
+47 
+wÜds_couÁ
+ = 15
+
+48 
+wÜd_size
+ = 10
+
+49 
+»ad_h—ds
+ = 1
+
+51 
+Ë¬nšg_¿‹
+ = 1e-4
+
+52 
+mom’tum
+ = 0.9
+
+54 
+äom_checkpošt
+ = 
+NÚe
+
+
+55 
+™”©iÚs
+ = 100000
+
+57 
+İtiÚs
+,
+_
+ = 
+g‘İt
+.
+	`g‘İt
+(
+sys
+.
+¬gv
+[1:], '', ['checkpoint=', 'iterations='])
+
+59 
+İt
+ 
+š
+ 
+İtiÚs
+:
+
+60 
+İt
+[0] == '--checkpoint':
+
+61 
+äom_checkpošt
+ = 
+İt
+[1]
+
+62 
+–if
+ 
+İt
+[0] == '--iterations':
+
+63 
+™”©iÚs
+ = (
+İt
+[1])
+
+65 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+67 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+68 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+70 
+	`Î´št
+("Building Computational Graph ... ")
+
+72 
+İtimiz”
+ = 
+tf
+.
+Œaš
+.
+	$RMSPrİO±imiz”
+(
+Ë¬nšg_¿‹
+, 
+mom’tum
+=momentum)
+
+74 
+ncompu‹r
+ = 
+	`DNC
+(
+
+75 
+F“dfÜw¬dCÚŒŞËr
+,
+
+76 
+šput_size
+,
+
+77 
+ouut_size
+,
+
+78 2 * 
+£qu’û_max_Ëngth
+ + 1,
+
+79 
+wÜds_couÁ
+,
+
+80 
+wÜd_size
+,
+
+81 
+»ad_h—ds
+,
+
+82 
+b©ch_size
+
+
+85 #squash 
+the
+ 
+DNC
+ 
+ouut
+ 
+b‘w“n
+ 0 
+ªd
+ 1
+
+86 
+ouut
+, 
+_
+ = 
+ncompu‹r
+.
+	$g‘_ouuts
+()
+
+87 
+squashed_ouut
+ = 
+tf
+.
+	`ş_by_v®ue
+Ñf.
+	`sigmoid
+(
+ouut
+), 1e-6, 1. - 1e-6)
+
+89 
+loss
+ = 
+	$bš¬y_üoss_’Œİy
+(
+squashed_ouut
+, 
+ncompu‹r
+.
+rg‘_ouut
+)
+
+91 
+summ”›s
+ = []
+
+93 
+g¿d›Ás
+ = 
+İtimiz”
+.
+	$compu‹_g¿d›Ás
+(
+loss
+)
+
+94 
+i
+, (
+g¿d
+, 
+v¬
+è
+š
+ 
+	$’um”©e
+(
+g¿d›Ás
+):
+
+95 
+g¿d
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+96 
+summ”›s
+.
+	`­³nd
+(
+tf
+.
+	`hi¡og¿m_summ¬y
+(
+v¬
+.
+Çme
+ + '/g¿d', 
+g¿d
+))
+
+97 
+g¿d›Ás
+[
+i
+] = (
+tf
+.
+	`ş_by_v®ue
+(
+g¿d
+, -10, 10), 
+v¬
+)
+
+99 
+­¶y_g¿d›Ás
+ = 
+İtimiz”
+.
+	$­¶y_g¿d›Ás
+(
+g¿d›Ás
+)
+
+101 
+summ”›s
+.
+	`­³nd
+(
+tf
+.
+	`sÿÏr_summ¬y
+("Loss", 
+loss
+))
+
+103 
+summ”ize_İ
+ = 
+tf
+.
+	$m”ge_summ¬y
+(
+summ”›s
+)
+
+104 
+no_summ”ize
+ = 
+tf
+.
+	$no_İ
+()
+
+106 
+summ”iz”
+ = 
+tf
+.
+Œaš
+.
+	$Summ¬yWr™”
+(
+tb_logs_dœ
+, 
+£ssiÚ
+.
+g¿ph
+)
+
+108 
+	`Î´št
+("Done!\n")
+
+110 
+	`Î´št
+("Initializing Variables ... ")
+
+111 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+112 
+	`Î´št
+("Done!\n")
+
+114 
+äom_checkpošt
+ 
+is
+ 
+nÙ
+ 
+NÚe
+:
+
+115 
+	`Î´št
+("Re¡Üšg Checkpošˆ% ... " % (
+äom_checkpošt
+))
+
+116 
+ncompu‹r
+.
+	$»¡Üe
+(
+£ssiÚ
+, 
+ck±s_dœ
+, 
+äom_checkpošt
+)
+
+117 
+	`Î´št
+("Done!\n")
+
+120 
+Ï¡_100_los£s
+ = []
+
+122 
+i
+ 
+š
+ 
+	`x¿nge
+(
+™”©iÚs
+ + 1):
+
+123 
+	`Î´št
+("\rI‹¿tiÚ %d/%d" % (
+i
+, 
+™”©iÚs
+))
+
+125 
+¿ndom_Ëngth
+ = 
+Å
+.
+¿ndom
+.
+	`¿ndšt
+(1, 
+£qu’û_max_Ëngth
+ + 1)
+
+126 
+šput_d©a
+, 
+rg‘_ouut
+ = 
+	$g’”©e_d©a
+(
+b©ch_size
+, 
+¿ndom_Ëngth
+, 
+šput_size
+)
+
+128 
+summ”ize
+ = (
+i
+ % 100 == 0)
+
+129 
+ke_checkpošt
+ = (
+i
+ !ğ0è
+	`ªd
+ (˜% 
+™”©iÚs
+ == 0)
+
+131 
+loss_v®ue
+, 
+_
+, 
+summ¬y
+ = 
+£ssiÚ
+.
+	`run
+([
+
+132 
+loss
+,
+
+133 
+­¶y_g¿d›Ás
+,
+
+134 
+summ”ize_İ
+ 
+summ”ize
+ 
+no_summ”ize
+
+
+135 ], 
+ãed_diù
+={
+
+136 
+ncompu‹r
+.
+šput_d©a
+: input_data,
+
+137 
+ncompu‹r
+.
+rg‘_ouut
+:arget_output,
+
+138 
+ncompu‹r
+.
+£qu’û_Ëngth
+: 2 * 
+¿ndom_Ëngth
+ + 1
+
+139 
+	}
+})
+
+141 
+Ï¡_100_los£s
+.
+	$­³nd
+(
+loss_v®ue
+)
+
+142 
+summ”iz”
+.
+	$add_summ¬y
+(
+summ¬y
+, 
+i
+)
+
+144 
+summ”ize
+:
+
+145 
+	`Î´št
+("\n\tAvg. Logi¡iøLoss: %.4f\n" % (
+Å
+.
+	$m—n
+(
+Ï¡_100_los£s
+)))
+
+146 
+Ï¡_100_los£s
+ = []
+
+148 
+ke_checkpošt
+:
+
+149 
+	`Î´št
+("\nSaving Checkpoint ... "),
+
+150 
+ncompu‹r
+.
+	`§ve
+(
+£ssiÚ
+, 
+ck±s_dœ
+, '¡•-%d' % (
+i
+))
+
+151 
+	`Î´št
+("Done!\n")
+
+	@unit-tests/controller.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+3 
+impÜt
+ 
+un™‹¡
+
+
+5 
+äom
+ 
+	gdnc
+.
+cÚŒŞËr
+ 
+impÜt
+ 
+Ba£CÚŒŞËr
+
+
+7 
+şass
+ 
+	$DummyCÚŒŞËr
+(
+Ba£CÚŒŞËr
+):
+
+8 
+def
+ 
+	$ÃtwÜk_v¬s
+(
+£lf
+):
+
+9 
+£lf
+.
+W
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	$Œunÿ‹d_nÜm®
+([
+£lf
+.
+Â_šput_size
+, 64]))
+
+10 
+£lf
+.
+b
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	$z”os
+([64]))
+
+12 
+def
+ 
+	$ÃtwÜk_İ
+(
+£lf
+, 
+X
+):
+
+13  
+tf
+.
+	`m©mul
+(
+X
+, 
+£lf
+.
+W
+è+ s–f.
+b
+
+
+16 
+şass
+ 
+	$DummyRecu¼’tCÚŒŞËr
+(
+Ba£CÚŒŞËr
+):
+
+17 
+def
+ 
+	$ÃtwÜk_v¬s
+(
+£lf
+):
+
+18 
+£lf
+.
+l¡m_ûÎ
+ = 
+tf
+.
+Â
+.
+ºn_ûÎ
+.
+	$BasicLSTMC–l
+(64)
+
+19 
+£lf
+.
+¡©e
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`z”os
+([£lf.
+b©ch_size
+, 64]), 
+ŒašabË
+=
+F®£
+)
+
+20 
+£lf
+.
+ouut
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`z”os
+([£lf.
+b©ch_size
+, 64]), 
+ŒašabË
+=
+F®£
+)
+
+22 
+def
+ 
+	$ÃtwÜk_İ
+(
+£lf
+, 
+X
+, 
+¡©e
+):
+
+23 
+X
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+X
+)
+
+24  
+£lf
+.
+	$l¡m_ûÎ
+(
+X
+, 
+¡©e
+)
+
+26 
+def
+ 
+	$upd©e_¡©e
+(
+£lf
+, 
+Ãw_¡©e
+):
+
+27  
+tf
+.
+	`group
+(
+
+28 
+£lf
+.
+ouut
+.
+	`assign
+(
+Ãw_¡©e
+[0]),
+
+29 
+£lf
+.
+¡©e
+.
+	$assign
+(
+Ãw_¡©e
+[1])
+
+32 
+def
+ 
+	$g‘_¡©e
+(
+£lf
+):
+
+33  (
+£lf
+.
+ouut
+, s–f.
+¡©e
+)
+
+36 
+şass
+ 
+	$DNCCÚŒŞËrTe¡
+(
+un™‹¡
+.
+Te¡Ca£
+):
+
+38 
+def
+ 
+	$‹¡_cÚ¡ruùiÚ
+(
+£lf
+):
+
+39 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+40 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+41 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+43 
+cÚŒŞËr
+ = 
+	$DummyCÚŒŞËr
+(10, 10, 2, 5)
+
+44 
+rcÚŒŞËr
+ = 
+	$DummyRecu¼’tCÚŒŞËr
+(10, 10, 2, 5, 1)
+
+46 
+£lf
+.
+	$as£¹F®£
+(
+cÚŒŞËr
+.
+has_»cu¼’t_Â
+)
+
+47 
+£lf
+.
+	$as£¹Equ®
+(
+cÚŒŞËr
+.
+Â_šput_size
+, 20)
+
+48 
+£lf
+.
+	$as£¹Equ®
+(
+cÚŒŞËr
+.
+š‹rçû_veùÜ_size
+, 38)
+
+49 
+£lf
+.
+	`as£¹Equ®
+(
+cÚŒŞËr
+.
+š‹rçû_weights
+.
+	`g‘_sh­e
+().
+	`as_li¡
+(), [64, 38])
+
+50 
+£lf
+.
+	`as£¹Equ®
+(
+cÚŒŞËr
+.
+Â_ouut_weights
+.
+	`g‘_sh­e
+().
+	`as_li¡
+(), [64, 10])
+
+51 
+£lf
+.
+	`as£¹Equ®
+(
+cÚŒŞËr
+.
+mem_ouut_weights
+.
+	`g‘_sh­e
+().
+	`as_li¡
+(), [10, 10])
+
+53 
+£lf
+.
+	$as£¹True
+(
+rcÚŒŞËr
+.
+has_»cu¼’t_Â
+)
+
+54 
+£lf
+.
+	$as£¹Equ®
+(
+rcÚŒŞËr
+.
+Â_šput_size
+, 20)
+
+55 
+£lf
+.
+	$as£¹Equ®
+(
+rcÚŒŞËr
+.
+š‹rçû_veùÜ_size
+, 38)
+
+56 
+£lf
+.
+	`as£¹Equ®
+(
+rcÚŒŞËr
+.
+š‹rçû_weights
+.
+	`g‘_sh­e
+().
+	`as_li¡
+(), [64, 38])
+
+57 
+£lf
+.
+	`as£¹Equ®
+(
+rcÚŒŞËr
+.
+Â_ouut_weights
+.
+	`g‘_sh­e
+().
+	`as_li¡
+(), [64, 10])
+
+58 
+£lf
+.
+	`as£¹Equ®
+(
+rcÚŒŞËr
+.
+mem_ouut_weights
+.
+	`g‘_sh­e
+().
+	`as_li¡
+(), [10, 10])
+
+62 
+def
+ 
+	$‹¡_g‘_Â_ouut_size
+(
+£lf
+):
+
+63 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+64 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+65 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+SessiÚ
+:
+
+67 
+cÚŒŞËr
+ = 
+	$DummyCÚŒŞËr
+(10, 10, 2, 5)
+
+68 
+rcÚŒŞËr
+ = 
+	$DummyRecu¼’tCÚŒŞËr
+(10, 10, 2, 5, 1)
+
+70 
+£lf
+.
+	`as£¹Equ®
+(
+cÚŒŞËr
+.
+	`g‘_Â_ouut_size
+(), 64)
+
+71 
+£lf
+.
+	`as£¹Equ®
+(
+rcÚŒŞËr
+.
+	`g‘_Â_ouut_size
+(), 64)
+
+74 
+def
+ 
+	$‹¡_·r£_š‹rçû_veùÜ
+(
+£lf
+):
+
+75 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+76 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+77 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+79 
+cÚŒŞËr
+ = 
+	$DummyCÚŒŞËr
+(10, 10, 2, 5)
+
+80 
+z‘a
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(-2, 2, (2, 38)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+82 
+»ad_keys
+ = 
+Å
+.
+	`»sh­e
+(
+z‘a
+[:, :10], (-1, 5, 2))
+
+83 
+»ad_¡»ngths
+ = 1 + 
+Å
+.
+	`log
+Òp.
+	`exp
+Òp.
+	`»sh­e
+(
+z‘a
+[:, 10:12], (-1, 2, ))) + 1)
+
+84 
+wr™e_key
+ = 
+Å
+.
+	`»sh­e
+(
+z‘a
+[:, 12:17], (-1, 5, 1))
+
+85 
+wr™e_¡»ngth
+ = 1 + 
+Å
+.
+	`log
+Òp.
+	`exp
+Òp.
+	`»sh­e
+(
+z‘a
+[:, 17], (-1, 1))) + 1)
+
+86 
+”a£_veùÜ
+ = 1.0 / (1 + 
+Å
+.
+	`exp
+(-1 *‚p.
+	`»sh­e
+(
+z‘a
+[:, 18:23], (-1, 5))))
+
+87 
+wr™e_veùÜ
+ = 
+Å
+.
+	`»sh­e
+(
+z‘a
+[:, 23:28], (-1, 5))
+
+88 
+ä“_g©es
+ = 1.0 / (1 + 
+Å
+.
+	`exp
+(-1 *‚p.
+	`»sh­e
+(
+z‘a
+[:, 28:30], (-1, 2))))
+
+89 
+®loÿtiÚ_g©e
+ = 1.0 / (1 + 
+Å
+.
+	`exp
+(-1 * 
+z‘a
+[:, 30,‚p.
+Ãwaxis
+]))
+
+90 
+wr™e_g©e
+ = 1.0 / (1 + 
+Å
+.
+	`exp
+(-1 * 
+z‘a
+[:, 31,‚p.
+Ãwaxis
+]))
+
+91 
+»ad_modes
+ = 
+Å
+.
+	`»sh­e
+(
+z‘a
+[:, 32:], (-1, 3, 2))
+
+93 
+»ad_modes
+ = 
+Å
+.
+	$Œª¥o£
+(
+»ad_modes
+, [0, 2, 1])
+
+94 
+»ad_modes
+ = 
+Å
+.
+	`»sh­e
+(read_modes, (-1, 3))
+
+95 
+»ad_modes
+ = 
+Å
+.
+	`exp
+Ô—d_modesè/‚p.
+	`sum
+Òp.expÔ—d_modes), 
+axis
+=-1, 
+k“pdims
+=
+True
+)
+
+96 
+»ad_modes
+ = 
+Å
+.
+	`»sh­e
+(read_modes, (2, 2, 3))
+
+97 
+»ad_modes
+ = 
+Å
+.
+	$Œª¥o£
+(
+»ad_modes
+, [0, 2, 1])
+
+99 
+İ
+ = 
+cÚŒŞËr
+.
+	$·r£_š‹rçû_veùÜ
+(
+z‘a
+)
+
+100 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+101 
+·r£d
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+103 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['»ad_keys'], 
+»ad_keys
+))
+
+104 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['»ad_¡»ngths'], 
+»ad_¡»ngths
+))
+
+105 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['wr™e_key'], 
+wr™e_key
+))
+
+106 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['wr™e_¡»ngth'], 
+wr™e_¡»ngth
+))
+
+107 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['”a£_veùÜ'], 
+”a£_veùÜ
+))
+
+108 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['wr™e_veùÜ'], 
+wr™e_veùÜ
+))
+
+109 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['ä“_g©es'], 
+ä“_g©es
+))
+
+110 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['®loÿtiÚ_g©e'], 
+®loÿtiÚ_g©e
+))
+
+111 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['wr™e_g©e'], 
+wr™e_g©e
+))
+
+112 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+·r£d
+['»ad_modes'], 
+»ad_modes
+))
+
+115 
+def
+ 
+	$‹¡_´oûss_šput
+(
+£lf
+):
+
+116 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+117 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+118 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+120 
+cÚŒŞËr
+ = 
+	$DummyCÚŒŞËr
+(10, 10, 2, 5)
+
+121 
+rcÚŒŞËr
+ = 
+	$DummyRecu¼’tCÚŒŞËr
+(10, 10, 2, 5, 2)
+
+123 
+šput_b©ch
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 10)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+124 
+Ï¡_»ad_veùÜs
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(-1, 1, (2, 5, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+126 
+v_İ
+, 
+z‘a_İ
+ = 
+cÚŒŞËr
+.
+	$´oûss_šput
+(
+šput_b©ch
+, 
+Ï¡_»ad_veùÜs
+)
+
+127 
+rv_İ
+, 
+rz‘a_İ
+, 
+rs_İ
+ = 
+rcÚŒŞËr
+.
+	`´oûss_šput
+(
+šput_b©ch
+, 
+Ï¡_»ad_veùÜs
+,„cÚŒŞËr.
+	$g‘_¡©e
+())
+
+129 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+130 
+v
+, 
+z‘a
+ = 
+£ssiÚ
+.
+	$run
+([
+v_İ
+, 
+z‘a_İ
+])
+
+131 
+rv
+, 
+rz‘a
+, 
+rs
+ = 
+£ssiÚ
+.
+	$run
+([
+rv_İ
+, 
+rz‘a_İ
+, 
+rs_İ
+])
+
+133 
+£lf
+.
+	`as£¹Equ®
+(
+v
+.
+sh­e
+, (2, 10))
+
+134 
+£lf
+.
+	`as£¹Equ®
+(
+Å
+.
+	`cÚÿ‹Ç‹
+([Å.
+	`»sh­e
+(
+v®
+, (2, -1)è
+_
+,v® 
+š
+ 
+z‘a
+.
+	`™”™ems
+()], 
+axis
+=1).
+sh­e
+, (2, 38))
+
+136 
+£lf
+.
+	`as£¹Equ®
+(
+rv
+.
+sh­e
+, (2, 10))
+
+137 
+£lf
+.
+	`as£¹Equ®
+(
+Å
+.
+	`cÚÿ‹Ç‹
+([Å.
+	`»sh­e
+(
+v®
+, (2, -1)è
+_
+,v® 
+š
+ 
+rz‘a
+.
+	`™”™ems
+()], 
+axis
+=1).
+sh­e
+, (2, 38))
+
+138 
+£lf
+.
+	`as£¹Equ®
+([
+_s
+.
+sh­e
+ _ 
+š
+ 
+rs
+], [(2, 64), (2, 64)])
+
+141 
+def
+ 
+	$‹¡_fš®_ouut
+(
+£lf
+):
+
+142 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+143 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+144 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+146 
+cÚŒŞËr
+ = 
+	$DummyCÚŒŞËr
+(10, 10, 2, 5)
+
+147 
+ouut_b©ch
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 10)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+148 
+Ãw_»ad_veùÜs
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(-1, 1, (2, 5, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+150 
+İ
+ = 
+cÚŒŞËr
+.
+	$fš®_ouut
+(
+ouut_b©ch
+, 
+Ãw_»ad_veùÜs
+)
+
+151 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+152 
+y
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+154 
+£lf
+.
+	`as£¹Equ®
+(
+y
+.
+sh­e
+, (2, 10))
+
+157 
+__Çme__
+ == '__main__':
+
+158 
+un™‹¡
+.
+	`maš
+(
+v”bos™y
+=2)
+
+	@unit-tests/dnc.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+3 
+impÜt
+ 
+un™‹¡
+
+
+4 
+impÜt
+ 
+shut
+
+
+5 
+impÜt
+ 
+os
+
+
+7 
+äom
+ 
+	gdnc
+.
+dnc
+ 
+impÜt
+ 
+DNC
+
+
+8 
+äom
+ 
+	gdnc
+.
+memÜy
+ 
+impÜt
+ 
+MemÜy
+
+
+9 
+äom
+ 
+	gdnc
+.
+cÚŒŞËr
+ 
+impÜt
+ 
+Ba£CÚŒŞËr
+
+
+11 
+şass
+ 
+	$DummyCÚŒŞËr
+(
+Ba£CÚŒŞËr
+):
+
+12 
+def
+ 
+	$ÃtwÜk_v¬s
+(
+£lf
+):
+
+13 
+£lf
+.
+W
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`Œunÿ‹d_nÜm®
+([£lf.
+Â_šput_size
+, 64]), 
+Çme
+='layer_W')
+
+14 
+£lf
+.
+b
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`z”os
+([64]), 
+Çme
+='layer_b')
+
+16 
+def
+ 
+	$ÃtwÜk_İ
+(
+£lf
+, 
+X
+):
+
+17  
+tf
+.
+	`m©mul
+(
+X
+, 
+£lf
+.
+W
+è+ s–f.
+b
+
+
+19 
+şass
+ 
+	$DummyRecu¼’tCÚŒŞËr
+(
+Ba£CÚŒŞËr
+):
+
+20 
+def
+ 
+	$ÃtwÜk_v¬s
+(
+£lf
+):
+
+21 
+£lf
+.
+l¡m_ûÎ
+ = 
+tf
+.
+Â
+.
+ºn_ûÎ
+.
+	$BasicLSTMC–l
+(64)
+
+22 
+£lf
+.
+¡©e
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`z”os
+([£lf.
+b©ch_size
+, 64]), 
+ŒašabË
+=
+F®£
+)
+
+23 
+£lf
+.
+ouut
+ = 
+tf
+.
+	`V¬ŸbË
+Ñf.
+	`z”os
+([£lf.
+b©ch_size
+, 64]), 
+ŒašabË
+=
+F®£
+)
+
+25 
+def
+ 
+	$ÃtwÜk_İ
+(
+£lf
+, 
+X
+, 
+¡©e
+):
+
+26 
+X
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+X
+)
+
+27  
+£lf
+.
+	$l¡m_ûÎ
+(
+X
+, 
+¡©e
+)
+
+29 
+def
+ 
+	$upd©e_¡©e
+(
+£lf
+, 
+Ãw_¡©e
+):
+
+30  
+tf
+.
+	`group
+(
+
+31 
+£lf
+.
+ouut
+.
+	`assign
+(
+Ãw_¡©e
+[0]),
+
+32 
+£lf
+.
+¡©e
+.
+	$assign
+(
+Ãw_¡©e
+[1])
+
+35 
+def
+ 
+	$g‘_¡©e
+(
+£lf
+):
+
+36  (
+£lf
+.
+ouut
+, s–f.
+¡©e
+)
+
+38 
+şass
+ 
+	$DNCTe¡
+(
+un™‹¡
+.
+Te¡Ca£
+):
+
+40 @
+şassm‘hod
+
+
+41 
+def
+ 
+	$_ş—r
+(
+şs
+):
+
+42 
+Œy
+:
+
+43 
+cu¼’t_dœ
+ = 
+os
+.
+·th
+.
+	$dœÇme
+(
+__fe__
+)
+
+44 
+ck±s_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+cu¼’t_dœ
+, 'checkpoints')
+
+46 
+shut
+.
+	$rmŒ“
+(
+ck±s_dœ
+)
+
+47 
+exû±
+:
+
+48 #sw®low 
+”rÜ
+
+
+51 @
+şassm‘hod
+
+
+52 
+def
+ 
+	$£tUpCÏss
+(
+şs
+):
+
+53 
+şs
+.
+	`_ş—r
+()
+
+56 @
+şassm‘hod
+
+
+57 
+def
+ 
+	$‹¬DownCÏss
+(
+şs
+):
+
+58 
+şs
+.
+	$_ş—r
+()
+
+61 
+def
+ 
+	$‹¡_cÚ¡ruùiÚ
+(
+£lf
+):
+
+62 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+63 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+64 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+66 
+compu‹r
+ = 
+	$DNC
+(
+DummyCÚŒŞËr
+, 10, 20, 10, 10, 64, 1)
+
+67 
+rcompu‹r
+ = 
+	$DNC
+(
+DummyRecu¼’tCÚŒŞËr
+, 10, 20, 10, 10, 64, 1)
+
+69 
+£lf
+.
+	$as£¹Equ®
+(
+compu‹r
+.
+šput_size
+, 10)
+
+70 
+£lf
+.
+	$as£¹Equ®
+(
+compu‹r
+.
+ouut_size
+, 20)
+
+71 
+£lf
+.
+	$as£¹Equ®
+(
+compu‹r
+.
+wÜds_num
+, 10)
+
+72 
+£lf
+.
+	$as£¹Equ®
+(
+compu‹r
+.
+wÜd_size
+, 64)
+
+73 
+£lf
+.
+	$as£¹Equ®
+(
+compu‹r
+.
+»ad_h—ds
+, 1)
+
+74 
+£lf
+.
+	$as£¹Equ®
+(
+compu‹r
+.
+b©ch_size
+, 1)
+
+76 
+£lf
+.
+	`as£¹True
+(
+	$isš¡ªû
+(
+compu‹r
+.
+memÜy
+, 
+MemÜy
+))
+
+77 
+£lf
+.
+	`as£¹True
+(
+	$isš¡ªû
+(
+compu‹r
+.
+cÚŒŞËr
+, 
+DummyCÚŒŞËr
+))
+
+78 
+£lf
+.
+	`as£¹True
+(
+	$isš¡ªû
+(
+rcompu‹r
+.
+cÚŒŞËr
+, 
+DummyRecu¼’tCÚŒŞËr
+))
+
+81 
+def
+ 
+	$‹¡_ÿÎ
+(
+£lf
+):
+
+82 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+83 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+84 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+86 
+compu‹r
+ = 
+	$DNC
+(
+DummyCÚŒŞËr
+, 10, 20, 10, 10, 64, 2, 
+b©ch_size
+=3)
+
+87 
+rcompu‹r
+ = 
+	$DNC
+(
+DummyRecu¼’tCÚŒŞËr
+, 10, 20, 10, 10, 64, 2, 
+b©ch_size
+=3)
+
+88 
+šput_b©ches
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (3, 5, 10)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+90 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+91 
+out_v›w
+ = 
+£ssiÚ
+.
+	`run
+(
+compu‹r
+.
+	`g‘_ouuts
+(), 
+ãed_diù
+={
+
+92 
+compu‹r
+.
+šput_d©a
+: 
+šput_b©ches
+,
+
+93 
+compu‹r
+.
+£qu’û_Ëngth
+: 5
+
+94 
+	}
+})
+
+95 
+out
+, 
+	gv›w
+ = 
+out_v›w
+
+
+97 
+rout_rv›w
+, 
+	gro
+, 
+	grs
+ = 
+£ssiÚ
+.
+run
+([
+
+98 
+rcompu‹r
+.
+g‘_ouuts
+(),
+
+99 
+rcompu‹r
+.
+cÚŒŞËr
+.
+g‘_¡©e
+()[0],
+
+100 
+rcompu‹r
+.
+cÚŒŞËr
+.
+g‘_¡©e
+()[1]
+
+101 ], 
+ãed_diù
+={
+
+102 
+rcompu‹r
+.
+šput_d©a
+: 
+šput_b©ches
+,
+
+103 
+rcompu‹r
+.
+£qu’û_Ëngth
+: 5
+
+105 
+rout
+, 
+	grv›w
+ = 
+rout_rv›w
+
+
+107 
+£lf
+.
+as£¹Equ®
+(
+out
+.
+sh­e
+, (3, 5, 20))
+
+108 
+	g£lf
+.
+as£¹Equ®
+(
+v›w
+['ä“_g©es'].
+sh­e
+, (3, 5, 2))
+
+109 
+	g£lf
+.
+as£¹Equ®
+(
+v›w
+['®loÿtiÚ_g©es'].
+sh­e
+, (3, 5, 1))
+
+110 
+	g£lf
+.
+as£¹Equ®
+(
+v›w
+['wr™e_g©es'].
+sh­e
+, (3, 5, 1))
+
+111 
+	g£lf
+.
+as£¹Equ®
+(
+v›w
+['»ad_weightšgs'].
+sh­e
+, (3, 5, 10, 2))
+
+112 
+	g£lf
+.
+as£¹Equ®
+(
+v›w
+['wr™e_weightšgs'].
+sh­e
+, (3, 5, 10))
+
+115 
+	g£lf
+.
+as£¹Equ®
+(
+rout
+.
+sh­e
+, (3, 5, 20))
+
+116 
+	g£lf
+.
+as£¹Equ®
+(
+rv›w
+['ä“_g©es'].
+sh­e
+, (3, 5, 2))
+
+117 
+	g£lf
+.
+as£¹Equ®
+(
+rv›w
+['®loÿtiÚ_g©es'].
+sh­e
+, (3, 5, 1))
+
+118 
+	g£lf
+.
+as£¹Equ®
+(
+rv›w
+['wr™e_g©es'].
+sh­e
+, (3, 5, 1))
+
+119 
+	g£lf
+.
+as£¹Equ®
+(
+rv›w
+['»ad_weightšgs'].
+sh­e
+, (3, 5, 10, 2))
+
+120 
+	g£lf
+.
+as£¹Equ®
+(
+rv›w
+['wr™e_weightšgs'].
+sh­e
+, (3, 5, 10))
+
+123 
+def
+ 
+	$‹¡_§ve
+(
+£lf
+):
+
+124 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+125 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+126 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+128 
+compu‹r
+ = 
+	$DNC
+(
+DummyCÚŒŞËr
+, 10, 20, 10, 10, 64, 2, 
+b©ch_size
+=2)
+
+129 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+130 
+cu¼’t_dœ
+ = 
+os
+.
+·th
+.
+	$dœÇme
+(
+__fe__
+)
+
+131 
+ck±s_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+cu¼’t_dœ
+, 'checkpoints')
+
+133 
+compu‹r
+.
+	`§ve
+(
+£ssiÚ
+, 
+ck±s_dœ
+, 'test-save')
+
+135 
+£lf
+.
+	$as£¹_
+(
+True
+)
+
+138 
+def
+ 
+	$‹¡_»¡Üe
+(
+£lf
+):
+
+140 
+cu¼’t_dœ
+ = 
+os
+.
+·th
+.
+	$dœÇme
+(
+__fe__
+)
+
+141 
+ck±s_dœ
+ = 
+os
+.
+·th
+.
+	`još
+(
+cu¼’t_dœ
+, 'checkpoints')
+
+143 
+mod–1_ouut
+, 
+mod–1_memv›w
+ = 
+NÚe
+, None
+
+144 
+§m¶e_šput
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 5, 10)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+145 
+§m¶e_£q_Ën
+ = 5
+
+147 
+g¿ph1
+ = 
+tf
+.
+	$G¿ph
+()
+
+148 
+w™h
+ 
+g¿ph1
+.
+	$as_deçuÉ
+():
+
+149 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=
+g¿ph1
+è
+as
+ 
+£ssiÚ1
+:
+
+151 
+compu‹r
+ = 
+	$DNC
+(
+DummyCÚŒŞËr
+, 10, 20, 10, 10, 64, 2, 
+b©ch_size
+=2)
+
+152 
+£ssiÚ1
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+154 
+§ved_weights
+ = 
+£ssiÚ1
+.
+	$run
+([
+
+155 
+compu‹r
+.
+cÚŒŞËr
+.
+Â_ouut_weights
+,
+
+156 
+compu‹r
+.
+cÚŒŞËr
+.
+š‹rçû_weights
+,
+
+157 
+compu‹r
+.
+cÚŒŞËr
+.
+mem_ouut_weights
+,
+
+158 
+compu‹r
+.
+cÚŒŞËr
+.
+W
+,
+
+159 
+compu‹r
+.
+cÚŒŞËr
+.
+b
+
+
+162 
+compu‹r
+.
+	`§ve
+(
+£ssiÚ1
+, 
+ck±s_dœ
+, 'test-restore')
+
+164 
+g¿ph2
+ = 
+tf
+.
+	$G¿ph
+()
+
+165 
+w™h
+ 
+g¿ph2
+.
+	$as_deçuÉ
+():
+
+166 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=
+g¿ph2
+è
+as
+ 
+£ssiÚ2
+:
+
+168 
+compu‹r
+ = 
+	$DNC
+(
+DummyCÚŒŞËr
+, 10, 20, 10, 10, 64, 2, 
+b©ch_size
+=2)
+
+169 
+£ssiÚ2
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+170 
+compu‹r
+.
+	`»¡Üe
+(
+£ssiÚ2
+, 
+ck±s_dœ
+, 'test-restore')
+
+172 
+»¡Üed_weights
+ = 
+£ssiÚ2
+.
+	$run
+([
+
+173 
+compu‹r
+.
+cÚŒŞËr
+.
+Â_ouut_weights
+,
+
+174 
+compu‹r
+.
+cÚŒŞËr
+.
+š‹rçû_weights
+,
+
+175 
+compu‹r
+.
+cÚŒŞËr
+.
+mem_ouut_weights
+,
+
+176 
+compu‹r
+.
+cÚŒŞËr
+.
+W
+,
+
+177 
+compu‹r
+.
+cÚŒŞËr
+.
+b
+
+
+180 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	`´oduù
+([Å.
+	$¬¿y_equ®
+(
+»¡Üed_weights
+[
+i
+], 
+§ved_weights
+[i]è˜
+š
+ 
+	`¿nge
+(5)]))
+
+182 
+__Çme__
+ == '__main__':
+
+183 
+un™‹¡
+.
+	`maš
+(
+v”bos™y
+=2)
+
+	@unit-tests/memory.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+3 
+impÜt
+ 
+un™‹¡
+
+
+5 
+äom
+ 
+	gdnc
+.
+memÜy
+ 
+impÜt
+ 
+MemÜy
+
+
+7 
+def
+ 
+	$¿ndom_soámax
+(
+sh­e
+, 
+axis
+):
+
+8 
+¿nd
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, 
+sh­e
+).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+9  
+Å
+.
+	`exp
+(
+¿nd
+è/‚p.
+	`sum
+Òp.expÔªd), 
+axis
+÷xis, 
+k“pdims
+=
+True
+)
+
+11 
+şass
+ 
+	$DNCMemÜyTe¡s
+(
+un™‹¡
+.
+Te¡Ca£
+):
+
+13 
+def
+ 
+	$‹¡_cÚ¡ruùiÚ
+(
+£lf
+):
+
+14 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+15 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+16 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+18 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+19 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+21 
+£lf
+.
+	$as£¹Equ®
+(
+mem
+.
+wÜds_num
+, 4)
+
+22 
+£lf
+.
+	$as£¹Equ®
+(
+mem
+.
+wÜd_size
+, 5)
+
+23 
+£lf
+.
+	$as£¹Equ®
+(
+mem
+.
+»ad_h—ds
+, 2)
+
+24 
+£lf
+.
+	$as£¹Equ®
+(
+mem
+.
+b©ch_size
+, 2)
+
+27 
+def
+ 
+	$‹¡_š™_memÜy
+(
+£lf
+):
+
+28 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+29 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+30 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+32 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+33 
+M
+, 
+u
+, 
+p
+, 
+L
+, 
+ww
+, 
+rw
+, 
+r
+ = 
+£ssiÚ
+.
+	`run
+(
+mem
+.
+	$š™_memÜy
+())
+
+35 
+£lf
+.
+	`as£¹Equ®
+(
+M
+.
+sh­e
+, (2, 4, 5))
+
+36 
+£lf
+.
+	`as£¹Equ®
+(
+u
+.
+sh­e
+, (2, 4))
+
+37 
+£lf
+.
+	`as£¹Equ®
+(
+L
+.
+sh­e
+, (2, 4, 4))
+
+38 
+£lf
+.
+	`as£¹Equ®
+(
+ww
+.
+sh­e
+, (2, 4))
+
+39 
+£lf
+.
+	`as£¹Equ®
+(
+rw
+.
+sh­e
+, (2, 4, 2))
+
+40 
+£lf
+.
+	`as£¹Equ®
+(
+r
+.
+sh­e
+, (2, 5, 2))
+
+41 
+£lf
+.
+	`as£¹Equ®
+(
+p
+.
+sh­e
+, (2, 4))
+
+43 
+def
+ 
+	$‹¡_lookup_weightšg
+(
+£lf
+):
+
+44 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+45 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+46 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+48 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+49 
+š™Ÿl_mem
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 4, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+50 
+keys
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 5, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+51 
+¡»ngths
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2 ,2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+53 
+nÜm_mem
+ = 
+š™Ÿl_mem
+ / 
+Å
+.
+	`sq¹
+Òp.
+	$sum
+(
+š™Ÿl_mem
+ ** 2, 
+axis
+=2, 
+k“pdims
+=
+True
+))
+
+54 
+nÜm_keys
+ = 
+keys
+/ 
+Å
+.
+	`sq¹
+Òp.
+	$sum
+(
+keys
+ ** 2, 
+axis
+ = 1, 
+k“pdims
+=
+True
+))
+
+55 
+sim
+ = 
+Å
+.
+	$m©mul
+(
+nÜm_mem
+, 
+nÜm_keys
+)
+
+56 
+sim
+ = sim * 
+¡»ngths
+[:, 
+Å
+.
+Ãwaxis
+, :]
+
+57 
+´ediùed_w›ghts
+ = 
+Å
+.
+	`exp
+(
+sim
+è/‚p.
+	`sum
+Òp.exp(sim), 
+axis
+=1, 
+k“pdims
+=
+True
+)
+
+59 
+memÜy_m©rix
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+š™Ÿl_mem
+)
+
+60 
+İ
+ = 
+mem
+.
+	$g‘_lookup_weightšg
+(
+memÜy_m©rix
+, 
+keys
+, 
+¡»ngths
+)
+
+61 
+c
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+63 
+£lf
+.
+	`as£¹Equ®
+(
+c
+.
+sh­e
+, (2, 4, 2))
+
+64 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+c
+, 
+´ediùed_w›ghts
+))
+
+67 
+def
+ 
+	$‹¡_upd©e_u§ge_veùÜ
+(
+£lf
+):
+
+68 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+69 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+70 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+72 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+73 
+ä“_g©es
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+74 
+š™_»ad_weightšgs
+ = 
+	`¿ndom_soámax
+((2, 4, 2), 
+axis
+=1)
+
+75 
+š™_wr™e_weightšgs
+ = 
+	`¿ndom_soámax
+((2, 4), 
+axis
+=1)
+
+76 
+š™_u§ge
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 4)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+78 
+psi
+ = 
+Å
+.
+	`´oduù
+(1 - 
+š™_»ad_weightšgs
+ * 
+ä“_g©es
+[:,‚p.
+Ãwaxis
+, :], 
+axis
+=2)
+
+79 
+´ediùed_u§ge
+ = (
+š™_u§ge
+ + 
+š™_wr™e_weightšgs
+ - in™_u§g* in™_wr™e_weightšgsè* 
+psi
+
+
+82 
+»ad_weightšgs
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+š™_»ad_weightšgs
+)
+
+83 
+wr™e_weightšg
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+š™_wr™e_weightšgs
+)
+
+84 
+u§ge_veùÜ
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+š™_u§ge
+)
+
+86 
+İ
+ = 
+mem
+.
+	$upd©e_u§ge_veùÜ
+(
+u§ge_veùÜ
+, 
+»ad_weightšgs
+, 
+wr™e_weightšg
+, 
+ä“_g©es
+)
+
+87 
+u
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+89 
+£lf
+.
+	`as£¹Equ®
+(
+u
+.
+sh­e
+, (2, 4))
+
+90 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$¬¿y_equ®
+(
+u
+, 
+´ediùed_u§ge
+))
+
+93 
+def
+ 
+	$‹¡_g‘_®loÿtiÚ_weightšg
+(
+£lf
+):
+
+94 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+95 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+96 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+98 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+99 
+mock_u§ge
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0.01, 1, (2, 4)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+100 
+sÜ‹d_u§ge
+ = 
+Å
+.
+	$sÜt
+(
+mock_u§ge
+, 
+axis
+=1)
+
+101 
+ä“_li¡
+ = 
+Å
+.
+	$¬gsÜt
+(
+mock_u§ge
+, 
+axis
+=1)
+
+103 
+´ediùed_weights
+ = 
+Å
+.
+	`z”os
+((2, 4)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+104 
+i
+ 
+š
+ 
+	$¿nge
+(2):
+
+105 
+j
+ 
+š
+ 
+	$¿nge
+(4):
+
+106 
+´oduù_li¡
+ = [
+mock_u§ge
+[
+i
+, 
+ä“_li¡
+[i,
+k
+]] k 
+š
+ 
+	`¿nge
+(
+j
+)]
+
+107 
+´ediùed_weights
+[
+i
+, 
+ä“_li¡
+[i,
+j
+]] = (1 - 
+mock_u§ge
+[i, f»e_li¡[i, j]]è* 
+Å
+.
+	$´oduù
+(
+´oduù_li¡
+)
+
+109 
+İ
+ = 
+mem
+.
+	$g‘_®loÿtiÚ_weightšg
+(
+sÜ‹d_u§ge
+, 
+ä“_li¡
+)
+
+110 
+a
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+112 
+£lf
+.
+	`as£¹Equ®
+(
+a
+.
+sh­e
+, (2, 4))
+
+113 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+a
+, 
+´ediùed_weights
+))
+
+116 
+def
+ 
+	$‹¡_upd©ed_wr™e_weightšg
+(
+£lf
+):
+
+117 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+118 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+119 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+121 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+122 
+wr™e_g©e
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2,1)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+123 
+®loÿtiÚ_g©e
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2,1)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+124 
+lookup_weightšg
+ = 
+	`¿ndom_soámax
+((2, 4, 1), 
+axis
+=1)
+
+125 
+®loÿtiÚ_weightšg
+ = 
+	`¿ndom_soámax
+((2, 4), 
+axis
+=1)
+
+127 
+´ediùed_weights
+ = 
+wr™e_g©e
+ * (
+®loÿtiÚ_g©e
+ * 
+®loÿtiÚ_weightšg
+ + (1 -‡ÎoÿtiÚ_g©eè* 
+Å
+.
+	$squ“ze
+(
+lookup_weightšg
+))
+
+129 
+İ
+ = 
+mem
+.
+	$upd©e_wr™e_weightšg
+(
+lookup_weightšg
+, 
+®loÿtiÚ_weightšg
+, 
+wr™e_g©e
+, 
+®loÿtiÚ_g©e
+)
+
+130 
+w_w
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+132 
+£lf
+.
+	`as£¹Equ®
+(
+w_w
+.
+sh­e
+, (2,4))
+
+133 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+w_w
+, 
+´ediùed_weights
+))
+
+136 
+def
+ 
+	$‹¡_upd©e_memÜy
+(
+£lf
+):
+
+137 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+138 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+139 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+141 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+142 
+wr™e_weightšg
+ = 
+	`¿ndom_soámax
+((2, 4), 
+axis
+=1)
+
+143 
+wr™e_veùÜ
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+144 
+”a£_veùÜ
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+145 
+memÜy_m©rix
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(-1, 1, (2, 4, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+147 
+ww
+ = 
+wr™e_weightšg
+[:, :, 
+Å
+.
+Ãwaxis
+]
+
+148 
+v
+, 
+e
+ = 
+wr™e_veùÜ
+[:, 
+Å
+.
+Ãwaxis
+, :], 
+”a£_veùÜ
+[:,‚p.newaxis, :]
+
+149 
+´ediùed
+ = 
+memÜy_m©rix
+ * (1 - 
+Å
+.
+	`m©mul
+(
+ww
+, 
+e
+)è+‚p.
+	$m©mul
+(
+ww
+, 
+v
+)
+
+151 
+memÜy_m©rix
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+memÜy_m©rix
+)
+
+153 
+İ
+ = 
+mem
+.
+	$upd©e_memÜy
+(
+memÜy_m©rix
+, 
+wr™e_weightšg
+, 
+wr™e_veùÜ
+, 
+”a£_veùÜ
+)
+
+154 
+M
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+156 
+£lf
+.
+	`as£¹Equ®
+(
+M
+.
+sh­e
+, (2, 4, 5))
+
+157 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+M
+, 
+´ediùed
+))
+
+159 
+def
+ 
+	$‹¡_upd©e_´eûd’û_veùÜ
+(
+£lf
+):
+
+160 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+161 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+162 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+164 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+165 
+wr™e_weightšg
+ = 
+	`¿ndom_soámax
+((2, 4), 
+axis
+=1)
+
+166 
+š™Ÿl_´eûd’û
+ = 
+	`¿ndom_soámax
+((2, 4), 
+axis
+=1)
+
+167 
+´ediùed
+ = (1 - 
+wr™e_weightšg
+.
+	`sum
+(
+axis
+=1, 
+k“pdims
+=
+True
+)è* 
+š™Ÿl_´eûd’û
+ + write_weighting
+
+169 
+´eûd’û_veùÜ
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+š™Ÿl_´eûd’û
+)
+
+171 
+İ
+ = 
+mem
+.
+	$upd©e_´eûd’û_veùÜ
+(
+´eûd’û_veùÜ
+, 
+wr™e_weightšg
+)
+
+172 
+p
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+174 
+£lf
+.
+	`as£¹Equ®
+(
+p
+.
+sh­e
+, (2,4))
+
+175 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+p
+, 
+´ediùed
+))
+
+178 
+def
+ 
+	$‹¡_upd©e_lšk_m©rix
+(
+£lf
+):
+
+179 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+180 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+181 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+183 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+184 
+_wr™e_weightšg
+ = 
+	`¿ndom_soámax
+((2, 4), 
+axis
+=1)
+
+185 
+_´eûd’û_veùÜ
+ = 
+	`¿ndom_soámax
+((2, 4), 
+axis
+=1)
+
+186 
+š™Ÿl_lšk
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 4, 4)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+187 
+Å
+.
+	$fl_dŸgÚ®
+(
+š™Ÿl_lšk
+[0,:], 0)
+
+188 
+Å
+.
+	$fl_dŸgÚ®
+(
+š™Ÿl_lšk
+[1,:], 0)
+
+190 #ÿlcuÏ‹ 
+the
+ 
+upd©ed
+ 
+lšk
+ 
+™”©iv–y
+ 
+as
+ 
+š
+ 
+·³r
+
+
+191 #tØ
+check
+ 
+the
+ 
+cÜ»ù’ess
+ 
+of
+h
+veùÜized
+ 
+im¶em’tiÚ
+
+
+192 
+´ediùed
+ = 
+Å
+.
+	`z”os
+((2,4,4), 
+dty³
+òp.
+æßt32
+)
+
+193 
+i
+ 
+š
+ 
+	$¿nge
+(4):
+
+194 
+j
+ 
+š
+ 
+	$¿nge
+(4):
+
+195 
+i
+ !ğ
+j
+:
+
+196 
+»£t_çùÜ
+ = (1 - 
+_wr™e_weightšg
+[:,
+i
+] - _wr™e_weightšg[:,
+j
+])
+
+197 
+´ediùed
+[:, 
+i
+, 
+j
+] = 
+»£t_çùÜ
+ * 
+š™Ÿl_lšk
+[:, i , j] + 
+_wr™e_weightšg
+[:, i] * 
+_´eûd’û_veùÜ
+[:, j]
+
+199 
+lšk_m©rix
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+š™Ÿl_lšk
+)
+
+200 
+´eûd’û_veùÜ
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+_´eûd’û_veùÜ
+)
+
+202 
+wr™e_weightšg
+ = 
+tf
+.
+	$cÚ¡ªt
+(
+_wr™e_weightšg
+)
+
+204 
+İ
+ = 
+mem
+.
+	$upd©e_lšk_m©rix
+(
+´eûd’û_veùÜ
+, 
+lšk_m©rix
+, 
+wr™e_weightšg
+)
+
+205 
+L
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+207 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+L
+, 
+´ediùed
+))
+
+210 
+def
+ 
+	$‹¡_g‘_dœeùiÚ®_weightšgs
+(
+£lf
+):
+
+211 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+212 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+213 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+215 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+216 
+_lšk_m©rix
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (2, 4, 4)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+217 
+_»ad_weightšgs
+ = 
+	`¿ndom_soámax
+((2, 4, 2), 
+axis
+=1)
+
+218 
+´ediùed_fÜw¬d
+ = 
+Å
+.
+	$m©mul
+(
+_lšk_m©rix
+, 
+_»ad_weightšgs
+)
+
+219 
+´ediùed_backw¬d
+ = 
+Å
+.
+	`m©mul
+Òp.
+	`Œª¥o£
+(
+_lšk_m©rix
+, [0, 2, 1]), 
+_»ad_weightšgs
+)
+
+221 
+»ad_weightšgs
+ = 
+tf
+.
+	$cÚv”t_to_‹nsÜ
+(
+_»ad_weightšgs
+)
+
+223 
+fİ
+, 
+bİ
+ = 
+mem
+.
+	$g‘_dœeùiÚ®_weightšgs
+(
+»ad_weightšgs
+, 
+_lšk_m©rix
+)
+
+225 
+fÜw¬d_weightšg
+, 
+backw¬d_weightšg
+ = 
+£ssiÚ
+.
+	$run
+([
+fİ
+, 
+bİ
+])
+
+227 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+fÜw¬d_weightšg
+, 
+´ediùed_fÜw¬d
+))
+
+228 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+backw¬d_weightšg
+, 
+´ediùed_backw¬d
+))
+
+232 
+def
+ 
+	$‹¡_upd©e_»ad_weightšgs
+(
+£lf
+):
+
+233 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+234 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+235 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+237 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 2)
+
+238 
+lookup_weightšgs
+ = 
+	`¿ndom_soámax
+((2, 4, 2), 
+axis
+=1)
+
+239 
+fÜw¬d_weightšg
+ = 
+	`¿ndom_soámax
+((2, 4, 2), 
+axis
+=1)
+
+240 
+backw¬d_weightšg
+ = 
+	`¿ndom_soámax
+((2, 4, 2), 
+axis
+=1)
+
+241 
+»ad_mode
+ = 
+	`¿ndom_soámax
+((2, 3, 2), 
+axis
+=1)
+
+242 
+´ediùed_weights
+ = 
+Å
+.
+	`z”os
+((2, 4, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+244 #ÿlcuÏ‹ 
+the
+ 
+´ediùed
+ 
+weights
+ 
+usšg
+ 
+™”©ive
+ 
+m‘hod
+ 
+äom
+ 
+·³r
+
+
+245 #tØ
+check
+ 
+the
+ 
+cÜ»ù’ess
+ 
+of
+h
+veùÜized
+ 
+im¶em’tiÚ
+
+
+246 
+i
+ 
+š
+ 
+	$¿nge
+(2):
+
+247 
+´ediùed_weights
+[:, :, 
+i
+] = 
+»ad_mode
+[:, 0,i, 
+Å
+.
+Ãwaxis
+] * 
+backw¬d_weightšg
+[:, :, i] +„—d_mode[:, 1, i,‚p.Ãwaxis] * 
+lookup_weightšgs
+[:, :, i] +„—d_mode[:, 2, i,‚p.Ãwaxis] * 
+fÜw¬d_weightšg
+[:, :, i]
+
+249 
+İ
+ = 
+mem
+.
+	$upd©e_»ad_weightšgs
+(
+lookup_weightšgs
+, 
+fÜw¬d_weightšg
+, 
+backw¬d_weightšg
+, 
+»ad_mode
+)
+
+250 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+251 
+w_r
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+252 #upd©ed_»ad_weightšg ğ
+£ssiÚ
+.
+	`run
+(
+mem
+.
+»ad_weightšgs
+.
+	`v®ue
+())
+
+254 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+w_r
+, 
+´ediùed_weights
+))
+
+255 #£lf.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+upd©ed_»ad_weightšgs
+, 
+´ediùed_weights
+))
+
+258 
+def
+ 
+	$‹¡_upd©e_»ad_veùÜs
+(
+£lf
+):
+
+259 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+260 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+261 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+ = g¿phè
+as
+ 
+£ssiÚ
+:
+
+263 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 4)
+
+264 
+memÜy_m©rix
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(-1, 1, (4, 4, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+265 
+»ad_weightšgs
+ = 
+	`¿ndom_soámax
+((4, 4, 2), 
+axis
+=1)
+
+266 
+´ediùed
+ = 
+Å
+.
+	`m©mul
+Òp.
+	`Œª¥o£
+(
+memÜy_m©rix
+, [0, 2, 1]), 
+»ad_weightšgs
+)
+
+268 
+İ
+ = 
+mem
+.
+	$upd©e_»ad_veùÜs
+(
+memÜy_m©rix
+, 
+»ad_weightšgs
+)
+
+269 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+270 
+r
+ = 
+£ssiÚ
+.
+	$run
+(
+İ
+)
+
+271 #upd©ed_»ad_veùÜ ğ
+£ssiÚ
+.
+	`run
+(
+mem
+.
+»ad_veùÜs
+.
+	`v®ue
+())
+
+273 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+r
+, 
+´ediùed
+))
+
+274 #£lf.
+	`as£¹True
+(
+Å
+.
+	`®lşo£
+(
+upd©ed_»ad_veùÜs
+, 
+´ediùed
+))
+
+276 
+def
+ 
+	$‹¡_wr™e
+(
+£lf
+):
+
+277 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+278 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+279 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+ = g¿phè
+as
+ 
+£ssiÚ
+:
+
+281 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 1)
+
+282 
+M
+, 
+u
+, 
+p
+, 
+L
+, 
+ww
+, 
+rw
+, 
+r
+ = 
+£ssiÚ
+.
+	`run
+(
+mem
+.
+	$š™_memÜy
+())
+
+283 
+key
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 5, 1)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+284 
+¡»ngth
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 1)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+285 
+ä“_g©es
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+286 
+wr™e_g©e
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 1)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+287 
+®loÿtiÚ_g©e
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1,1)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+288 
+wr™e_veùÜ
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+289 
+”a£_veùÜ
+ = 
+Å
+.
+	`z”os
+((1, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+291 
+u_İ
+, 
+ww_İ
+, 
+M_İ
+, 
+L_İ
+, 
+p_İ
+ = 
+mem
+.
+	$wr™e
+(
+
+292 
+M
+, 
+u
+, 
+rw
+, 
+ww
+, 
+p
+, 
+L
+,
+
+293 
+key
+, 
+¡»ngth
+, 
+ä“_g©es
+, 
+®loÿtiÚ_g©e
+,
+
+294 
+wr™e_g©e
+ , 
+wr™e_veùÜ
+, 
+”a£_veùÜ
+
+
+296 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+297 
+u
+, 
+ww
+, 
+M
+, 
+L
+, 
+p
+ = 
+£ssiÚ
+.
+	$run
+([
+u_İ
+, 
+ww_İ
+, 
+M_İ
+, 
+L_İ
+, 
+p_İ
+])
+
+299 
+£lf
+.
+	`as£¹Equ®
+(
+u
+.
+sh­e
+, (1, 4))
+
+300 
+£lf
+.
+	`as£¹Equ®
+(
+ww
+.
+sh­e
+, (1, 4))
+
+301 
+£lf
+.
+	`as£¹Equ®
+(
+M
+.
+sh­e
+, (1, 4, 5))
+
+302 
+£lf
+.
+	`as£¹Equ®
+(
+L
+.
+sh­e
+, (1, 4, 4))
+
+303 
+£lf
+.
+	`as£¹Equ®
+(
+p
+.
+sh­e
+, (1, 4))
+
+307 
+def
+ 
+	$‹¡_»ad
+(
+£lf
+):
+
+308 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+309 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+310 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+ = g¿phè
+as
+ 
+£ssiÚ
+:
+
+311 
+mem
+ = 
+	$MemÜy
+(4, 5, 2, 1)
+
+312 
+M
+, 
+u
+, 
+p
+, 
+L
+, 
+ww
+, 
+rw
+, 
+r
+ = 
+£ssiÚ
+.
+	`run
+(
+mem
+.
+	$š™_memÜy
+())
+
+313 
+keys
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 5, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+314 
+¡»ngths
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 2)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+315 
+lšk_m©rix
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(0, 1, (1, 4, 4)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+316 
+»ad_modes
+ = 
+	`¿ndom_soámax
+((1, 3, 2), 
+axis
+=1).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+317 
+memÜy_m©rix
+ = 
+Å
+.
+¿ndom
+.
+	`unifÜm
+(-1, 1, (1, 4, 5)).
+	$a¡y³
+(
+Å
+.
+æßt32
+)
+
+319 
+wr_İ
+, 
+r_İ
+ = 
+mem
+.
+	$»ad
+(
+memÜy_m©rix
+, 
+rw
+, 
+keys
+, 
+¡»ngths
+, 
+lšk_m©rix
+, 
+»ad_modes
+)
+
+320 
+£ssiÚ
+.
+	`run
+(
+tf
+.
+	$š™Ÿlize_®l_v¬ŸbËs
+())
+
+321 
+wr
+, 
+r
+ = 
+£ssiÚ
+.
+	$run
+([
+wr_İ
+, 
+r_İ
+])
+
+323 
+£lf
+.
+	`as£¹Equ®
+(
+wr
+.
+sh­e
+, (1, 4, 2))
+
+324 
+£lf
+.
+	`as£¹Equ®
+(
+r
+.
+sh­e
+, (1, 5, 2))
+
+327 
+__Çme__
+ == '__main__':
+
+328 
+un™‹¡
+.
+	`maš
+(
+v”bos™y
+=2)
+
+	@unit-tests/utility.py
+
+1 
+impÜt
+ 
+‹nsÜæow
+ 
+as
+ 
+tf
+
+
+2 
+impÜt
+ 
+numpy
+ 
+as
+ 
+Å
+
+
+3 
+impÜt
+ 
+un™‹¡
+
+
+5 
+impÜt
+ 
+	gdnc
+.
+ut™y
+ 
+as
+ 
+ut
+
+
+7 
+şass
+ 
+	$DNCUt™yTe¡s
+(
+un™‹¡
+.
+Te¡Ca£
+):
+
+9 
+def
+ 
+	$‹¡_·œwi£_add
+(
+£lf
+):
+
+10 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+11 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+12 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+14 
+_u
+ = 
+Å
+.
+	$¬¿y
+([5, 6])
+
+15 
+_v
+ = 
+Å
+.
+	$¬¿y
+([1, 2])
+
+17 
+´ediùed_U
+ = 
+Å
+.
+	$¬¿y
+([[10, 11], [11, 12]])
+
+18 
+´ediùed_UV
+ = 
+Å
+.
+	$¬¿y
+([[6, 7], [7, 8]])
+
+20 
+u
+ = 
+tf
+.
+	$cÚ¡ªt
+(
+_u
+)
+
+21 
+v
+ = 
+tf
+.
+	$cÚ¡ªt
+(
+_v
+)
+
+23 
+U_İ
+ = 
+ut
+.
+	$·œwi£_add
+(
+u
+)
+
+24 
+UV_İ
+ = 
+ut
+.
+	$·œwi£_add
+(
+u
+, 
+v
+)
+
+26 
+U
+, 
+UV
+ = 
+£ssiÚ
+.
+	$run
+([
+U_İ
+, 
+UV_İ
+])
+
+28 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+U
+, 
+´ediùed_U
+))
+
+29 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+UV
+, 
+´ediùed_UV
+))
+
+32 
+def
+ 
+	$‹¡_·œwi£_add_w™h_b©ch
+(
+£lf
+):
+
+33 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+34 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+35 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+37 
+_u
+ = 
+Å
+.
+	$¬¿y
+([[5, 6], [7, 8]])
+
+38 
+_v
+ = 
+Å
+.
+	$¬¿y
+([[1, 2], [3, 4]])
+
+40 
+´ediùed_U
+ = 
+Å
+.
+	$¬¿y
+([[[10, 11], [11, 12]], [[14, 15], [15, 16]]])
+
+41 
+´ediùed_UV
+ = 
+Å
+.
+	$¬¿y
+([[[6, 7], [7, 8]], [[10, 11], [11, 12]]])
+
+43 
+u
+ = 
+tf
+.
+	$cÚ¡ªt
+(
+_u
+)
+
+44 
+v
+ = 
+tf
+.
+	$cÚ¡ªt
+(
+_v
+)
+
+46 
+U_İ
+ = 
+ut
+.
+	$·œwi£_add
+(
+u
+, 
+is_b©ch
+=
+True
+)
+
+47 
+UV_İ
+ = 
+ut
+.
+	$·œwi£_add
+(
+u
+, 
+v
+, 
+is_b©ch
+=
+True
+)
+
+49 
+U
+, 
+UV
+ = 
+£ssiÚ
+.
+	$run
+([
+U_İ
+, 
+UV_İ
+])
+
+51 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+U
+, 
+´ediùed_U
+))
+
+52 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+UV
+, 
+´ediùed_UV
+))
+
+55 
+def
+ 
+	$‹¡_uÅack_što_‹nsÜ¬¿y
+(
+£lf
+):
+
+56 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+57 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+58 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+60 
+T
+ = 
+tf
+.
+	$¿ndom_nÜm®
+([5, 10, 7, 7])
+
+61 
+
+ = 
+ut
+.
+	$uÅack_što_‹nsÜ¬¿y
+(
+T
+, 
+axis
+=1)
+
+63 
+vT
+, 
+vTA5
+ = 
+£ssiÚ
+.
+	`run
+([
+T
+, 
+
+.
+	`»ad
+(5)])
+
+65 
+£lf
+.
+	`as£¹Equ®
+(
+vTA5
+.
+sh­e
+, (5, 7, 7))
+
+66 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+vT
+[:, 5, :, :], 
+vTA5
+))
+
+69 
+def
+ 
+	$‹¡_·ck_što_‹nsÜ
+(
+£lf
+):
+
+70 
+g¿ph
+ = 
+tf
+.
+	$G¿ph
+()
+
+71 
+w™h
+ 
+g¿ph
+.
+	$as_deçuÉ
+():
+
+72 
+w™h
+ 
+tf
+.
+	$SessiÚ
+(
+g¿ph
+=g¿phè
+as
+ 
+£ssiÚ
+:
+
+74 
+T
+ = 
+tf
+.
+	$¿ndom_nÜm®
+([5, 10, 7, 7])
+
+75 
+
+ = 
+ut
+.
+	$uÅack_što_‹nsÜ¬¿y
+(
+T
+, 
+axis
+=1)
+
+76 
+pT
+ = 
+ut
+.
+	$·ck_što_‹nsÜ
+(
+
+, 
+axis
+=1)
+
+78 
+vT
+, 
+vPT
+ = 
+£ssiÚ
+.
+	$run
+([
+T
+, 
+pT
+])
+
+80 
+£lf
+.
+	`as£¹Equ®
+(
+vPT
+.
+sh­e
+, (5, 10, 7, 7))
+
+81 
+£lf
+.
+	`as£¹True
+(
+Å
+.
+	$®lşo£
+(
+vT
+, 
+vPT
+))
+
+84 
+__Çme__
+ == "__main__":
+
+85 
+un™‹¡
+.
+	`maš
+(
+v”bos™y
+=2)
+
+	@
+1
+.
+1
+/usr/include
+16
+343
+dnc/__init__.py
+dnc/controller.py
+dnc/dnc.py
+dnc/memory.py
+dnc/utility.py
+tasks/babi/preprocess.py
+tasks/babi/recurrent_controller.py
+tasks/babi/test.py
+tasks/babi/train.py
+tasks/copy/feedforward_controller.py
+tasks/copy/train-series.py
+tasks/copy/train.py
+unit-tests/controller.py
+unit-tests/dnc.py
+unit-tests/memory.py
+unit-tests/utility.py

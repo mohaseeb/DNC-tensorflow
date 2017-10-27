@@ -1,0 +1,16 @@
+./unit-tests/controller.py
+./unit-tests/memory.py
+./unit-tests/utility.py
+./unit-tests/dnc.py
+./tasks/babi/train.py
+./tasks/babi/recurrent_controller.py
+./tasks/babi/preprocess.py
+./tasks/babi/test.py
+./tasks/copy/train.py
+./tasks/copy/train-series.py
+./tasks/copy/feedforward_controller.py
+./dnc/controller.py
+./dnc/__init__.py
+./dnc/memory.py
+./dnc/utility.py
+./dnc/dnc.py
