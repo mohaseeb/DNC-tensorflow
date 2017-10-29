@@ -113,7 +113,7 @@ if __name__ == '__main__':
             llprint("Done!\n")
 
             llprint("Initializing Variables ... ")
-            session.run(tf.initialize_all_variables())
+            session.run(tf.global_variables_initialize())
             llprint("Done!\n")
 
             if from_checkpoint is not None:

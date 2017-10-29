@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
-import utility
+from . import utility
+
 
 class Memory:
 
@@ -29,7 +30,7 @@ class Memory:
         self.batch_size = batch_size
 
         # a words_num x words_num identity matrix
-        self.I = tf.constant(np.identity(words_num, dtype=np.float32))
+        self.identity = tf.constant(np.identity(words_num, dtype=np.float32))
 
         # maps the indecies from the 2D array of free list per batch to
         # their corresponding values in the flat 1D array of ordered_allocation_weighting
@@ -79,7 +80,6 @@ class Memory:
 
         return tf.nn.softmax(similiarity * strengths, 1)
 
-
     def update_usage_vector(self, usage_vector, read_weightings, write_weighting, free_gates):
         """
         updates and returns the usgae vector given the values of the free gates
@@ -98,10 +98,9 @@ class Memory:
         free_gates = tf.expand_dims(free_gates, 1)
 
         retention_vector = tf.reduce_prod(1 - read_weightings * free_gates, 2)
-        updated_usage = (usage_vector + write_weighting - usage_vector * write_weighting)  * retention_vector
+        updated_usage = (usage_vector + write_weighting - usage_vector * write_weighting) * retention_vector
 
         return updated_usage
-
 
     def get_allocation_weighting(self, sorted_usage, free_list):
         """
@@ -118,7 +117,7 @@ class Memory:
             the allocation weighting for each word in memory
         """
 
-        shifted_cumprod = tf.cumprod(sorted_usage, axis = 1, exclusive=True)
+        shifted_cumprod = tf.cumprod(sorted_usage, axis=1, exclusive=True)
         unordered_allocation_weighting = (1 - sorted_usage) * shifted_cumprod
 
         mapped_free_list = free_list + self.index_mapper
@@ -132,7 +131,6 @@ class Memory:
         )
         packed_wightings = flat_ordered_weightings.stack()
         return tf.reshape(packed_wightings, (self.batch_size, self.words_num))
-
 
     def update_write_weighting(self, lookup_weighting, allocation_weighting, write_gate, allocation_gate):
         """
@@ -159,7 +157,6 @@ class Memory:
         updated_write_weighting = write_gate * (allocation_gate * allocation_weighting + (1 - allocation_gate) * lookup_weighting)
 
         return updated_write_weighting
-
 
     def update_memory(self, memory_matrix, write_weighting, write_vector, erase_vector):
         """
@@ -193,7 +190,6 @@ class Memory:
 
         return updated_memory
 
-
     def update_precedence_vector(self, precedence_vector, write_weighting):
         """
         updates the precedence vector given the latest write weighting
@@ -214,7 +210,6 @@ class Memory:
         updated_precedence_vector = reset_factor * precedence_vector + write_weighting
 
         return updated_precedence_vector
-
 
     def update_link_matrix(self, precedence_vector, link_matrix, write_weighting):
         """
@@ -239,10 +234,9 @@ class Memory:
 
         reset_factor = 1 - utility.pairwise_add(write_weighting, is_batch=True)
         updated_link_matrix = reset_factor * link_matrix + tf.matmul(write_weighting, precedence_vector)
-        updated_link_matrix = (1 - self.I) * updated_link_matrix  # eliminates self-links
+        updated_link_matrix = (1 - self.identity) * updated_link_matrix  # eliminates self-links
 
         return updated_link_matrix
-
 
     def get_directional_weightings(self, read_weightings, link_matrix):
         """
@@ -265,7 +259,6 @@ class Memory:
         backward_weighting = tf.matmul(link_matrix, read_weightings, adjoint_a=True)
 
         return forward_weighting, backward_weighting
-
 
     def update_read_weightings(self, lookup_weightings, forward_weighting, backward_weighting, read_mode):
         """
@@ -292,7 +285,6 @@ class Memory:
 
         return updated_read_weightings
 
-
     def update_read_vectors(self, memory_matrix, read_weightings):
         """
         reads, updates, and returns the read vectors of the recently updated memory
@@ -310,7 +302,6 @@ class Memory:
         updated_read_vectors = tf.matmul(memory_matrix, read_weightings, adjoint_a=True)
 
         return updated_read_vectors
-
 
     def write(self, memory_matrix, usage_vector, read_weightings, write_weighting,
               precedence_vector, link_matrix,  key, strength, free_gates,
@@ -370,7 +361,6 @@ class Memory:
         new_precedence_vector = self.update_precedence_vector(precedence_vector, new_write_weighting)
 
         return new_usage_vector, new_write_weighting, new_memory_matrix, new_link_matrix, new_precedence_vector
-
 
     def read(self, memory_matrix, read_weightings, keys, strengths, link_matrix, read_modes):
         """

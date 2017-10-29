@@ -1,6 +1,5 @@
-import warnings
-warnings.filterwarnings('ignore')
-
+# import warnings
+# warnings.filterwarnings('ignore')
 import tensorflow as tf
 import numpy as np
 import pickle
@@ -12,17 +11,21 @@ import os
 from dnc.dnc import DNC
 from recurrent_controller import RecurrentController
 
+
 def llprint(message):
     sys.stdout.write(message)
     sys.stdout.flush()
 
+
 def load(path):
     return pickle.load(open(path, 'rb'))
+
 
 def onehot(index, size):
     vec = np.zeros(size, dtype=np.float32)
     vec[index] = 1.0
     return vec
+
 
 def prepare_sample(sample, target_code, word_space_size):
     input_vec = np.array(sample[0]['inputs'], dtype=np.float32)
@@ -45,11 +48,10 @@ def prepare_sample(sample, target_code, word_space_size):
     )
 
 
-
 if __name__ == '__main__':
 
     dirname = os.path.dirname(__file__)
-    ckpts_dir = os.path.join(dirname , 'checkpoints')
+    ckpts_dir = os.path.join(dirname, 'checkpoints')
     data_dir = os.path.join(dirname, 'data', 'en-10k')
     tb_logs_dir = os.path.join(dirname, 'logs')
 
@@ -73,7 +75,7 @@ if __name__ == '__main__':
     iterations = 100000
     start_step = 0
 
-    options,_ = getopt.getopt(sys.argv[1:], '', ['checkpoint=', 'iterations=', 'start='])
+    options, _ = getopt.getopt(sys.argv[1:], '', ['checkpoint=', 'iterations=', 'start='])
 
     for opt in options:
         if opt[0] == '--checkpoint':
@@ -138,7 +140,6 @@ if __name__ == '__main__':
                 ncomputer.restore(session, ckpts_dir, from_checkpoint)
                 llprint("Done!\n")
 
-
             last_100_losses = []
 
             start = 0 if start_step == 0 else start_step + 1
@@ -182,8 +183,8 @@ if __name__ == '__main__':
                         avg_100_time += (1. / avg_counter) * (elapsed_time - avg_100_time)
                         estimated_time = (avg_100_time * ((end - i) / 100.)) / 60.
 
-                        print "\tAvg. 100 iterations time: %.2f minutes" % (avg_100_time)
-                        print "\tApprox. time to completion: %.2f hours" % (estimated_time)
+                        print("\tAvg. 100 iterations time: %.2f minutes" % (avg_100_time))
+                        print("\tApprox. time to completion: %.2f hours" % (estimated_time))
 
                         start_time_100 = time.time()
                         last_100_losses = []

@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
+
 class BaseController:
 
     def __init__(self, input_size, output_size, memory_read_heads, memory_word_size, batch_size=1):
@@ -32,7 +33,7 @@ class BaseController:
         # by the existence of recurrent_update and get_state methods
         has_recurrent_update = callable(getattr(self, 'update_state', None))
         has_get_state = callable(getattr(self, 'get_state', None))
-        self.has_recurrent_nn =  has_recurrent_update and has_get_state
+        self.has_recurrent_nn = has_recurrent_update and has_get_state
 
         # the actual size of the neural network input after flatenning and
         # concatenating the input vector with the previously read vctors from memory
@@ -76,7 +77,6 @@ class BaseController:
         """
         raise NotImplementedError("network_vars is not implemented")
 
-
     def network_op(self, X):
         """
         defines the controller's internal neural network operation
@@ -90,7 +90,6 @@ class BaseController:
         """
         raise NotImplementedError("network_op method is not implemented")
 
-
     def get_nn_output_size(self):
         """
         retrives the output size of the defined neural network
@@ -101,11 +100,11 @@ class BaseController:
         Raises: ValueError
         """
 
-        input_vector =  np.zeros([self.batch_size, self.nn_input_size], dtype=np.float32)
+        input_vector = np.zeros([self.batch_size, self.nn_input_size], dtype=np.float32)
         output_vector = None
 
         if self.has_recurrent_nn:
-            output_vector,_ = self.network_op(input_vector, self.get_state())
+            output_vector, _ = self.network_op(input_vector, self.get_state())
         else:
             output_vector = self.network_op(input_vector)
 
@@ -115,7 +114,6 @@ class BaseController:
             raise ValueError("Expected the neural network to output a 1D vector, but got %dD" % (len(shape) - 1))
         else:
             return shape[1]
-
 
     def parse_interface_vector(self, interface_vector):
         """
@@ -206,7 +204,6 @@ class BaseController:
             return pre_output, parsed_interface, nn_state
         else:
             return pre_output, parsed_interface
-
 
     def final_output(self, pre_output, new_read_vectors):
         """

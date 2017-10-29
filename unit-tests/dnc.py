@@ -87,7 +87,7 @@ class DNCTest(unittest.TestCase):
                 rcomputer = DNC(DummyRecurrentController, 10, 20, 10, 10, 64, 2, batch_size=3)
                 input_batches = np.random.uniform(0, 1, (3, 5, 10)).astype(np.float32)
 
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 out_view = session.run(computer.get_outputs(), feed_dict={
                     computer.input_data: input_batches,
                     computer.sequence_length: 5
@@ -126,13 +126,13 @@ class DNCTest(unittest.TestCase):
             with tf.Session(graph=graph) as session:
 
                 computer = DNC(DummyController, 10, 20, 10, 10, 64, 2, batch_size=2)
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 current_dir = os.path.dirname(__file__)
                 ckpts_dir = os.path.join(current_dir, 'checkpoints')
 
                 computer.save(session, ckpts_dir, 'test-save')
 
-                self.assert_(True)
+                self.assertTrue(True)
 
 
     def test_restore(self):
@@ -149,7 +149,7 @@ class DNCTest(unittest.TestCase):
             with tf.Session(graph=graph1) as session1:
 
                 computer = DNC(DummyController, 10, 20, 10, 10, 64, 2, batch_size=2)
-                session1.run(tf.initialize_all_variables())
+                session1.run(tf.global_variables_initializer())
 
                 saved_weights = session1.run([
                     computer.controller.nn_output_weights,
@@ -166,7 +166,7 @@ class DNCTest(unittest.TestCase):
             with tf.Session(graph=graph2) as session2:
 
                 computer = DNC(DummyController, 10, 20, 10, 10, 64, 2, batch_size=2)
-                session2.run(tf.initialize_all_variables())
+                session2.run(tf.global_variables_initializer())
                 computer.restore(session2, ckpts_dir, 'test-restore')
 
                 restored_weights = session2.run([

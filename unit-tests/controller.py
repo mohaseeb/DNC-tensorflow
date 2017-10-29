@@ -97,7 +97,7 @@ class DNCControllerTest(unittest.TestCase):
                 read_modes = np.transpose(read_modes, [0, 2, 1])
 
                 op = controller.parse_interface_vector(zeta)
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 parsed = session.run(op)
 
                 self.assertTrue(np.allclose(parsed['read_keys'], read_keys))
@@ -126,15 +126,15 @@ class DNCControllerTest(unittest.TestCase):
                 v_op, zeta_op = controller.process_input(input_batch, last_read_vectors)
                 rv_op, rzeta_op, rs_op = rcontroller.process_input(input_batch, last_read_vectors, rcontroller.get_state())
 
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 v, zeta = session.run([v_op, zeta_op])
                 rv, rzeta, rs = session.run([rv_op, rzeta_op, rs_op])
 
                 self.assertEqual(v.shape, (2, 10))
-                self.assertEqual(np.concatenate([np.reshape(val, (2, -1)) for _,val in zeta.iteritems()], axis=1).shape, (2, 38))
+                self.assertEqual(np.concatenate([np.reshape(val, (2, -1)) for _,val in zeta.items()], axis=1).shape, (2, 38))
 
                 self.assertEqual(rv.shape, (2, 10))
-                self.assertEqual(np.concatenate([np.reshape(val, (2, -1)) for _,val in rzeta.iteritems()], axis=1).shape, (2, 38))
+                self.assertEqual(np.concatenate([np.reshape(val, (2, -1)) for _,val in rzeta.items()], axis=1).shape, (2, 38))
                 self.assertEqual([_s.shape for _s in rs], [(2, 64), (2, 64)])
 
 
@@ -148,7 +148,7 @@ class DNCControllerTest(unittest.TestCase):
                 new_read_vectors = np.random.uniform(-1, 1, (2, 5, 2)).astype(np.float32)
 
                 op = controller.final_output(output_batch, new_read_vectors)
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 y = session.run(op)
 
                 self.assertEqual(y.shape, (2, 10))

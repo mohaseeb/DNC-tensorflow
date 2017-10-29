@@ -1,13 +1,13 @@
 import tensorflow as tf
-from tensorflow.contrib.rnn.python.ops.core_rnn_cell import LSTMStateTuple
-from memory import Memory
-import utility
+from tensorflow.python.ops.rnn_cell_impl import LSTMStateTuple
+from .memory import Memory
+from . import utility
 import os
 
 class DNC:
 
     def __init__(self, controller_class, input_size, output_size, max_sequence_length,
-                 memory_words_num = 256, memory_word_size = 64, memory_read_heads = 4, batch_size = 1):
+                 memory_words_num=256, memory_word_size=64, memory_read_heads=4, batch_size=1):
         """
         constructs a complete DNC architecture as described in the DNC paper
         http://www.nature.com/nature/journal/vaop/ncurrent/full/nature20101.html
@@ -49,7 +49,6 @@ class DNC:
         self.sequence_length = tf.placeholder(tf.int32, name='sequence_length')
 
         self.build_graph()
-
 
     def _step_op(self, step, memory_state, controller_state=None):
         """
@@ -118,7 +117,6 @@ class DNC:
             nn_state[1] if nn_state is not None else tf.zeros(1)
         ]
 
-
     def _loop_body(self, time, memory_state, outputs, free_gates, allocation_gates, write_gates,
                    read_weightings, write_weightings, usage_vectors, controller_state):
         """
@@ -163,11 +161,10 @@ class DNC:
 
         return (
             time + 1, new_memory_state, outputs,
-            free_gates,allocation_gates, write_gates,
+            free_gates, allocation_gates, write_gates,
             read_weightings, write_weightings,
             usage_vectors, new_controller_state
         )
-
 
     def build_graph(self):
         """
@@ -222,7 +219,6 @@ class DNC:
                 'usage_vectors': utility.pack_into_tensor(final_results[8], axis=1)
             }
 
-
     def get_outputs(self):
         """
         returns the graph nodes for the output and memory view
@@ -232,7 +228,6 @@ class DNC:
             memory_view: dict
         """
         return self.packed_output, self.packed_memory_view
-
 
     def save(self, session, ckpts_dir, name):
         """
@@ -253,7 +248,6 @@ class DNC:
             os.makedirs(checkpoint_dir)
 
         tf.train.Saver(tf.trainable_variables()).save(session, os.path.join(checkpoint_dir, 'model.ckpt'))
-
 
     def restore(self, session, ckpts_dir, name):
         """

@@ -16,7 +16,7 @@ class DNCMemoryTests(unittest.TestCase):
             with tf.Session(graph=graph) as session:
 
                 mem = Memory(4, 5, 2, 2)
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
 
                 self.assertEqual(mem.words_num, 4)
                 self.assertEqual(mem.word_size, 5)
@@ -247,7 +247,7 @@ class DNCMemoryTests(unittest.TestCase):
                     predicted_weights[:, :, i] = read_mode[:, 0,i, np.newaxis] * backward_weighting[:, :, i] + read_mode[:, 1, i, np.newaxis] * lookup_weightings[:, :, i] + read_mode[:, 2, i, np.newaxis] * forward_weighting[:, :, i]
 
                 op = mem.update_read_weightings(lookup_weightings, forward_weighting, backward_weighting, read_mode)
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 w_r = session.run(op)
                 #updated_read_weightings = session.run(mem.read_weightings.value())
 
@@ -266,7 +266,7 @@ class DNCMemoryTests(unittest.TestCase):
                 predicted = np.matmul(np.transpose(memory_matrix, [0, 2, 1]), read_weightings)
 
                 op = mem.update_read_vectors(memory_matrix, read_weightings)
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 r = session.run(op)
                 #updated_read_vectors = session.run(mem.read_vectors.value())
 
@@ -293,7 +293,7 @@ class DNCMemoryTests(unittest.TestCase):
                     key, strength, free_gates, allocation_gate,
                     write_gate , write_vector, erase_vector
                 )
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 u, ww, M, L, p = session.run([u_op, ww_op, M_op, L_op, p_op])
 
                 self.assertEqual(u.shape, (1, 4))
@@ -317,7 +317,7 @@ class DNCMemoryTests(unittest.TestCase):
                 memory_matrix = np.random.uniform(-1, 1, (1, 4, 5)).astype(np.float32)
 
                 wr_op, r_op = mem.read(memory_matrix, rw, keys, strengths, link_matrix, read_modes)
-                session.run(tf.initialize_all_variables())
+                session.run(tf.global_variables_initializer())
                 wr, r = session.run([wr_op, r_op])
 
                 self.assertEqual(wr.shape, (1, 4, 2))
