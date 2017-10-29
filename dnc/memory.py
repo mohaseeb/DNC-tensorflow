@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
 from . import utility
+from . import metrics 
 
 
 class Memory:
@@ -72,13 +73,7 @@ class Memory:
             The list of lookup weightings for each provided key
         """
 
-        normalized_memory = tf.nn.l2_normalize(memory_matrix, 2)
-        normalized_keys = tf.nn.l2_normalize(keys, 1)
-
-        similiarity = tf.matmul(normalized_memory, normalized_keys)
-        strengths = tf.expand_dims(strengths, 1)
-
-        return tf.nn.softmax(similiarity * strengths, 1)
+        return metrics.weighted_cosine(memory_matrix, keys, strengths)
 
     def update_usage_vector(self, usage_vector, read_weightings, write_weighting, free_gates):
         """

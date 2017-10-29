@@ -39,6 +39,11 @@ class BaseController:
         # concatenating the input vector with the previously read vctors from memory
         self.nn_input_size = self.word_size * self.read_heads + self.input_size
 
+        # The size of the interface vetor
+        # read keys: self.word_size * self.read_heads
+        # read strength, free gate and 3 read modes per read head: 5 * self.read_heads
+        # write key + write and erase vector: 3 * self.word_size
+        # write strength + write gate + allocation gate: 3
         self.interface_vector_size = self.word_size * self.read_heads + 3 * self.word_size + 5 * self.read_heads + 3
 
         # define network vars
