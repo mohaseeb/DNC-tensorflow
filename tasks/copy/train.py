@@ -9,6 +9,7 @@ import os
 
 from dnc.dnc import DNC
 from feedforward_controller import FeedforwardController
+from memory_visualization import visualize_op
 
 def llprint(message):
     sys.stdout.write(message)
@@ -44,7 +45,7 @@ if __name__ == '__main__':
     batch_size = 1
     input_size = output_size = 6
     sequence_max_length = 10
-    words_count = 15
+    words_count = 15 # number of rows in memory matrix
     word_size = 10
     read_heads = 1
 
@@ -53,6 +54,14 @@ if __name__ == '__main__':
 
     from_checkpoint = None
     iterations = 100000
+
+    visualize_step = 500
+    images_dir = os.path.join(
+        dirname,
+        'images_max_len_{}_cells_qtty_{}_cell_size_{}_{}'.format(
+            sequence_max_length, words_count, word_size, 'random'))
+    if not os.path.exists(images_dir):
+        os.makedirs(images_dir)
 
     options,_ = getopt.getopt(sys.argv[1:], '', ['checkpoint=', 'iterations='])
 
@@ -83,7 +92,7 @@ if __name__ == '__main__':
             )
 
             # squash the DNC output between 0 and 1
-            output, _ = ncomputer.get_outputs()
+            output, packed_memory_view = ncomputer.get_outputs()
             squashed_output = tf.clip_by_value(tf.sigmoid(output), 1e-6, 1. - 1e-6)
 
             loss = binary_cross_entropy(squashed_output, ncomputer.target_output)
@@ -119,7 +128,7 @@ if __name__ == '__main__':
 
             last_100_losses = []
 
-            for i in xrange(iterations + 1):
+            for i in range(iterations + 1):
                 llprint("\rIteration %d/%d" % (i, iterations))
 
                 random_length = np.random.randint(1, sequence_max_length + 1)
@@ -128,10 +137,12 @@ if __name__ == '__main__':
                 summerize = (i % 100 == 0)
                 take_checkpoint = (i != 0) and (i % iterations == 0)
 
-                loss_value, _, summary = session.run([
+                loss_value, _, summary, mem_view, out = session.run([
                     loss,
                     apply_gradients,
-                    summerize_op if summerize else no_summerize
+                    summerize_op if summerize else no_summerize,
+                    packed_memory_view,
+                    squashed_output
                 ], feed_dict={
                     ncomputer.input_data: input_data,
                     ncomputer.target_output: target_output,
@@ -139,11 +150,15 @@ if __name__ == '__main__':
                 })
 
                 last_100_losses.append(loss_value)
-                summerizer.add_summary(summary, i)
+                if summary: 
+                    summerizer.add_summary(summary, i)
 
                 if summerize:
                     llprint("\n\tAvg. Logistic Loss: %.4f\n" % (np.mean(last_100_losses)))
                     last_100_losses = []
+
+                if i%visualize_step == 0:
+                    visualize_op(input_data, out, mem_view, images_dir, i)
 
                 if take_checkpoint:
                     llprint("\nSaving Checkpoint ... "),
