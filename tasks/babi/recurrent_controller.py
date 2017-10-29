@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.contrib.rnn.python.ops.core_rnn_cell import BasicLSTMCell
+from tensorflow.contrib.rnn import BasicLSTMCell
 from dnc.controller import BaseController
 
 """
