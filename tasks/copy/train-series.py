@@ -45,11 +45,11 @@ if __name__ == '__main__':
     batch_size = 1
     input_size = output_size = 6
     series_length = 4
-    max_input_length = 10
+    max_input_length = 4
     sequence_max_length = (2*max_input_length+1)*series_length
-    words_count = 5
+    words_count = 10 # number of rows in memory matrix
     word_size = 10
-    read_heads = 4
+    read_heads = 1
 
     learning_rate = 1e-4
     momentum = 0.9
